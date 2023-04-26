@@ -11,5 +11,6 @@ public class TstApplication {
 		SpringApplication.run(TstApplication.class, args);
 		//Jorim
 		// 왜이럼
+		//test
 	}
 }
