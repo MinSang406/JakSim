@@ -11,7 +11,6 @@ public class TstApplication {
 		SpringApplication.run(TstApplication.class, args);
     jojang
 		//I AM JOJANG ^^
-=======
 	}
 	//syum 되라 제발
 }
