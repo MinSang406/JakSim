@@ -9,6 +9,7 @@ public class TstApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(TstApplication.class, args);
 		//Jorim
+		//test at 4.26.14:39
 	}
 	//syum 되라 제발
 }
