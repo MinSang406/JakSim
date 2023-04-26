@@ -11,6 +11,7 @@ public class TstApplication {
 		SpringApplication.run(TstApplication.class, args);
 		//I AM JOJANG ^^
 		//반짝2조 화이팅입니다....^^
+		//Jorim
 		// 왜이럼
 	}
 }
