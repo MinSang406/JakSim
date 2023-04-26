@@ -8,6 +8,7 @@ public class TstApplication {
 
 	public static void main(String[] args) {
 		SpringApplication.run(TstApplication.class, args);
+		//Jorim
 	}
 	//syum 되라 제발
 }
