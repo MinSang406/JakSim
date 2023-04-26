@@ -7,9 +7,10 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TstApplication {
 
 	public static void main(String[] args) {
+
 		SpringApplication.run(TstApplication.class, args);
-		//Jorim
-		//test at 4.26.14:39
+    jojang
+		//I AM JOJANG ^^
 	}
 	//syum 되라 제발
 }
