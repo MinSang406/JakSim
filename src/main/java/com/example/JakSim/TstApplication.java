@@ -8,6 +8,8 @@ public class TstApplication {
 
 	public static void main(String[] args) {
 
+		//반짝2조의 커밋도전
+
 		SpringApplication.run(TstApplication.class, args);
 		//Jorim
 		//I AM JOJANG ^^
@@ -19,3 +21,4 @@ public class TstApplication {
 	//syum 되라 제발
 	// 이번에는 되려나 ,,?
 }
+
