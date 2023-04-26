@@ -9,8 +9,7 @@ public class TstApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(TstApplication.class, args);
-    jojang
-		//I AM JOJANG ^^
+		// 왜이럼
 	}
 	//syum 되라 제발
 	// 이번에는 되려나 ,,?
