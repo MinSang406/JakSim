@@ -13,5 +13,8 @@ public class TstApplication {
 		//반짝2조 화이팅입니다....^^
 		//Jorim
 		// 왜이럼
+		//test
 	}
+	//syum 되라 제발
+	// 이번에는 되려나 ,,?
 }
