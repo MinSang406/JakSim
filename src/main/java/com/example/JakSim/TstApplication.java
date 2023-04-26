@@ -10,5 +10,5 @@ public class TstApplication {
 		SpringApplication.run(TstApplication.class, args);
 		//Jorim
 	}
-
+	//syum 되라 제발
 }
