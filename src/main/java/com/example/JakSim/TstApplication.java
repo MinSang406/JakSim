@@ -12,6 +12,7 @@ public class TstApplication {
 		//Jorim
 		//I AM JOJANG ^^
 		//반짝2조 화이팅입니다....^^
+		//Jorim
 		// 왜이럼
 		//test
 	}
