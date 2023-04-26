@@ -9,7 +9,9 @@ public class TstApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(TstApplication.class, args);
+		//Jorim
 		// 왜이럼
+		//test
 	}
 	//syum 되라 제발
 	// 이번에는 되려나 ,,?
