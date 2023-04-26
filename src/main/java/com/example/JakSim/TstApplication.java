@@ -9,7 +9,6 @@ public class TstApplication {
 	public static void main(String[] args) {
 
 		SpringApplication.run(TstApplication.class, args);
-		//I AM JOJANG ^^ tester
+		// 왜이럼
 	}
-	//syum 되라 제발
 }
