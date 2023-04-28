@@ -7,9 +7,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class TstApplication {
 
 	public static void main(String[] args) {
-
-		//반짝2조의 커밋도전
-
 		SpringApplication.run(TstApplication.class, args);
 		//Jorim
 		//I AM JOJANG ^^
