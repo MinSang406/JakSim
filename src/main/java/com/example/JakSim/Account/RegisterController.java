@@ -8,5 +8,7 @@ public class RegisterController {
     @GetMapping("/signup")
     public String Signup(){
         return "content/account/register";
+
+        //in the fork
     }
 }
