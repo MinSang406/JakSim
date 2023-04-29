@@ -1,32 +1,47 @@
 package com.example.JakSim;
 
-import com.example.JakSim.login.Member;
+import com.example.JakSim.login.JDBCTest;
+import groovy.util.logging.Log4j;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import java.time.LocalDateTime;
+
+import javax.sql.DataSource;
+import java.sql.*;
 
 @SpringBootTest
+@Log4j
 class TstApplicationTests {
+	@Autowired
+	private DataSource ds;
 
 	@Test
 	void contextLoads() {
 	}
 
 	@Test
-	@DisplayName("Getter/Setter테스트")
-	void GetterSetterTest(){
-		Member member = new Member();
-		member.setId(1L);
-		member.setEmail("wkdgyfla97@naver.com");
-		member.setName("장효림");
-		member.setPassword("알려주겠냐고 아 ㅋㅋ");
-		member.setRegisterDateTime(LocalDateTime.now());
+	public void testConnection() throws SQLException {
+		Connection conn = ds.getConnection();
+		PreparedStatement pstmt = conn.prepareStatement("select * from user_info where user_id = ?");
+		pstmt.setString(1, "hye8997");
+		ResultSet rs = pstmt.executeQuery();
+		if(rs.next()) {
+			System.out.println(rs.getString("USER_ID"));
+			System.out.println(rs.getString("USER_NAME"));
+		}
 
-		System.out.println(member.toString());
-		System.out.println(member.getEmail() + " :: " + member.getRegisterDateTime());
-		// 커밋 테스트
+		if(!conn.isClosed())
+			conn.close();
+
+	}
+
+	@Test
+	@DisplayName("JDBC 성공했나?")
+	public void testJDBCConnection() throws SQLException{
+		JDBCTest jdbcTest = new JDBCTest();
+		jdbcTest.findById();
 	}
 
 }
