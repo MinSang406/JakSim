@@ -2,13 +2,13 @@ package com.example.JakSim;
 
 import com.example.JakSim.login.JDBCTest;
 import groovy.util.logging.Log4j;
+import org.apache.tomcat.jdbc.pool.DataSource;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 
-import javax.sql.DataSource;
 import java.sql.*;
 
 @SpringBootTest
@@ -40,7 +40,7 @@ class TstApplicationTests {
 	@Test
 	@DisplayName("JDBC 성공했나?")
 	public void testJDBCConnection() throws SQLException{
-		JDBCTest jdbcTest = new JDBCTest();
+		JDBCTest jdbcTest = new JDBCTest(ds);
 		jdbcTest.findById();
 	}
 

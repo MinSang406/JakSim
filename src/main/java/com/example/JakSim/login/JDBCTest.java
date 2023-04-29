@@ -1,44 +1,34 @@
 package com.example.JakSim.login;
 
 
+import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
+import org.springframework.dao.EmptyResultDataAccessException;
+import org.springframework.jdbc.core.JdbcTemplate;
 
-import javax.sql.DataSource;
 import java.sql.*;
 
 public class JDBCTest {
-    @Autowired
-    private DataSource ds;
-
-    private Statement stmt;
-    private PreparedStatement pstmt;
-    private ResultSet rs;
+    private JdbcTemplate jdbcTemplate;
     private String sql;
 
-    public JDBCTest(){
-
+    public JDBCTest(DataSource ds){
+        jdbcTemplate = new JdbcTemplate(ds);
     }
 
     public void findById() throws SQLException{
         this.sql = "select * from user_info where user_id = ?";
 
-        Connection conn = ds.getConnection();
-        this.pstmt = conn.prepareStatement(sql);
-        pstmt.setString(1, "hye8997");
+        UserInfo userInfo = null;
+        String userId = "hye8997";
 
-        this.rs = pstmt.executeQuery();
-
-        if(rs.next()){
-            System.out.println(rs.getString("USER_NAME"));
-            System.out.println(rs.getString("USER_PW"));
-            System.out.println(rs.getString("USER_C_DT"));
-            try {
-                if (!conn.isClosed())
-                    conn.close();
-            }catch (Exception e){
-                e.printStackTrace();
-            }
+        try{
+            userInfo = jdbcTemplate.queryForObject(this.sql, new UserRowMapper(), userId);
+        }catch(EmptyResultDataAccessException e){
+            e.printStackTrace();
         }
+
+        System.out.println(userInfo.toString());
     }
 }
