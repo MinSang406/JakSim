@@ -1,5 +1,47 @@
-<html layout:decorate="~{layout/base}" xmlns:layout="http://www.w3.org/1999/xhtml">
-<div layout:fragment="content" id="index_container">
+<html layout:decorate="~{layout/base}" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+    <div layout:fragment="content">
+        <h1 id="account_head">회원가입</h1>
 
-</div>
+        <form th:action="@{/register/action}" method="post" id="account_container">
+            <div class="input_container">
+                <span class="input_span">아이디</span>
+                <input class="input_input" name="user_id">
+                <button class="btn btn-outline-secondary" id="duplicate">중복확인</button>
+            </div>
+            <div class="input_container">
+                <span class="input_span">이름</span>
+                <input class="input_input" name="user_name">
+            </div>
+            <div class="input_container">
+                <span class="input_span">성별</span>
+                <input class="input_input" name="user_gender">
+            </div>
+            <div class="input_container">
+                <span class="input_span">전화번호</span>
+                <input class="input_input" name="user_tel" placeholder="- 없이 작성해주세요. 예)01012345678">
+            </div>
+            <div class="input_container">
+                <span class="input_span">비밀번호</span>
+                <input class="input_input" name="user_pw" type="password">
+            </div>
+            <div class="input_container">
+                <span class="input_span">비밀번호 확인</span>
+                <input class="input_input" name="user_confirm" type="password">
+            </div>
+            <div class="input_container">
+                <span class="input_span">계정 복구 질문</span>
+                <input class="input_input" name="user_question">
+            </div>
+            <div class="input_container">
+                <span class="input_span">계정 복구 정답</span>
+                <input class="input_input" name="user_answer">
+            </div>
+            <div class="input_container">
+                <span class="input_span">생년월일</span>
+                <input class="input_input" name="user_c_dt">
+            </div>
+
+            <input type="submit" class="btn btn-success" value="회원가입 완료" id="fin_button">
+        </form>
+    </div>
 </html>

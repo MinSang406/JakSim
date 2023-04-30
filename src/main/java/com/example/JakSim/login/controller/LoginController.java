@@ -29,9 +29,5 @@ public class LoginController {
         model.addAttribute("userinfo", dao.findById());
         return "content/test/test";
     }
-
-    @PostMapping("/login")
-    public void postLogin(UserInfo param){
-    }
 }
 

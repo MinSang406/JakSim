@@ -1,0 +1,32 @@
+#account_head{
+    margin: 1vh;
+}
+.input_container{
+    position: relative;
+    margin: 1vh 1vh 0vh 5vh;
+}
+.input_container > .input_span{
+    margin-top: 4px;
+    left:1vh;
+    position:absolute;
+    font-weight: bold;
+}
+.input_container > .input_input{
+    padding-left: 15vh;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 50%;
+}
+#account_container{
+    margin: 5vh;
+}
+#duplicate{
+    margin-left: 1em;
+}
+#fin_button{
+    margin: 5vh
+}
