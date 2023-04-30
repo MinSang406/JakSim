@@ -1,4 +1,4 @@
-package com.example.JakSim.login;
+package com.example.JakSim.login.model;
 
 import lombok.Getter;
 import lombok.Setter;

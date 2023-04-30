@@ -1,23 +1,23 @@
-package com.example.JakSim.login;
+package com.example.JakSim.login.model;
 
 
+import com.example.JakSim.login.model.UserInfo;
+import com.example.JakSim.login.model.UserRowMapper;
 import org.apache.tomcat.jdbc.pool.DataSource;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
 
 import java.sql.*;
 
-public class JDBCTest {
+public class LoginDao {
     private JdbcTemplate jdbcTemplate;
     private String sql;
 
-    public JDBCTest(DataSource ds){
+    public LoginDao(DataSource ds){
         jdbcTemplate = new JdbcTemplate(ds);
     }
 
-    public void findById() throws SQLException{
+    public UserInfo findById() throws SQLException{
         this.sql = "select * from user_info where user_id = ?";
 
         UserInfo userInfo = null;
@@ -30,5 +30,6 @@ public class JDBCTest {
         }
 
         System.out.println(userInfo.toString());
+        return userInfo;
     }
 }

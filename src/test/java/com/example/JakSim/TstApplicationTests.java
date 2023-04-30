@@ -1,6 +1,6 @@
 package com.example.JakSim;
 
-import com.example.JakSim.login.JDBCTest;
+import com.example.JakSim.login.model.LoginDao;
 import groovy.util.logging.Log4j;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.junit.jupiter.api.DisplayName;
@@ -40,8 +40,8 @@ class TstApplicationTests {
 	@Test
 	@DisplayName("JDBC 성공했나?")
 	public void testJDBCConnection() throws SQLException{
-		JDBCTest jdbcTest = new JDBCTest(ds);
-		jdbcTest.findById();
+		LoginDao loginDao = new LoginDao(ds);
+		loginDao.findById();
 	}
 
 }
