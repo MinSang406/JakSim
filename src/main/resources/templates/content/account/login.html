@@ -1,7 +1,22 @@
-<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
-<div layout:fragment="content" id="index_container">
-  <h1>여기가</h1>
-  <hr>
-  <p>로그인이여 ㅇㅋ?</p>
-</div>
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
+  <div layout:fragment="content" id="login_layout">
+      <h1>
+        작심득근<br>Sign In
+      </h1>
+      <form th:action="@{/login/action}" method="post" id="login_container">
+        <div class="mb-3">
+          <span id="inputGroup-sizing-default">ID</span>
+          <input type="text" name="user_id" id="useR_id" class="form-control">
+        </div>
+        <div class="mb-3">
+          <label for="user_pw">비밀번호</label>
+          <input type="password" name="user_pw" id="user_pw" class="form-control">
+        </div>
+
+        <button type="submit" class="btn btn-primary">로그인</button>
+        <a th:href="@{/user/signup}" class="btn btn-success" type="button">회원가입</a>
+        <a href="#" id="find_id">아이디 / 비밀번호 찾기</a>
+
+      </form>
+  </div>
 </html>
