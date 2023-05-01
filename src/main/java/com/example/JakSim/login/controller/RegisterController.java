@@ -19,6 +19,7 @@ public class RegisterController {
 
     @PostMapping("/register/action")
     public String registerUser(UserInfo param){
+        System.out.println(param.getUser_birth());
         loginService.registerUser(param);
         return "redirect:/";
     }
