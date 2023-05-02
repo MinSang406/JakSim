@@ -28,7 +28,7 @@ public class AuthFailureHandler extends SimpleUrlAuthenticationFailureHandler {
             msg = "Bad Credentials Expired Exception Account";
         }
 
-        setDefaultFailureUrl("/login?error=true&exception=" + msg); //애러 페이지 이렇게 설정해도 좋을듯?
+        setDefaultFailureUrl("/login?error=true&exception=" + msg); //애러 페이지 이렇게 설정해도 좋을듯? ???
 
         super.onAuthenticationFailure(request, response, exception);
     }
