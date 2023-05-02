@@ -1,4 +1,4 @@
-package com.example.JakSim.trainer;
+package com.example.JakSim.trainer.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -7,10 +7,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class TrainerController {
     @GetMapping("trainer/register")
     public String create() {
-        return "content/account/trainerRegister";
-    }
-    @GetMapping("trainer/function")
-    public String function(){
-        return "content/accout/fuctiontest";
+        return "content/trainer/trainerRegister";
     }
 }
