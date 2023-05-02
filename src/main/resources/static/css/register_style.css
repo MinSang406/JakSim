@@ -3,7 +3,7 @@
 }
 .input_container{
     position: relative;
-    margin: 1vh 1vh 0vh 5vh;
+    margin: 1vh auto;
 }
 .input_container > .input_span{
     margin-top: 4px;
@@ -21,8 +21,15 @@
     border-radius: 5px;
     width: 50%;
 }
+.input_container > #user_id_check{
+    height:1px;
+}
+#user_id_container{
+    margin-left: 5em;
+    margin-top: 5vh;
+}
 #account_container{
-    margin: 5vh;
+    margin-left: 5em;
 }
 #duplicate{
     margin-left: 1em;

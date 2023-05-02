@@ -17,19 +17,17 @@ public class LoginDao {
         jdbcTemplate = new JdbcTemplate(ds);
     }
 
-    public UserInfo findById() throws SQLException{
+    public UserInfo findById(String userId) throws SQLException{
         this.sql = "select * from user_info where user_id = ?";
 
         UserInfo userInfo = null;
-        String userId = "hye8997";
 
         try{
             userInfo = jdbcTemplate.queryForObject(this.sql, new UserRowMapper(), userId);
         }catch(EmptyResultDataAccessException e){
-            e.printStackTrace();
+            System.out.println("조회되지 않은 닉네임");
         }
 
-        System.out.println(userInfo.toString());
         return userInfo;
     }
 
