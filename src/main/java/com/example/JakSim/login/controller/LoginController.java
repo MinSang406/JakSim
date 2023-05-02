@@ -26,7 +26,7 @@ public class LoginController {
     @GetMapping("/test")
     public String tester(Model model) throws SQLException {
         LoginDao dao = new LoginDao(ds);
-        model.addAttribute("userinfo", dao.findById());
+        model.addAttribute("userinfo", dao.findById("hye8997"));
         return "content/test/test";
     }
 }

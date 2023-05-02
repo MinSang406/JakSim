@@ -2,12 +2,15 @@
     <div layout:fragment="content">
         <h1 id="account_head">회원가입</h1>
 
+        <div class="input_container" id="user_id_container">
+            <span class="input_span">아이디</span>
+            <input class="input_input" name="user_id" id="input_user_id">
+            <button class="btn btn-outline-secondary" id="dup">중복확인</button>
+            <br/><span id="user_id_check">아이디를 확인해주세요</span>
+        </div>
+
         <form th:action="@{/register/action}" method="post" id="account_container">
-            <div class="input_container">
-                <span class="input_span">아이디</span>
-                <input class="input_input" name="user_id">
-                <button class="btn btn-outline-secondary" id="duplicate">중복확인</button>
-            </div>
+            <input type="hidden" name="user_id" id="user_id" readonly/>
             <div class="input_container">
                 <span class="input_span">이름</span>
                 <input class="input_input" name="user_name">
