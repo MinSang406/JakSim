@@ -1,0 +1,82 @@
+<html layout:decorate="~{layout/base}" xmlns:layout="http://www.w3.org/1999/xhtml">
+<div layout:fragment="content" id="index_container">
+  <head>
+    <title>Trainer Registration</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+  </head>
+
+  <body>
+  <div class="container">
+    <h1 class="title">Trainer Registration</h1>
+    <form id="trainer-form">
+      <div class="banner">
+        <h2 class="banner-title">Trainer Introduction</h2>
+        <label for="instagram">Instagram Address</label>
+        <input type="text" id="instagram" name="instagram" required>
+        <label for="self-introduction">Self-Introduction</label>
+        <textarea id="self-introduction" name="self-introduction" rows="5" maxlength="200" required></textarea>
+      </div>
+
+      <div class="banner">
+        <h2 class="banner-title">Area of Expertise</h2>
+        <label for="specialization">Select 2 Specializations:</label>
+        <select id="specialization" name="specialization" multiple required>
+          <option value="body-profile">Body Profile</option>
+          <option value="powerlifting">Powerlifting</option>
+          <option value="diet">Diet</option>
+          <option value="bodybuilding">Bodybuilding</option>
+          <option value="posture-correction">Posture Correction</option>
+          <option value="rehabilitation-exercise">Rehabilitation Exercise</option>
+        </select>
+      </div>
+
+      <div class="banner">
+        <h2 class="banner-title">Qualifications</h2>
+        <label for="certification">Certification</label>
+        <input type="text" id="certification" name="certification" required>
+        <button id="add-certification" type="button">Add More Certifications</button>
+        <label for="photo-registration">Photo Registration</label>
+        <input type="file" id="photo-registration" name="photo-registration" accept="image/*" required>
+      </div>
+
+      <div class="banner">
+        <h2 class="banner-title">Awards/Career Details</h2>
+        <label for="awards-career-details">Enter Awards/Career Details</label>
+        <textarea id="awards-career-details" name="awards-career-details"></textarea>
+        <button id="add-awards-career-details" type="button">Add More Awards/Career Details</button>
+      </div>
+
+      <div class="banner">
+        <h2 class="banner-title">Affiliated Gym</h2>
+        <label for="gym-address">Gym Address</label>
+        <input type="text" id="gym-address" name="gym-address" required>
+      </div>
+
+      <div class="banner">
+        <h2 class="banner-title">PT Information</h2>
+        <label for="full-text">Full Text:</label>
+        <select id="full-text" name="full-text" required>
+          <option value="individual">Individual</option>
+          <option value="group">Group</option>
+        </select>
+        <label for="pt-number">Number of PTs:</label>
+        <input type="number" id="pt-number" name="pt-number" required>
+      </div>
+          <div class="registration__form-group">
+            <label for="certification">Certification:</label>
+            <input type="text" id="certification" name="certification" />
+            <button type="button" id="add-certification">Add More</button>
+          </div>
+          <div class="registration__form-group">
+            <label for="photo">Photo:</label>
+            <input type="file" id="photo" name="photo" multiple accept="image/*" />
+            <div class="photo-preview"></div>
+          </div>
+          <div class="registration__form-group">
+            <button type="submit" id="register-trainer">Register</button>
+          </div>
+        </form>
+</div>
+</html>
