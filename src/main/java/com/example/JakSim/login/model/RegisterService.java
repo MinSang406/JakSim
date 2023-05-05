@@ -15,4 +15,9 @@ public class RegisterService {
         LoginDao loginDao = new LoginDao(ds);
         return loginDao.findById(user_id);
     }
+
+    public void updatePassword(String findId, String findPw) {
+        LoginDao loginDao = new LoginDao(ds);
+        loginDao.updatePassword(findId, findPw);
+    }
 }

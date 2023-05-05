@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class UserRowMapper implements RowMapper<UserInfo> {
+
     @Override
     public UserInfo mapRow(ResultSet rs, int rowNum) throws SQLException {
         UserInfo userInfo = new UserInfo();

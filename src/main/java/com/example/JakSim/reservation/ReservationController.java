@@ -1,7 +1,5 @@
 package com.example.JakSim.reservation;
 
-import com.example.JakSim.Timetable.model.TimetableDao;
-import com.example.JakSim.Timetable.model.TimetableService;
 import groovy.util.logging.Slf4j;
 import org.apache.juli.logging.Log;
 import org.apache.tomcat.jdbc.pool.DataSource;
@@ -16,18 +14,19 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 @RequestMapping("/Reservation")
 public class ReservationController {
-
-    ReservationService reservationService = new ReservationService(ds);
-
-
-    private TimetableService timetableService;
-    private Log log;
     @Autowired
     private DataSource ds;
+
+    ReservationService reservationService;
+
+
+    private Log log;
 
     // 일반 PT사용자가 캘린더 예약 현황 확인_첫 페이지
     @GetMapping("/{userId}")
     public String ReservationList(@PathVariable("userId") String id, Model model) {
+
+        reservationService = new ReservationService();
 
 //        log.error("Helllllllolhlehfoaisjofajsofjaosijfoaseijfoi");
 
