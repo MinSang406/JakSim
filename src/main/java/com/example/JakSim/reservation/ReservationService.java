@@ -6,6 +6,6 @@ public class ReservationService {
 
     public List<Reservation> searchAllReservation(String userId) {
 
-        return ;
+        return null;
     }
 }

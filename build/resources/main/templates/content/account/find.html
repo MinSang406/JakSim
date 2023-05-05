@@ -1,0 +1,60 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
+<div layout:fragment="content" id="find_container">
+
+  <h3>아이디 / 비밀번호 찾기</h3>
+
+  <div id="find_main">
+    <span>가입시 등록한 전화번호를 입력하세요</span>
+    <hr>
+    <div class="find_input_con">
+      <div >
+        <span class="find_banner">전화번호</span>
+      </div>
+      <input type="text" class="find_input" id="find_tel"/>
+      <button class="btn btn-outline-secondary" id="find_tel_button">확인</button>
+    </div>
+    <div class="find_input_con">
+      <div>
+        <span class="find_banner">계정복구질문</span>
+      </div>
+      <span id="find_question"></span>
+    </div>
+    <div class="find_input_con">
+      <div>
+        <span class="find_banner">계정복구정답</span>
+      </div>
+      <input type="text" class="find_input" id="find_answer"/>
+      <button class="btn btn-outline-secondary" id="find_answer_button">확인</button>
+    </div>
+    <hr style="margin-top: 5vh;">
+    <div>
+      <form th:action="@{/find/change/action}" method="post">
+        <div class="find_input_con">
+          <div>
+            <span class="find_banner">아이디 </span>
+          </div>
+          <input type="text" name="find_id" id="find_id" class="find_input" readonly/>
+        </div>
+        <div class="find_input_con">
+          <div>
+            <span class="find_banner">비밀번호</span>
+          </div>
+          <input type="password" name="find_pw" id="find_pw" class="find_input" disabled/>
+        </div>
+        <div class="find_input_con">
+          <div>
+            <span class="find_banner">비번확인</span>
+          </div>
+          <input type="password" name="find_pw_confirm" id="find_pw_confirm" class="find_input" disabled/>
+          <input type="submit" class="btn btn-primary" id="find_change_pw" value="변경" disabled/>
+        </div>
+      </form>
+      <div style="margin-top: 3vh">
+        <a type="button" class="btn btn-outline-secondary" th:href="@{/login}">로그인으로 이동</a>
+      </div>
+    </div>
+  </div>
+
+
+</div>
+</html>

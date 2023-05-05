@@ -1,47 +1,70 @@
 <html layout:decorate="~{layout/base}" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
-    <div layout:fragment="content">
-        <h1 id="account_head">회원가입</h1>
+<div layout:fragment="content">
+    <h1 id="account_head">회원가입</h1>
 
-        <form th:action="@{/register/action}" method="post" id="account_container">
-            <div class="input_container">
-                <span class="input_span">아이디</span>
-                <input class="input_input" name="user_id">
-                <button class="btn btn-outline-secondary" id="duplicate">중복확인</button>
-            </div>
-            <div class="input_container">
-                <span class="input_span">이름</span>
-                <input class="input_input" name="user_name">
-            </div>
-            <div class="input_container">
-                <span class="input_span">성별</span>
-                <input class="input_input" name="user_gender">
-            </div>
-            <div class="input_container">
-                <span class="input_span">전화번호</span>
-                <input class="input_input" name="user_tel" placeholder="- 없이 작성해주세요. 예)01012345678">
-            </div>
-            <div class="input_container">
-                <span class="input_span">비밀번호</span>
-                <input class="input_input" name="user_pw" type="password">
-            </div>
-            <div class="input_container">
-                <span class="input_span">비밀번호 확인</span>
-                <input class="input_input" name="user_confirm" type="password">
-            </div>
-            <div class="input_container">
-                <span class="input_span">계정 복구 질문</span>
-                <input class="input_input" name="user_question">
-            </div>
-            <div class="input_container">
-                <span class="input_span">계정 복구 정답</span>
-                <input class="input_input" name="user_answer">
-            </div>
-            <div class="input_container">
-                <span class="input_span">생년월일</span>
-                <input class="input_input" name="user_birth">
-            </div>
-
-            <input type="submit" class="btn btn-success" value="회원가입 완료" id="fin_button">
-        </form>
+    <div class="input_container" id="user_id_container">
+        <span class="input_span">아이디</span>
+        <input class="input_input" name="user_id" id="input_user_id">
+        <button class="btn btn-outline-secondary" id="dup">중복확인</button>
+        <br/><span id="user_id_check">아이디를 확인해주세요</span>
     </div>
+
+    <div class="input_container", id="user_tel_container">
+        <span class="input_span">전화번호</span>
+        <input class="input_input" name="user_tel" id="input_user_tel" placeholder="- 없이 작성해주세요. 예)01012345678">
+        <button class="btn btn-outline-secondary" id="tel_dup">중복확인</button>
+        <br/><span id="user_tel_check">전화번호 중복을 확인해주세요</span>
+    </div>
+
+    <form th:action="@{/register/action}" method="post" id="account_container">
+        <input type="hidden" name="user_id" id="user_id" readonly/>
+        <input type="hidden" name="user_tel" id="user_tel" readonly/>
+        <div class="input_container">
+            <span class="input_span">이름</span>
+            <input class="input_input" name="user_name">
+        </div>
+        <div class="input_container">
+            <span class="input_span">성별</span>
+            <select name="user_gender" class="register_select">
+                <option value="0" selected>남</option>
+                <option value="1">여</option>
+            </select>
+            <!--                <input class="input_input" name="user_gender">-->
+        </div>
+
+        <div class="input_container">
+            <span class="input_span">비밀번호</span>
+            <input class="input_input" name="user_pw" type="password">
+        </div>
+        <div class="input_container">
+            <span class="input_span">비밀번호 확인</span>
+            <input class="input_input" name="user_confirm" type="password">
+        </div>
+        <div class="input_container">
+            <span class="input_span">계정 복구 질문</span>
+            <select name="user_answer" class="register_select">
+                <option value="0">당신이 태어난 고향은?</option>
+                <option value="1">졸업한 초등학교 이름은?</option>
+                <option value="2">가장 소중한 보물 1호는?</option>
+                <option value="3">당신의 첫 해외여행지는?</option>
+                <option value="4">가장 존경하는 인물은?</option>
+            </select>
+            <!--                <input class="input_input" name="user_question">-->
+        </div>
+        <div class="input_container">
+            <span class="input_span">계정 복구 정답</span>
+            <input class="input_input" name="user_answer">
+        </div>
+        <div class="input_container">
+            <span class="input_span">생년월일</span>
+            <input class="input_input" name="user_birth">
+        </div>
+
+        <!--            <div class="input_container">-->
+        <!--                <select name="year" id="yearBox" title="년도" class="select_year">년도</select>-->
+        <!--            </div>-->
+
+        <input type="submit" class="btn btn-success" value="회원가입 완료" id="fin_button">
+    </form>
+</div>
 </html>
