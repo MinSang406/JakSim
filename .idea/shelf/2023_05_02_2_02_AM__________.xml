@@ -1,0 +1,19 @@
+<changelist name="2023_05_02_2_02_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]" date="1682960526409" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/2023_05_02_2_02_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" />
+  <option name="DESCRIPTION" value="2023/05/02 2:02 AM, 체크아웃 전에 커밋되지 않은 변경 내용 [변경]" />
+  <binary>
+    <option name="BEFORE_PATH" value="bin/main/com/example/JakSim/login/LoginController.class" />
+    <option name="AFTER_PATH" value="bin/main/com/example/JakSim/login/LoginController.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023_05_02_2_02_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/LoginController.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="bin/test/com/example/JakSim/TstApplicationTests.class" />
+    <option name="AFTER_PATH" value="bin/test/com/example/JakSim/TstApplicationTests.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023_05_02_2_02_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplicationTests.class" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="bin/main/com/example/JakSim/TstApplication.class" />
+    <option name="AFTER_PATH" value="bin/main/com/example/JakSim/TstApplication.class" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/2023_05_02_2_02_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplication.class" />
+  </binary>
+</changelist>

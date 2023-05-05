@@ -1,0 +1,14 @@
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.output.ansi.enabled=always\nserver.port=8080
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	
++++ b/src/main/resources/application.properties	
+@@ -1,2 +1,2 @@
+ spring.output.ansi.enabled=always
+-server.port=8080
+\ No newline at end of file
++server.port=8082
+\ No newline at end of file

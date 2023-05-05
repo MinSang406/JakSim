@@ -1,0 +1,48 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout/base}">
+<div layout:fragment="content" id="trainer_container">
+    <form th:action="@{/trainer/regist/action}" method="post" id="tRegister_container">
+      <fieldset>
+        <legend>수상/경력사항</legend>
+        <ul>
+          <li>
+            <label for="career">수상/경력사항</label>
+            <input type="text" name="career" id="career" placeholder="추가해 주세요" required>
+            <button id="addCareer" type="button">추가</button>
+          </li>
+        </ul>
+      </fieldset>
+      <hr/>
+      <fieldset>
+        <legend>PT 정보</legend>
+        <ul>
+          <label>전문:&nbsp;</label>
+          <input type="radio" name="ptType" id="Pt_sol" checked>
+          <label for="Pt_sol">개인</label>
+          <input type="radio" name="ptType" id="Pt_dan" >
+          <label for="Pt_dan">단체</label> <br/>
+
+          <label for="ptCount">PT 횟수</label>
+          <input type="text" name="ptCount" id="ptCount" placeholder="맛보기 1회" required>
+          <label for="ptPay">가격</label>
+          <input type="text" name="ptPay" id="ptPay" placeholder="입력해주세요" required> <br/>
+
+          <label for="ptCount1">PT 횟수</label>
+          <input type="text" name="ptCount1" id="ptCount1" placeholder="10" required>
+          <label for="ptPay1">가격</label>
+          <input type="text" name="ptPay1" id="ptPay1" placeholder="입력해주세요" required> <br/>
+          <button id="addPT" type="button">추가</button>
+        </ul>
+      </fieldset>
+      <hr/>
+      <fieldset>
+        <legend>사진 등록</legend>
+          <label for="photo">사진등록:</label>
+          <input type="file" id="photo" name="photo" multiple accept="image/*" />
+          <div class="photo-preview"></div>
+      </fieldset>
+      <hr/>
+        <input type="submit" class="btn btn-success" value="등록 완료">
+    </form>
+</div>
+</html>

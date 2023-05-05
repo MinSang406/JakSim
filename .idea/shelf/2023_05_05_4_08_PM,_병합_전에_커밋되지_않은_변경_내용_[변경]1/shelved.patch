@@ -1,0 +1,471 @@
+Index: src/main/resources/templates/content/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:layout=\"http://www.w3.org/1999/xhtml\" layout:decorate=\"~{layout/base}\">\n<div layout:fragment=\"content\" id=\"index_container\">\n    <h1>여기다가</h1>\n    <hr>\n    <p>그거 잘 하면 됨 ㅇㅋ?</p>\n\n    <button type=\"button\" class=\"btn btn-success\">Success</button>\n</div>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/content/index.html b/src/main/resources/templates/content/index.html
+--- a/src/main/resources/templates/content/index.html	
++++ b/src/main/resources/templates/content/index.html	
+@@ -1,9 +1,37 @@
+-<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
++<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
++      layout:decorate="~{layout/base}">
+ <div layout:fragment="content" id="index_container">
+-    <h1>여기다가</h1>
+-    <hr>
+-    <p>그거 잘 하면 됨 ㅇㅋ?</p>
++    <!-- container는 가장 상위 요소 -->
++    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
++        <div class="carousel-inner">
++            <div class="carousel-item active">
++                <a th:href="@{/iamport}"><img th:src="@{/images/MainImg.png}" class="d-block w-100" alt="..."></a>
++            </div>
++            <div class="carousel-item">
++                <img src="..." class="d-block w-100" alt="...">
++            </div>
++            <div class="carousel-item">
++                <img src="..." class="d-block w-100" alt="...">
++            </div>
++        </div>
++        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
++            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
++            <span class="visually-hidden">Previous</span>
++        </button>
++        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
++            <span class="carousel-control-next-icon" aria-hidden="true"></span>
++            <span class="visually-hidden">Next</span>
++        </button>
++    </div>
++
+ 
+-    <button type="button" class="btn btn-success">Success</button>
++</div>
++</html>
++
++<body>
++<div class="card">
++    <div class="card-body">
++        This is some text within a card body.
++    </div>
+ </div>
+-</html>
+\ No newline at end of file
++</body>
+\ No newline at end of file
+Index: src/main/resources/templates/fragment/navi.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:sec=\"http://www.w3.org/1999/xhtml\" xmlns:th=\"http://www.w3.org/1999/xhtml\">\n\n<nav class=\"navbar navbar-expand-lg bg-body-tertiary\" th:fragment=\"naviFragment\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link active\" aria-current=\"page\" href=\"/\">Home</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#\">Link</a>\n        </li>\n        <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n            Dropdown\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\">Disabled</a>\n        </li>\n      </ul>\n      <form class=\"d-flex\" role=\"search\">\n        <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </div>\n</nav>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/fragment/navi.html b/src/main/resources/templates/fragment/navi.html
+--- a/src/main/resources/templates/fragment/navi.html	
++++ b/src/main/resources/templates/fragment/navi.html	
+@@ -1,33 +1,34 @@
+ <html xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
++</html>
++<body>
+ 
+ <nav class="navbar navbar-expand-lg bg-body-tertiary" th:fragment="naviFragment">
+   <div class="container-fluid">
+-    <a class="navbar-brand" href="#">Navbar</a>
++    <a class="navbar-brand" href="#">작심득근</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+-          <a class="nav-link active" aria-current="page" href="/">Home</a>
++          <a class="nav-link" href="#">트레이너 등록</a>
+         </li>
+         <li class="nav-item">
+-          <a class="nav-link" href="#">Link</a>
++          <a class="nav-link" href="#">트레이너 찾기</a>
+         </li>
+-        <li class="nav-item dropdown">
+-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+-            Dropdown
+-          </a>
++      </ul>
++
++      <ul class="nav justify-content-end">
++        <li class="nav-item">
++          <a class="nav-link" href="#">로그인</a>
+         </li>
+         <li class="nav-item">
+-          <a class="nav-link disabled">Disabled</a>
++          <a class="nav-link" href="#">회원가입</a>
+         </li>
+       </ul>
+-      <form class="d-flex" role="search">
+-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+-        <button class="btn btn-outline-success" type="submit">Search</button>
+-      </form>
++
+     </div>
+   </div>
+ </nav>
+-</html>
+\ No newline at end of file
++
++</body>
+Index: src/main/resources/templates/layout/base.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"ko\"\n      xmlns:layout=\"http://www.w3.org/1999/xhtml\" xmlns:th=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Title</title>\n  <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\n        integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n  <link rel=\"stylesheet\" type=\"text/css\" th:href=\"@{/css/style.css}\">\n</head>\n<body>\n  <!-- navi -->\n  <th:block th:replace=\"~{fragment/navi :: naviFragment}\"></th:block>\n\n  <!-- content -->\n  <section>\n    <th:block layout:fragment=\"content\"></th:block>\n  </section>\n\n  <!-- footer -->\n  <th:block th:replace=\"~{fragment/footer :: footerFragment}\"></th:block>\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/layout/base.html b/src/main/resources/templates/layout/base.html
+--- a/src/main/resources/templates/layout/base.html	
++++ b/src/main/resources/templates/layout/base.html	
+@@ -4,6 +4,44 @@
+ <head>
+   <meta charset="UTF-8">
+   <title>Title</title>
++  <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
++  <!-- iamport.payment.js -->
++  <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
++  <script src="https://cdn.portone.io/v2/browser-sdk.js"></script>
++  <script>
++        var IMP = window.IMP;
++        IMP.init("imp54766517");
++
++        var today = new Date();
++        var hours = today.getHours(); // 시
++        var minutes = today.getMinutes();  // 분
++        var seconds = today.getSeconds();  // 초
++        var milliseconds = today.getMilliseconds();
++        var makeMerchantUid = hours +  minutes + seconds + milliseconds;
++
++
++        function requestPay() {
++            IMP.request_pay({
++                pg : 'html5_inicis',
++                pay_method : 'card',
++                merchant_uid: "IMP"+makeMerchantUid,
++                name : '당근 10kg',
++                amount : 1004,
++                buyer_email : 'Iamport@chai.finance',
++                buyer_name : '아임포트 기술지원팀',
++                buyer_tel : '010-1234-5678',
++                buyer_addr : '서울특별시 강남구 삼성동',
++                buyer_postcode : '123-456'
++            }, function (rsp) { // callback
++                if (rsp.success) {
++                    console.log(rsp);
++                } else {
++                    console.log(rsp);
++                }
++            });
++        }
++
++    </script>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
+Index: src/main/java/com/example/JakSim/pay/PayController.java
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/pay/PayController.java b/src/main/java/com/example/JakSim/pay/PaymentsController.java
+rename from src/main/java/com/example/JakSim/pay/PayController.java
+rename to src/main/java/com/example/JakSim/pay/PaymentsController.java
+--- a/src/main/java/com/example/JakSim/pay/PayController.java	
++++ b/src/main/java/com/example/JakSim/pay/PaymentsController.java	
+@@ -4,10 +4,9 @@
+ import org.springframework.web.bind.annotation.GetMapping;
+ 
+ @Controller
+-public class PayController {
+-    @GetMapping("/pay")
+-    public String BeforePay(){
++public class PaymentsController {
++    @GetMamport")
++    public String iamport() {apping("/i
+         return "content/pay/Pay";
+     }
+-    //안농
+-}
++}
+\ No newline at end of file
+Index: settings.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>rootProject.name = 'JakSim'\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/settings.gradle b/settings.gradle
+--- a/settings.gradle	
++++ b/settings.gradle	
+@@ -1,1 +1,11 @@
+ rootProject.name = 'JakSim'
++
++
++//pluginManagement {
++//    repositories {
++//        maven { url 'https://repo.spring.io/release' }
++//        mavenCentral()
++//        gradlePluginPortal()
++//    }
++//}
++rootProject.name = 'Iamport_example'
+\ No newline at end of file
+Index: src/main/resources/templates/content/pay/Pay.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:layout=\"http://www.w3.org/1999/xhtml\" layout:decorate=\"~{layout/base}\">\n<div layout:fragment=\"content\">\n\n  <h1>여기가 페이 페이지임</h1>\n  <hr>\n  <p>페이 페이지 ㅋㅋㅋ 엌ㅋㅋ</p>\n\n</div>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/content/pay/Pay.html b/src/main/resources/templates/content/pay/Pay.html
+--- a/src/main/resources/templates/content/pay/Pay.html	
++++ b/src/main/resources/templates/content/pay/Pay.html	
+@@ -1,9 +1,67 @@
+ <html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
+-<div layout:fragment="content">
++<div layout:fragment="content" id="pay_container">
++
++<!--<head>-->
++<!--    &lt;!&ndash; jQuery &ndash;&gt;-->
++<!--    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>-->
++<!--    &lt;!&ndash; iamport.payment.js &ndash;&gt;-->
++<!--    <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>-->
++<!--    <script src="https://cdn.portone.io/v2/browser-sdk.js"></script>-->
++<!--    <script>-->
++<!--        var IMP = window.IMP;-->
++<!--        IMP.init("imp54766517");-->
+ 
+-  <h1>여기가 페이 페이지임</h1>
+-  <hr>
+-  <p>페이 페이지 ㅋㅋㅋ 엌ㅋㅋ</p>
++<!--        var today = new Date();-->
++<!--        var hours = today.getHours(); // 시-->
++<!--        var minutes = today.getMinutes();  // 분-->
++<!--        var seconds = today.getSeconds();  // 초-->
++<!--        var milliseconds = today.getMilliseconds();-->
++<!--        var makeMerchantUid = hours +  minutes + seconds + milliseconds;-->
+ 
+-</div>
+-</html>
+\ No newline at end of file
++
++<!--        function requestPay() {-->
++<!--            IMP.request_pay({-->
++<!--                pg : 'html5_inicis',-->
++<!--                pay_method : 'card',-->
++<!--                merchant_uid: "IMP"+makeMerchantUid,-->
++<!--                name : '당근 10kg',-->
++<!--                amount : 1004,-->
++<!--                buyer_email : 'Iamport@chai.finance',-->
++<!--                buyer_name : '아임포트 기술지원팀',-->
++<!--                buyer_tel : '010-1234-5678',-->
++<!--                buyer_addr : '서울특별시 강남구 삼성동',-->
++<!--                buyer_postcode : '123-456'-->
++<!--            }, function (rsp) { // callback-->
++<!--                if (rsp.success) {-->
++<!--                    console.log(rsp);-->
++<!--                } else {-->
++<!--                    console.log(rsp);-->
++<!--                }-->
++<!--            });-->
++<!--        }-->
++
++<!--    </script>-->
++<!--    <meta charset="UTF-8">-->
++<!--    <title>Sample Payment</title>-->
++<!--</head>-->
++<!--<body>-->
++
++        <!-- 상품 정보 영역-->
++        <div class="title">상품 정보</div>
++        <p>토스 티셔츠</p>
++        <p>결제 금액: 15,000원</p>
++
++        <!-- 결제 방법 영역-->
++        <div class="title">결제 방법</div>
++        <div id="payment-method"></div>
++        <div id="agreement"></div>
++        <button onclick="requestPay()">결제하기</button> <!-- 결제하기 버튼 생성 -->
++    </div>
++
++</html>
++
++<!--<html xmlns:layout="http://www.w3.org/1999/xhtml">-->
++<!--    <div layout:fragment="content">-->
++<!--        <h1>test</h1>-->
++<!--    </div>-->
++<!--</html>-->
+\ No newline at end of file
+Index: bin/main/templates/fragment/navi.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:sec=\"http://www.w3.org/1999/xhtml\" xmlns:th=\"http://www.w3.org/1999/xhtml\">\n\n<nav class=\"navbar navbar-expand-lg bg-body-tertiary\" th:fragment=\"naviFragment\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link active\" aria-current=\"page\" href=\"/\">Home</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#\">Link</a>\n        </li>\n        <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n            Dropdown\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\">Disabled</a>\n        </li>\n      </ul>\n      <form class=\"d-flex\" role=\"search\">\n        <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </div>\n</nav>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/bin/main/templates/fragment/navi.html b/bin/main/templates/fragment/navi.html
+--- a/bin/main/templates/fragment/navi.html	
++++ b/bin/main/templates/fragment/navi.html	
+@@ -2,7 +2,7 @@
+ 
+ <nav class="navbar navbar-expand-lg bg-body-tertiary" th:fragment="naviFragment">
+   <div class="container-fluid">
+-    <a class="navbar-brand" href="#">Navbar</a>
++    <a class="navbar-brand" href="#">작심득근</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+Index: bin/main/templates/content/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:layout=\"http://www.w3.org/1999/xhtml\" layout:decorate=\"~{layout/base}\">\n<div layout:fragment=\"content\" id=\"index_container\">\n    <h1>여기다가</h1>\n    <hr>\n    <p>그거 잘 하면 됨 ㅇㅋ?</p>\n\n    <button type=\"button\" class=\"btn btn-success\">Success</button>\n</div>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/bin/main/templates/content/index.html b/bin/main/templates/content/index.html
+--- a/bin/main/templates/content/index.html	
++++ b/bin/main/templates/content/index.html	
+@@ -1,9 +1,37 @@
+-<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
++<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
++      layout:decorate="~{layout/base}">
+ <div layout:fragment="content" id="index_container">
+-    <h1>여기다가</h1>
+-    <hr>
+-    <p>그거 잘 하면 됨 ㅇㅋ?</p>
++    <!-- container는 가장 상위 요소 -->
++    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
++        <div class="carousel-inner">
++            <div class="carousel-item active">
++                <a th:href="@{/content/pay/Pay}"><img th:src="@{/images/MainImg.png}" class="d-block w-100" alt="..."></a>
++            </div>
++            <div class="carousel-item">
++                <img src="..." class="d-block w-100" alt="...">
++            </div>
++            <div class="carousel-item">
++                <img src="..." class="d-block w-100" alt="...">
++            </div>
++        </div>
++        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
++            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
++            <span class="visually-hidden">Previous</span>
++        </button>
++        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
++            <span class="carousel-control-next-icon" aria-hidden="true"></span>
++            <span class="visually-hidden">Next</span>
++        </button>
++    </div>
++
+ 
+-    <button type="button" class="btn btn-success">Success</button>
++</div>
++</html>
++
++<body>
++<div class="card">
++    <div class="card-body">
++        This is some text within a card body.
++    </div>
+ </div>
+-</html>
+\ No newline at end of file
++</body>
+\ No newline at end of file
+Index: src/main/resources/static/js/payments.js
+===================================================================
+diff --git a/src/main/resources/static/js/payments.js b/src/main/resources/static/js/payments.js
+new file mode 100644
+--- /dev/null	
++++ b/src/main/resources/static/js/payments.js	
+@@ -0,0 +1,53 @@
++// bodyParser 등을 통해 body의 JSON 데이터를 파싱할 수 있는지 확인해주세요.
++app.use(bodyParser.json());
++// POST 요청을 받는 /payments/complete
++app.post("/payments/complete", async (req, res) => {
++  try {
++    // 요청의 body로 SDK의 응답 중 txId와 paymentId가 오기를 기대합니다.
++    const { txId, paymentId } = req.body;
++
++    // 1. 포트원 API를 사용하기 위해 액세스 토큰을 발급받습니다.
++    const signinResponse = await axios({
++      url: "https://api.portone.io/v2/signin/api-key",
++      method: "post",
++      headers: { "Content-Type": "application/json" },
++      data: {
++        api_key: PORTONE_API_KEY, // 포트원 API Key
++      },
++    });
++    const { access_token } = signinResponse.data;
++
++    // 2. 포트원 결제내역 단건조회 API 호출
++    const paymentResponse = await axios({
++      url: `https://api.portone.io/v2/payments/${paymentId}`,
++      method: "get",
++      // 1번에서 발급받은 액세스 토큰을 Bearer 형식에 맞게 넣어주세요.
++      headers: { "Authorization": "Bearer " + access_token },
++    });
++    const { payment: { id, transactions } } = paymentResponse.data;
++    // 대표 트랜잭션(승인된 트랜잭션)을 선택합니다.
++    const transaction = transactions.find(tx => tx.is_primary === true);
++
++    // 3. 가맹점 내부 주문 데이터의 가격과 실제 지불된 금액을 비교합니다.
++    const order = await OrderService.findById(id);
++    if (order.amount === transaction.amount.total) {
++      switch (status) {
++        case "VIRTUAL_ACCOUNT_ISSUED": {
++          const { virtual_account } = transaction.payment_method_detail;
++          // 가상 계좌가 발급된 상태입니다.
++          // 계좌 정보(virtual_account)를 이용해 원하는 로직을 구성하세요.
++          break;
++        }
++        case "PAID": {
++          // 모든 금액을 지불했습니다! 완료 시 원하는 로직을 구성하세요.
++          break;
++        }
++      }
++    } else {
++      // 결제 금액이 불일치하여 위/변조 시도가 의심됩니다.
++    }
++  } catch (e) {
++    // 결제 검증에 실패했습니다.
++    res.status(400).send(e);
++  }
++});
+\ No newline at end of file
+Index: src/main/java/com/example/JakSim/search/SearchController.java
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/search/SearchController.java b/src/main/java/com/example/JakSim/search/SearchController.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/com/example/JakSim/search/SearchController.java	
+@@ -0,0 +1,10 @@
++package com.example.JakSim.search;
++
++import org.springframework.stereotype.Controller;
++import org.springframework.web.bind.annotation.GetMapping;
++
++@Controller
++public class SearchController {
++    //@GetMapping("/{category_name}/{lecture_id}")
++
++}
+Index: bin/main/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.output.ansi.enabled=always\nserver.port=8080
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/bin/main/application.properties b/bin/main/application.properties
+--- a/bin/main/application.properties	
++++ b/bin/main/application.properties	
+@@ -1,2 +1,2 @@
+ spring.output.ansi.enabled=always
+-server.port=8080
+\ No newline at end of file
++server.port=8081
+\ No newline at end of file

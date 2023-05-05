@@ -1,0 +1,341 @@
+Index: src/main/java/com/example/JakSim/pay/PayController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/pay/PayController.java b/src/main/java/com/example/JakSim/pay/PayController.java
+deleted file mode 100644
+--- a/src/main/java/com/example/JakSim/pay/PayController.java	
++++ /dev/null	
+@@ -1,13 +0,0 @@
+-package com.example.JakSim.pay;
+-
+-import org.springframework.stereotype.Controller;
+-import org.springframework.web.bind.annotation.GetMapping;
+-
+-@Controller
+-public class PayController {
+-    @GetMapping("/pay")
+-    public String BeforePay(){
+-        return "content/pay/Pay";
+-    }
+-    //안농
+-}
+Index: bin/main/templates/fragment/navi.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:sec=\"http://www.w3.org/1999/xhtml\" xmlns:th=\"http://www.w3.org/1999/xhtml\">\n\n<nav class=\"navbar navbar-expand-lg bg-body-tertiary\" th:fragment=\"naviFragment\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link active\" aria-current=\"page\" href=\"/\">Home</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#\">Link</a>\n        </li>\n        <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n            Dropdown\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\">Disabled</a>\n        </li>\n      </ul>\n      <form class=\"d-flex\" role=\"search\">\n        <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </div>\n</nav>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/bin/main/templates/fragment/navi.html b/bin/main/templates/fragment/navi.html
+--- a/bin/main/templates/fragment/navi.html	
++++ b/bin/main/templates/fragment/navi.html	
+@@ -2,7 +2,7 @@
+ 
+ <nav class="navbar navbar-expand-lg bg-body-tertiary" th:fragment="naviFragment">
+   <div class="container-fluid">
+-    <a class="navbar-brand" href="#">Navbar</a>
++    <a class="navbar-brand" href="#">작심득근</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+Index: src/main/resources/templates/content/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:layout=\"http://www.w3.org/1999/xhtml\" layout:decorate=\"~{layout/base}\">\n<div layout:fragment=\"content\" id=\"index_container\">\n    <h1>여기다가</h1>\n    <hr>\n    <p>그거 잘 하면 됨 ㅇㅋ?</p>\n\n    <button type=\"button\" class=\"btn btn-success\">Success</button>\n</div>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/content/index.html b/src/main/resources/templates/content/index.html
+--- a/src/main/resources/templates/content/index.html	
++++ b/src/main/resources/templates/content/index.html	
+@@ -1,9 +1,37 @@
+-<html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
++<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
++      layout:decorate="~{layout/base}">
+ <div layout:fragment="content" id="index_container">
+-    <h1>여기다가</h1>
+-    <hr>
+-    <p>그거 잘 하면 됨 ㅇㅋ?</p>
++    <!-- container는 가장 상위 요소 -->
++    <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
++        <div class="carousel-inner">
++            <div class="carousel-item active">
++                <a th:href="@{/pay}"><img th:src="@{/images/MainImg.png}" class="d-block w-100" alt="..."></a>
++            </div>
++            <div class="carousel-item">
++                <img src="..." class="d-block w-100" alt="...">
++            </div>
++            <div class="carousel-item">
++                <img src="..." class="d-block w-100" alt="...">
++            </div>
++        </div>
++        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="prev">
++            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
++            <span class="visually-hidden">Previous</span>
++        </button>
++        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControls" data-bs-slide="next">
++            <span class="carousel-control-next-icon" aria-hidden="true"></span>
++            <span class="visually-hidden">Next</span>
++        </button>
++    </div>
++
+ 
+-    <button type="button" class="btn btn-success">Success</button>
++</div>
++</html>
++
++<body>
++<div class="card">
++    <div class="card-body">
++        This is some text within a card body.
++    </div>
+ </div>
+-</html>
+\ No newline at end of file
++</body>
+\ No newline at end of file
+Index: src/test/java/com/example/JakSim/TstApplicationTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.JakSim;\n\nimport com.example.JakSim.login.model.LoginDao;\nimport groovy.util.logging.Log4j;\nimport org.apache.tomcat.jdbc.pool.DataSource;\nimport org.junit.jupiter.api.DisplayName;\nimport org.junit.jupiter.api.Test;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.boot.test.context.SpringBootTest;\n\n\nimport java.sql.*;\n\n@SpringBootTest\n@Log4j\nclass TstApplicationTests {\n\t@Autowired\n\tprivate DataSource ds;\n\n\t@Test\n\tvoid contextLoads() {\n\t}\n\n\t@Test\n\tpublic void testConnection() throws SQLException {\n\t\tConnection conn = ds.getConnection();\n\t\tPreparedStatement pstmt = conn.prepareStatement(\"select * from user_info where user_id = ?\");\n\t\tpstmt.setString(1, \"hye8997\");\n\t\tResultSet rs = pstmt.executeQuery();\n\t\tif(rs.next()) {\n\t\t\tSystem.out.println(rs.getString(\"USER_ID\"));\n\t\t\tSystem.out.println(rs.getString(\"USER_NAME\"));\n\t\t}\n\n\t\tif(!conn.isClosed())\n\t\t\tconn.close();\n\n\t}\n\n\t@Test\n\t@DisplayName(\"JDBC 성공했나?\")\n\tpublic void testJDBCConnection() throws SQLException{\n\t\tLoginDao loginDao = new LoginDao(ds);\n\t\tloginDao.findById();\n\t}\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/com/example/JakSim/TstApplicationTests.java b/src/test/java/com/example/JakSim/TstApplicationTests.java
+--- a/src/test/java/com/example/JakSim/TstApplicationTests.java	
++++ b/src/test/java/com/example/JakSim/TstApplicationTests.java	
+@@ -1,47 +1,32 @@
+ package com.example.JakSim;
+ 
+-import com.example.JakSim.login.model.LoginDao;
+-import groovy.util.logging.Log4j;
+-import org.apache.tomcat.jdbc.pool.DataSource;
++import com.example.JakSim.login.Member;
+ import org.junit.jupiter.api.DisplayName;
+ import org.junit.jupiter.api.Test;
+-import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.boot.test.context.SpringBootTest;
+ 
+-
+-import java.sql.*;
++import java.time.LocalDateTime;
+ 
+ @SpringBootTest
+-@Log4j
+ class TstApplicationTests {
+-	@Autowired
+-	private DataSource ds;
+ 
+ 	@Test
+ 	void contextLoads() {
+ 	}
+ 
+ 	@Test
+-	public void testConnection() throws SQLException {
+-		Connection conn = ds.getConnection();
+-		PreparedStatement pstmt = conn.prepareStatement("select * from user_info where user_id = ?");
+-		pstmt.setString(1, "hye8997");
+-		ResultSet rs = pstmt.executeQuery();
+-		if(rs.next()) {
+-			System.out.println(rs.getString("USER_ID"));
+-			System.out.println(rs.getString("USER_NAME"));
+-		}
+-
+-		if(!conn.isClosed())
+-			conn.close();
++	@DisplayName("Getter/Setter테스트")
++	void GetterSetterTest(){
++		Member member = new Member();
++		member.setId(1L);
++		member.setEmail("wkdgyfla97@naver.com");
++		member.setName("장효림");
++		member.setPassword("알려주겠냐고 아 ㅋㅋ");
++		member.setRegisterDateTime(LocalDateTime.now());
+ 
+-	}
+-
+-	@Test
+-	@DisplayName("JDBC 성공했나?")
+-	public void testJDBCConnection() throws SQLException{
+-		LoginDao loginDao = new LoginDao(ds);
+-		loginDao.findById();
++		System.out.println(member.toString());
++		System.out.println(member.getEmail() + " :: " + member.getRegisterDateTime());
++		// 커밋 테스트
+ 	}
+ 
+ }
+Index: src/main/java/com/example/JakSim/pay/PaymentsContoller.java
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/pay/PaymentsContoller.java b/src/main/java/com/example/JakSim/pay/PaymentsContoller.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/com/example/JakSim/pay/PaymentsContoller.java	
+@@ -0,0 +1,13 @@
++package com.example.JakSim.payments;
++
++import org.springframework.stereotype.Controller;
++import org.springframework.web.bind.annotation.GetMapping;
++
++@Controller
++public class PaymentsContoller {
++
++    @GetMapping("/iamport")
++    public String iamport(){
++        return "content/pay/pay";
++    }
++}
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\n\tid 'java'\n\tid 'org.springframework.boot' version '2.7.11'\n\tid 'io.spring.dependency-management' version '1.0.15.RELEASE'\n\tid 'war'\n}\n\ngroup = 'com.example'\nversion = '0.0.1-SNAPSHOT'\nsourceCompatibility = '11'\napply plugin: 'war'\n\nconfigurations {\n\tcompileOnly {\n\t\textendsFrom annotationProcessor\n\t}\n}\n\nrepositories {\n\tmavenCentral()\n}\n\ndependencies {\n\timplementation 'org.springframework.boot:spring-boot-starter-web'\n\tcompileOnly 'org.projectlombok:lombok'\n\truntimeOnly 'com.oracle.database.jdbc:ojdbc8'\n\tannotationProcessor 'org.projectlombok:lombok'\n\n\timplementation 'org.springframework.boot:spring-boot-starter-thymeleaf'\n\timplementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'\n\n\timplementation 'org.springframework.boot:spring-boot-starter-jdbc'\n\timplementation 'org.apache.tomcat:tomcat-jdbc:8.5.27'// Using JDBCTemplate\n\timplementation 'com.oracle.ojdbc:orai18n:19.3.0.0'   // KO16KSC5601 Encoding\n\tprovidedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'\n\n\t//security\n\timplementation 'org.springframework.boot:spring-boot-starter-security'\n\timplementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE'\n\n\ttestImplementation 'org.springframework.boot:spring-boot-starter-test'\n\n}\n\ntasks.named('test') {\n\tuseJUnitPlatform()\n}\n\nbootWar{\n\tarchiveName(\"Jaksim.war\")\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	
++++ b/build.gradle	
+@@ -29,23 +29,13 @@
+ 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+ 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+ 
+-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
+-	implementation 'org.apache.tomcat:tomcat-jdbc:8.5.27'// Using JDBCTemplate
+-	implementation 'com.oracle.ojdbc:orai18n:19.3.0.0'   // KO16KSC5601 Encoding
+-	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+-
+-	//security
+-	implementation 'org.springframework.boot:spring-boot-starter-security'
+-	implementation 'org.thymeleaf.extras:thymeleaf-extras-springsecurity6:3.1.1.RELEASE'
+-
+ 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+ 
++	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
++	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
++
+ }
+ 
+ tasks.named('test') {
+ 	useJUnitPlatform()
+ }
+-
+-bootWar{
+-	archiveName("Jaksim.war")
+-}
+\ No newline at end of file
+Index: src/main/resources/templates/fragment/navi.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:sec=\"http://www.w3.org/1999/xhtml\" xmlns:th=\"http://www.w3.org/1999/xhtml\">\n\n<nav class=\"navbar navbar-expand-lg bg-body-tertiary\" th:fragment=\"naviFragment\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link active\" aria-current=\"page\" href=\"/\">Home</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#\">Link</a>\n        </li>\n        <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n            Dropdown\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\">Disabled</a>\n        </li>\n      </ul>\n      <form class=\"d-flex\" role=\"search\">\n        <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </div>\n</nav>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/fragment/navi.html b/src/main/resources/templates/fragment/navi.html
+--- a/src/main/resources/templates/fragment/navi.html	
++++ b/src/main/resources/templates/fragment/navi.html	
+@@ -1,33 +1,34 @@
+ <html xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
++</html>
++<body>
+ 
+ <nav class="navbar navbar-expand-lg bg-body-tertiary" th:fragment="naviFragment">
+   <div class="container-fluid">
+-    <a class="navbar-brand" href="#">Navbar</a>
++    <a class="navbar-brand" href="#">작심득근</a>
+     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+     </button>
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+-          <a class="nav-link active" aria-current="page" href="/">Home</a>
++          <a class="nav-link" href="#">트레이너 등록</a>
+         </li>
+         <li class="nav-item">
+-          <a class="nav-link" href="#">Link</a>
++          <a class="nav-link" href="#">트레이너 찾기</a>
+         </li>
+-        <li class="nav-item dropdown">
+-          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+-            Dropdown
+-          </a>
++      </ul>
++
++      <ul class="nav justify-content-end">
++        <li class="nav-item">
++          <a class="nav-link" href="#">로그인</a>
+         </li>
+         <li class="nav-item">
+-          <a class="nav-link disabled">Disabled</a>
++          <a class="nav-link" href="#">회원가입</a>
+         </li>
+       </ul>
+-      <form class="d-flex" role="search">
+-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+-        <button class="btn btn-outline-success" type="submit">Search</button>
+-      </form>
++
+     </div>
+   </div>
+ </nav>
+-</html>
+\ No newline at end of file
++
++</body>
+Index: src/main/resources/static/javascript/Pay.js
+===================================================================
+diff --git a/src/main/resources/static/javascript/Pay.js b/src/main/resources/static/javascript/Pay.js
+new file mode 100644
+--- /dev/null	
++++ b/src/main/resources/static/javascript/Pay.js	
+@@ -0,0 +1,27 @@
++IMP.request_pay({
++    pg : 'html5_inicis.{PG상점아이디}', //테스트 시 html5_inicis.INIpayTest 기재
++    pay_method : 'card',
++    merchant_uid: "order_no_0001", //상점에서 생성한 고유 주문번호
++    name : '주문명:결제테스트',
++    amount : 1004,
++    buyer_email : 'test@portone.io',
++    buyer_name : '구매자이름',
++    buyer_tel : '010-1234-5678',   //필수 파라미터 입니다.
++    buyer_addr : '서울특별시 강남구 삼성동',
++    buyer_postcode : '123-456',
++    m_redirect_url : '{모바일에서 결제 완료 후 리디렉션 될 URL}',
++    escrow : true, //에스크로 결제인 경우 설정
++    vbank_due : 'YYYYMMDD'
++    bypass : {
++        acceptmethod : "noeasypay" // 간편결제 버튼을 통합결제창에서 제외(PC)
++        P_RESERVED: "noeasypay=Y"  // 간편결제 버튼을 통합결제창에서 제외(모바일)
++        acceptmethod: 'cardpoint'  // 카드포인트 사용시 설정(PC)
++        P_RESERVED : 'cp_yn=Y'     // 카드포인트 사용시 설정(모바일)
++    },
++    period : {
++       from : "20200101", //YYYYMMDD
++       to : "20201231"   //YYYYMMDD
++    }
++}, function(rsp) { // callback 로직
++	//* ...중략... *//
++});
+\ No newline at end of file
+Index: src/main/resources/templates/layout/base.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"ko\"\n      xmlns:layout=\"http://www.w3.org/1999/xhtml\" xmlns:th=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Title</title>\n  <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\n        integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n  <link rel=\"stylesheet\" type=\"text/css\" th:href=\"@{/css/style.css}\">\n  <link rel=\"stylesheet\" type=\"text/css\" th:href=\"@{/css/login_style.css}\">\n  <script src=\"/javascript/TrainerRegister.js\"></script>\n</head>\n<body>\n  <!-- navi -->\n  <th:block th:replace=\"~{fragment/navi :: naviFragment}\"></th:block>\n\n  <!-- content -->\n  <section>\n    <th:block layout:fragment=\"content\"></th:block>\n  </section>\n\n  <!-- footer -->\n  <th:block th:replace=\"~{fragment/footer :: footerFragment}\"></th:block>\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/layout/base.html b/src/main/resources/templates/layout/base.html
+--- a/src/main/resources/templates/layout/base.html	
++++ b/src/main/resources/templates/layout/base.html	
+@@ -13,6 +13,9 @@
+ <body>
+   <!-- navi -->
+   <th:block th:replace="~{fragment/navi :: naviFragment}"></th:block>
++  <!-- Bootstrap JS -->
++  <script th:src="@{/js/bootstrap.min.js}"></script>
++
+ 
+   <!-- content -->
+   <section>

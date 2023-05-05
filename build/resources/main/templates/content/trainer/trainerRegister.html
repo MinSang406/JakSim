@@ -1,0 +1,115 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout/base}">
+<div layout:fragment="content" id="trainer_container">
+<<<<<<< HEAD
+    <form th:action="@{/trainer/regist/action}" method="post" id="tRegister_container">
+=======
+    <form th:action="@{/login/action}" method="post" id="login_container">
+      <fieldset>
+          <legend>트레이너 소개</legend>
+        <ul>
+          <li>
+            <label for="uinsta">인스타 링크</label>
+            <input type="text" name="uinsta" id="uinsta" autofocus placeholder="인스타 주소">
+            <br/><br/>
+            <label for="uintroduce">자기소개</label><br>
+            <textarea id="uintroduce" name="uintroduce" rows="10" maxlength="200" required></textarea>
+          </li>
+        </ul>
+      </fieldset>
+      <hr/>
+      <fieldset>
+        <legend>전문 분야</legend>
+        <ul>
+          <li>
+            <label for="exp">전문 분야</label>            <!-- 클릭시 하단에 블록표시 -->
+            <select id="exp" name="exp">
+              <option value="bodyprofile">바디프로필</option>
+              <option value="powerlifting">파워리프팅</option>
+              <option value="diet">다이어트</option>
+              <option value="body">보디빌딩</option>
+              <option value="rehabilitation">재활운동</option>
+              <option value="correction">자세교정</option>
+              <option value="conditioning">컨디셔닝</option>
+            </select>
+          </li>
+        </ul>
+      </fieldset>
+      <hr/>
+      <fieldset>
+        <legend>자격증</legend>
+        <ul>
+          <li>
+            <label for="cert">자격증</label>
+            <input type="text" name="cert" id="cert" placeholder="추가해 주세요" required>
+            <button id="add-cert" type="button">추가</button>
+            <label for="photo_cert">사진 등록</label>
+            <input type="file" id="photo_cert" name="photo_cert" multiple accept="image/*" />
+          </li>
+        </ul>
+      </fieldset>
+      <hr/>
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
+      <fieldset>
+        <legend>수상/경력사항</legend>
+        <ul>
+          <li>
+            <label for="career">수상/경력사항</label>
+            <input type="text" name="career" id="career" placeholder="추가해 주세요" required>
+            <button id="addCareer" type="button">추가</button>
+          </li>
+        </ul>
+      </fieldset>
+      <hr/>
+      <fieldset>
+<<<<<<< HEAD
+=======
+        <legend>소속 헬스장</legend>
+        <ul>
+          <li>
+            <label for="gymmap">소속 헬스장</label>
+            <input type="text" name="gymmap" id="gymmap" placeholder="검색해 주세요" required>
+          </li>
+        </ul>
+      </fieldset>
+      <hr/>
+      <fieldset>
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
+        <legend>PT 정보</legend>
+        <ul>
+          <label>전문:&nbsp;</label>
+          <input type="radio" name="ptType" id="Pt_sol" checked>
+          <label for="Pt_sol">개인</label>
+          <input type="radio" name="ptType" id="Pt_dan" >
+          <label for="Pt_dan">단체</label> <br/>
+
+          <label for="ptCount">PT 횟수</label>
+          <input type="text" name="ptCount" id="ptCount" placeholder="맛보기 1회" required>
+          <label for="ptPay">가격</label>
+          <input type="text" name="ptPay" id="ptPay" placeholder="입력해주세요" required> <br/>
+
+          <label for="ptCount1">PT 횟수</label>
+          <input type="text" name="ptCount1" id="ptCount1" placeholder="10" required>
+          <label for="ptPay1">가격</label>
+          <input type="text" name="ptPay1" id="ptPay1" placeholder="입력해주세요" required> <br/>
+          <button id="addPT" type="button">추가</button>
+        </ul>
+      </fieldset>
+      <hr/>
+      <fieldset>
+        <legend>사진 등록</legend>
+          <label for="photo">사진등록:</label>
+          <input type="file" id="photo" name="photo" multiple accept="image/*" />
+          <div class="photo-preview"></div>
+      </fieldset>
+      <hr/>
+<<<<<<< HEAD
+        <input type="submit" class="btn btn-success" value="등록 완료">
+=======
+      <div id="buttons">
+        <input type="submit" value="프로필 등록">
+      </div>
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
+    </form>
+</div>
+</html>
