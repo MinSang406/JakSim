@@ -23,7 +23,11 @@
 <tr>
 <td>
 <div class="infoBox" id="tests">
+<<<<<<< HEAD
+<div class="counter">3</div>
+=======
 <div class="counter">1</div>
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
 <p>tests</p>
 </div>
 </td>
@@ -41,7 +45,11 @@
 </td>
 <td>
 <div class="infoBox" id="duration">
-<div class="counter">0.961s</div>
+<<<<<<< HEAD
+<div class="counter">0.563s</div>
+=======
+<div class="counter">1.410s</div>
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
 <p>duration</p>
 </div>
 </td>
@@ -79,9 +87,27 @@
 </tr>
 </thead>
 <tr>
+<<<<<<< HEAD
+<td class="success">contextLoads()</td>
+<td class="success">contextLoads()</td>
+<td class="success">0.002s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
+<td class="success">testConnection()</td>
+<td class="success">testConnection()</td>
+<td class="success">0.537s</td>
+<td class="success">passed</td>
+</tr>
+<tr>
 <td class="success">JDBC 성공했나?</td>
 <td class="success">testJDBCConnection()</td>
-<td class="success">0.961s</td>
+<td class="success">0.024s</td>
+=======
+<td class="success">JDBC 성공했나?</td>
+<td class="success">testJDBCConnection()</td>
+<td class="success">1.410s</td>
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
 <td class="success">passed</td>
 </tr>
 </table>
@@ -89,21 +115,39 @@
 <div id="tab1" class="tab">
 <h2>Standard output</h2>
 <span class="code">
-<pre>17:26:33.025 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
-17:26:33.031 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
-17:26:33.045 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.JakSim.TstApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
-17:26:33.051 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.JakSim.TstApplicationTests], using SpringBootContextLoader
-17:26:33.053 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.JakSim.TstApplicationTests]: class path resource [com/example/JakSim/TstApplicationTests-context.xml] does not exist
-17:26:33.053 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.JakSim.TstApplicationTests]: class path resource [com/example/JakSim/TstApplicationTestsContext.groovy] does not exist
-17:26:33.053 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.JakSim.TstApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
-17:26:33.054 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.JakSim.TstApplicationTests]: TstApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
-17:26:33.073 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.JakSim.TstApplicationTests]
-17:26:33.108 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [/Users/syum_in/Desktop/study/JakSim/build/classes/java/main/com/example/JakSim/TstApplication.class]
-17:26:33.110 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.JakSim.TstApplication for test class com.example.JakSim.TstApplicationTests
-17:26:33.153 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.JakSim.TstApplicationTests]: using defaults.
-17:26:33.154 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
-17:26:33.163 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@21680803, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@588ab592, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@c8b96ec, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@4cc61eb1, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@2d8f2f3a, org.springframework.test.context.support.DirtiesContextTestExecutionListener@2024293c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@7048f722, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@c074c0c, org.springframework.test.context.event.EventPublishingTestExecutionListener@58a55449, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@5949eba8, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@6e0ff644, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@58dea0a5, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@2a2bb0eb, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@3c291aad, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@2d0566ba]
-17:26:33.165 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@7bdf6bb7 testClass = TstApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1bc53649 testClass = TstApplicationTests, locations = '{}', classes = '{class com.example.JakSim.TstApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@3b7ff809, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@674658f7, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@58c34bb3, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@1698fc68, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@b78a709, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@4c2bb6e0], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+<<<<<<< HEAD
+<pre>01:06:59.577 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+01:06:59.583 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+01:06:59.602 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.JakSim.TstApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+01:06:59.609 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.JakSim.TstApplicationTests], using SpringBootContextLoader
+01:06:59.611 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.JakSim.TstApplicationTests]: class path resource [com/example/JakSim/TstApplicationTests-context.xml] does not exist
+01:06:59.612 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.JakSim.TstApplicationTests]: class path resource [com/example/JakSim/TstApplicationTestsContext.groovy] does not exist
+01:06:59.612 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.JakSim.TstApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+01:06:59.612 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.JakSim.TstApplicationTests]: TstApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+01:06:59.636 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.JakSim.TstApplicationTests]
+01:06:59.677 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\projects\인프런\hello-spring\JakSim\build\classes\java\main\com\example\JakSim\TstApplication.class]
+01:06:59.678 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.JakSim.TstApplication for test class com.example.JakSim.TstApplicationTests
+01:06:59.742 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.JakSim.TstApplicationTests]: using defaults.
+01:06:59.743 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+01:06:59.753 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@79f227a9, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@6ca320ab, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@50d68830, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@1e53135d, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@7674a051, org.springframework.test.context.support.DirtiesContextTestExecutionListener@3a7704c, org.springframework.test.context.transaction.TransactionalTestExecutionListener@6754ef00, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@619bd14c, org.springframework.test.context.event.EventPublishingTestExecutionListener@323e8306, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@a23a01d, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@4acf72b6, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@7561db12, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@3301500b, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@24b52d3e, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@15deb1dc]
+01:06:59.756 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@54a3ab8f testClass = TstApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@1968a49c testClass = TstApplicationTests, locations = '{}', classes = '{class com.example.JakSim.TstApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@129b4fe2, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@60dce7ea, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1ef3efa8, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@5c3b6c6e, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@14c01636, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@72ef8d15], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+=======
+<pre>20:40:30.854 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+20:40:30.874 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+20:40:30.919 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.example.JakSim.TstApplicationTests] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+20:40:30.937 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.example.JakSim.TstApplicationTests], using SpringBootContextLoader
+20:40:30.944 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.JakSim.TstApplicationTests]: class path resource [com/example/JakSim/TstApplicationTests-context.xml] does not exist
+20:40:30.944 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.example.JakSim.TstApplicationTests]: class path resource [com/example/JakSim/TstApplicationTestsContext.groovy] does not exist
+20:40:30.945 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.example.JakSim.TstApplicationTests]: no resource found for suffixes {-context.xml, Context.groovy}.
+20:40:30.946 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.example.JakSim.TstApplicationTests]: TstApplicationTests does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+20:40:31.014 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.example.JakSim.TstApplicationTests]
+20:40:31.092 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\Users\ujeon\IdeaProjects\JakSim\build\classes\java\main\com\example\JakSim\TstApplication.class]
+20:40:31.094 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.example.JakSim.TstApplication for test class com.example.JakSim.TstApplicationTests
+20:40:31.220 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.example.JakSim.TstApplicationTests]: using defaults.
+20:40:31.222 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+20:40:31.243 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@57a4d5ee, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@5af5def9, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@3a45c42a, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@36dce7ed, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@47a64f7d, org.springframework.test.context.support.DirtiesContextTestExecutionListener@33d05366, org.springframework.test.context.transaction.TransactionalTestExecutionListener@27a0a5a2, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@7692cd34, org.springframework.test.context.event.EventPublishingTestExecutionListener@33aa93c, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@32c0915e, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@106faf11, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@70f43b45, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@26d10f2e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@10ad20cb, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@7dd712e8]
+20:40:31.246 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@11963225 testClass = TstApplicationTests, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@3f3c966c testClass = TstApplicationTests, locations = '{}', classes = '{class com.example.JakSim.TstApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@56bca85b, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@0, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@47db5fa5, org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@1080b026, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@dcfda20, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@5bfa8cc5, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@42e25b0b], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -&gt; true]], class annotated with @DirtiesContext [false] with mode [null].
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
 
   .   ____          _            __ _ _
  /\\ / ___'_ __ _ _(_)_ __  __ _ \ \ \ \
@@ -111,12 +155,21 @@
  \\/  ___)| |_)| | | | | || (_| |  ) ) ) )
   '  |____| .__|_| |_|_| |_\__, | / / / /
  =========|_|==============|___/=/_/_/_/
-?[32m :: Spring Boot :: ?[39m             ?[2m (v2.7.11)?[0;39m
+ :: Spring Boot ::               (v2.7.11)
 
-?[2m2023-05-01 17:26:33.334?[0;39m ?[32m INFO?[0;39m ?[35m15148?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mcom.example.JakSim.TstApplicationTests  ?[0;39m ?[2m:?[0;39m Starting TstApplicationTests using Java 11.0.17 on jeongsumin-ui-MacBookAir.local with PID 15148 (started by syum_in in /Users/syum_in/Desktop/study/JakSim)
-?[2m2023-05-01 17:26:33.334?[0;39m ?[32m INFO?[0;39m ?[35m15148?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mcom.example.JakSim.TstApplicationTests  ?[0;39m ?[2m:?[0;39m No active profile set, falling back to 1 default profile: &quot;default&quot;
-?[2m2023-05-01 17:26:34.383?[0;39m ?[32m INFO?[0;39m ?[35m15148?[0;39m ?[2m---?[0;39m ?[2m[    Test worker]?[0;39m ?[36mcom.example.JakSim.TstApplicationTests  ?[0;39m ?[2m:?[0;39m Started TstApplicationTests in 1.193 seconds (JVM running for 1.786)
-UserInfo{user_id='hye8997', user_name='정혜화', user_gender=1, user_tel='01012341234', user_pw='123123', user_question=0, user_answer='전라남도 해남군', user_type=1, user_birth='1989-03-30 00:00:00', user_c_dt='2023-05-01 08:26:17'}
+<<<<<<< HEAD
+2023-05-01 01:06:59.961  INFO 12628 --- [    Test worker] com.example.JakSim.TstApplicationTests   : Starting TstApplicationTests using Java 11.0.18 on 민상 with PID 12628 (started by i9412 in C:\projects\인프런\hello-spring\JakSim)
+2023-05-01 01:06:59.962  INFO 12628 --- [    Test worker] com.example.JakSim.TstApplicationTests   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-05-01 01:07:01.264  INFO 12628 --- [    Test worker] com.example.JakSim.TstApplicationTests   : Started TstApplicationTests in 1.484 seconds (JVM running for 2.284)
+hye8997
+정혜화
+UserInfo{user_id='hye8997', user_name='정혜화', user_gender=1, user_tel='01012341234', user_pw='123123', user_question=0, user_answer='전라남도 해남군', user_type=1, user_birth='1989-03-30 00:00:00', user_c_dt='2023-05-01 01:06:15'}
+=======
+2023-05-01 20:40:31.644  INFO 42700 --- [    Test worker] com.example.JakSim.TstApplicationTests   : Starting TstApplicationTests using Java 11.0.18 on BOOK-S3TILQKI84 with PID 42700 (started by ujeon in C:\Users\ujeon\IdeaProjects\JakSim)
+2023-05-01 20:40:31.645  INFO 42700 --- [    Test worker] com.example.JakSim.TstApplicationTests   : No active profile set, falling back to 1 default profile: &quot;default&quot;
+2023-05-01 20:40:34.145  INFO 42700 --- [    Test worker] com.example.JakSim.TstApplicationTests   : Started TstApplicationTests in 2.855 seconds (JVM running for 5.042)
+UserInfo{user_id='hye8997', user_name='정혜화', user_gender=1, user_tel='01012341234', user_pw='123123', user_question=0, user_answer='전라남도 해남군', user_type=1, user_birth='1989-03-30 00:00:00', user_c_dt='2023-05-01 01:04:52'}
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
 </pre>
 </span>
 </div>
@@ -128,7 +181,11 @@ UserInfo{user_id='hye8997', user_name='정혜화', user_gender=1, user_tel='0101
 <input id="line-wrapping-toggle" type="checkbox" autocomplete="off"/>
 </label>
 </div>Generated by 
-<a href="http://www.gradle.org">Gradle 7.6.1</a> at 2023. 5. 1. 오후 5:26:35</p>
+<<<<<<< HEAD
+<a href="http://www.gradle.org">Gradle 7.6.1</a> at 2023. 5. 1. 오전 1:07:01</p>
+=======
+<a href="http://www.gradle.org">Gradle 7.6.1</a> at 2023. 5. 1. 오후 8:40:35</p>
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
 </div>
 </div>
 </body>

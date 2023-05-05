@@ -41,7 +41,7 @@ class TstApplicationTests {
 	@DisplayName("JDBC 성공했나?")
 	public void testJDBCConnection() throws SQLException{
 		LoginDao loginDao = new LoginDao(ds);
-		loginDao.findById();
+		loginDao.findById("test");
 	}
 
 }
