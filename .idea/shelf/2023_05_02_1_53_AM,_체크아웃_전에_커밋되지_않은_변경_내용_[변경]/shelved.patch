@@ -1,0 +1,15 @@
+Index: src/main/java/com/example/JakSim/login/controller/RegisterController.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.JakSim.login.controller;\n\nimport org.springframework.web.bind.annotation.GetMapping;\n\npublic class RegisterController {\n    @GetMapping(\"/register\")\n    public String register(){\n\n    }\n}\n
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/login/controller/RegisterController.java b/src/main/java/com/example/JakSim/login/controller/RegisterController.java
+--- a/src/main/java/com/example/JakSim/login/controller/RegisterController.java	
++++ b/src/main/java/com/example/JakSim/login/controller/RegisterController.java	
+@@ -6,5 +6,6 @@
+     @GetMapping("/register")
+     public String register(){
+ 
++        return "";
+     }
+ }

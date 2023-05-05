@@ -1,0 +1,123 @@
+Index: src/main/resources/templates/content/account/login.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:layout=\"http://www.w3.org/1999/xhtml\" xmlns:th=\"http://www.w3.org/1999/xhtml\" layout:decorate=\"~{layout/base}\">\n  <div layout:fragment=\"content\" id=\"login_layout\">\n      <h1>\n        작심득근<br>Sign In\n      </h1>\n      <form th:action=\"@{/login/action}\" method=\"post\" id=\"login_container\">\n        <div class=\"mb-3\">\n          <span id=\"inputGroup-sizing-default\">ID</span>\n          <input type=\"text\" name=\"user_id\" id=\"useR_id\" class=\"form-control\">\n        </div>\n        <div class=\"mb-3\">\n          <label for=\"user_pw\">비밀번호</label>\n          <input type=\"password\" name=\"user_pw\" id=\"user_pw\" class=\"form-control\">\n        </div>\n\n        <button type=\"submit\" class=\"btn btn-primary\">로그인</button>\n        <a th:href=\"@{/user/signup}\" class=\"btn btn-success\" type=\"button\">회원가입</a>\n        <a href=\"#\" id=\"find_id\">아이디 / 비밀번호 찾기</a>\n\n      </form>\n  </div>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/content/account/login.html b/src/main/resources/templates/content/account/login.html
+--- a/src/main/resources/templates/content/account/login.html	
++++ b/src/main/resources/templates/content/account/login.html	
+@@ -1,22 +1,27 @@
+-<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
+-  <div layout:fragment="content" id="login_layout">
+-      <h1>
++<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
++      layout:decorate="~{layout/base}">
++
++
++<body>
++<div layout:fragment="content" id="login_layout">
++    <h1>
+         작심득근<br>Sign In
+-      </h1>
+-      <form th:action="@{/login/action}" method="post" id="login_container">
++    </h1>
++    <form th:action="@{/login/action}" method="post" id="login_container">
+         <div class="mb-3">
+-          <span id="inputGroup-sizing-default">ID</span>
+-          <input type="text" name="user_id" id="useR_id" class="form-control">
++            <span id="inputGroup-sizing-default">ID</span>
++            <input type="text" name="user_id" id="useR_id" class="form-control">
+         </div>
+         <div class="mb-3">
+-          <label for="user_pw">비밀번호</label>
+-          <input type="password" name="user_pw" id="user_pw" class="form-control">
++            <label for="user_pw">비밀번호</label>
++            <input type="password" name="user_pw" id="user_pw" class="form-control">
+         </div>
+ 
+         <button type="submit" class="btn btn-primary">로그인</button>
+         <a th:href="@{/user/signup}" class="btn btn-success" type="button">회원가입</a>
+         <a href="#" id="find_id">아이디 / 비밀번호 찾기</a>
+ 
+-      </form>
+-  </div>
++    </form>
++</div>
++</body>
+ </html>
+\ No newline at end of file
+Index: src/main/resources/templates/content/pay/Pay.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/content/pay/Pay.html b/src/main/resources/templates/content/pay/pay.html
+rename from src/main/resources/templates/content/pay/Pay.html
+rename to src/main/resources/templates/content/pay/pay.html
+--- a/src/main/resources/templates/content/pay/Pay.html	
++++ b/src/main/resources/templates/content/pay/pay.html	
+@@ -1,9 +1,58 @@
++<!DOCTYPE html>
+ <html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
++
++<head>
++    <!-- jQuery -->
++    <script type="text/javascript" src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
++    <!-- iamport.payment.js -->
++    <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.2.0.js"></script>
++    <script>
++        var IMP = window.IMP;
++        IMP.init("imp67011510");
++
++        var today = new Date();
++        var hours = today.getHours(); // 시
++        var minutes = today.getMinutes();  // 분
++        var seconds = today.getSeconds();  // 초
++        var milliseconds = today.getMilliseconds();
++        var makeMerchantUid = hours +  minutes + seconds + milliseconds;
++
++
++        function requestPay() {
++            IMP.request_pay({
++                pg : 'html5_inicis',
++                pay_method : 'card',
++                merchant_uid: "IMP"+makeMerchantUid,
++                name : '당근 10kg',
++                amount : 1004,
++                buyer_email : 'Iamport@chai.finance',
++                buyer_name : '아임포트 기술지원팀',
++                buyer_tel : '010-1234-5678',
++                buyer_addr : '서울특별시 강남구 삼성동',
++                buyer_postcode : '123-456'
++            }, function (rsp) { // callback
++                if (rsp.success) {
++                    console.log(rsp);
++                } else {
++                    console.log(rsp);
++                }
++            });
++        }
++
++
++
++    </script>
++    <meta charset="UTF-8">
++    <title>Sample Payment</title>
++</head>
++
++<body>
+ <div layout:fragment="content">
+ 
+-  <h1>여기가 페이 페이지임</h1>
+-  <hr>
+-  <p>페이 페이지 ㅋㅋㅋ 엌ㅋㅋ</p>
++    <h1>여기가 페이 페이지임</h1>
++    <hr>
++    <p>페이 페이지 ㅋㅋㅋ 엌ㅋㅋ</p>
+ 
+ </div>
++</body>
+ </html>
+\ No newline at end of file
