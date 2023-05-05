@@ -1,17 +1,17 @@
 package com.example.JakSim.login.model;
 
-import lombok.NoArgsConstructor;
-import lombok.RequiredArgsConstructor;
 import org.springframework.jdbc.core.PreparedStatementCreator;
-import org.springframework.security.crypto.password.PasswordEncoder;
+// import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.SQLException;
+
 public class UserRegisterPreparedStatementCreator implements PreparedStatementCreator {
     private UserInfo userInfo;
     private String[] keyColumns;
     private String sql;
+    // private PasswordEncoder passwordEncoder;
 
 
     public UserRegisterPreparedStatementCreator(UserInfo userInfo, String[] keyColumns, String sql){
@@ -36,14 +36,12 @@ public class UserRegisterPreparedStatementCreator implements PreparedStatementCr
         pstmt.setString(2, userInfo.getUser_name());
         pstmt.setInt(3, userInfo.getUser_gender());
         pstmt.setString(4, userInfo.getUser_tel());
-        pstmt.setString(5, userInfo.getUser_pw());
+        // pstmt.setString(5, passwordEncoder.encode(userInfo.getUser_pw()));
         pstmt.setInt(6, userInfo.getUser_question());
         pstmt.setString(7, userInfo.getUser_answer());
         pstmt.setInt(8, 1);
         pstmt.setString(9, userInfo.getUser_birth());
 
         return pstmt;
-
-
     }
 }
