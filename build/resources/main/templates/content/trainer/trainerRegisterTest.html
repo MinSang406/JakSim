@@ -1,0 +1,53 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout/base}">
+<div layout:fragment="content" id="trainer_container">
+    <form th:action="@{/trainer/regist/action}" method="post" id="tRegister_container">
+        <fieldset>
+            <legend>트레이너 소개</legend>
+            <ul>
+                <li>
+                    <label for="uinsta">인스타 링크</label>
+                    <input type="text" name="uinsta" id="uinsta" autofocus placeholder="인스타 주소">
+                    <br/><br/>
+                    <label for="uintroduce">자기소개</label><br>
+                    <textarea id="uintroduce" name="uintroduce" rows="10" maxlength="200" required></textarea><br/>
+                    <label for="gymmap">소속 헬스장</label>
+                    <input type="text" name="gymmap" id="gymmap" placeholder="검색해 주세요" required>
+                </li>
+            </ul>
+        </fieldset>
+        <hr/>
+        <fieldset>
+            <legend>전문 분야</legend>
+            <ul>
+                <li>
+                    <label for="exp">전문 분야</label>            <!-- 클릭시 하단에 블록표시 -->
+                    <select id="exp" name="exp">
+                        <option value="bodyprofile">바디프로필</option>
+                        <option value="powerlifting">파워리프팅</option>
+                        <option value="diet">다이어트</option>
+                        <option value="body">보디빌딩</option>
+                        <option value="rehabilitation">재활운동</option>
+                        <option value="correction">자세교정</option>
+                        <option value="conditioning">컨디셔닝</option>
+                    </select>
+                </li>
+            </ul>
+        </fieldset>
+        <hr/>
+        <fieldset>
+            <legend>자격증</legend>
+            <ul>
+                <li>
+                    <label for="cert">자격증</label>
+                    <input type="text" name="cert" id="cert" placeholder="추가해 주세요" required>
+                    <button id="add-cert" type="button">추가</button>
+                    <label for="photo_cert">사진 등록</label>
+                    <input type="file" id="photo_cert" name="photo_cert" multiple accept="image/*" />
+                </li>
+            </ul>
+        </fieldset>
+        <input type="submit" class="btn btn-success" value="다음 단계로">
+    </form>
+</div>
+</html>

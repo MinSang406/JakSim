@@ -9,7 +9,7 @@ public class PayController {
     @PreAuthorize("isAuthenticated()")
     @GetMapping("/pay")
     public String BeforePay(){
-        return "content/pay/Pay";
+        return "content/pay/pay";
     }
-    //안농
+
 }

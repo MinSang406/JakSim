@@ -1,5 +1,44 @@
 var isDup = true;
 window.addEventListener('load', function(){
+<<<<<<< HEAD
+    document.getElementById("dup").onclick=function doAction(){
+        var xhr = new XMLHttpRequest();
+        var url = "http://localhost:8080/register/check/"; //페이지 자체는 잘 먹힌단다
+        url += document.getElementById("input_user_id").value
+        //1. 아이디 입력 후 데이터베이스 확인
+
+        //2. 체크
+        //3. 체크 값에 맞는 결과물 출력
+
+        console.log(url);
+
+        xhr.open("POST", url);
+        xhr.onreadystatechange = function(){
+            if(xhr.status===200 || xhr.status === 201){
+                console.log(xhr.responseText);
+                if(xhr.response == ""){
+                    isDup = false;
+                    document.getElementById("user_id_check").innerHTML="사용가능한 아이디입니다.";
+                }
+                else{
+                    isDup = true;
+                    document.getElementById("user_id_check").innerHTML="사용할 수 없는 아이디입니다.";
+                }
+            }
+        }
+        xhr.send();
+        console.log('isDup: ' + isDup);
+    }
+
+    document.getElementById("user_id").value = document.getElementById("input_user_id").value;
+    console.log(document.getElementById('user_id').value);
+});
+
+var doSomething = function(){
+    alert('test');
+}
+//
+=======
     console.log(window.location.href);
     // 특정 페이지에서만 실행하는 방법. 그 페이지 주소가 맞다면 실행시키면 된다아
     // 굳이 이러는 이유는 console 열어봤더니 너무 지저분해져서
@@ -143,3 +182,4 @@ function Question(q){
             return '가장 존경하는 인물은?';
     }
 }
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc

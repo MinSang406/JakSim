@@ -1,7 +1,11 @@
 #account_head{
+<<<<<<< HEAD
+    margin: 1vh;
+=======
     margin-top: 1vh;
     margin-left: 1vh;
     margin-bottom: 5vh;
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
 }
 .input_container{
     position: relative;
@@ -26,9 +30,15 @@
 .input_container > #user_id_check{
     height:1px;
 }
+<<<<<<< HEAD
+#user_id_container{
+    margin-left: 5em;
+    margin-top: 5vh;
+=======
 #user_id_container, #user_tel_container{
     margin-left: 5em;
     /*margin-top: 5vh;*/
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
 }
 #account_container{
     margin-left: 5em;
@@ -39,6 +49,9 @@
 #fin_button{
     margin: 5vh
 }
+<<<<<<< HEAD
+=======
 .register_select {
     margin-left: 8em;
 }
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc

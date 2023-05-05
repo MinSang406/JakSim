@@ -4,6 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
     <list default="true" id="5f33acec-38d9-4fdf-93a9-d1751fc276e7" name="Changes" comment="">
       <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationDao.class" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ReservationController.class.uniqueId0" afterDir="false" />
@@ -55,11 +56,35 @@
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/account/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content/account/register.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/timetable/timetable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content/timetable/timetable.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/base.html" afterDir="false" />
+=======
+    <list default="true" id="9495474b-28c1-4396-b5f7-304dcd124ee3" name="변경" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> fd139f6cc270cbe890af08d15c2161c001393b05
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ExternalProjectsData">
+    <projectState path="$PROJECT_DIR$">
+      <ProjectState />
+    </projectState>
+  </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <task path="$PROJECT_DIR$">
+          <activation />
+        </task>
+        <projects_view>
+          <tree_state>
+            <expand />
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -83,14 +108,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "node.js.selected.package.tslint": "(autodetect)"
+=======
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+>>>>>>> fd139f6cc270cbe890af08d15c2161c001393b05
   }
-}]]></component>
+}</component>
   <component name="RunManager">
     <configuration name="TstApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.example.JakSim.TstApplication" />

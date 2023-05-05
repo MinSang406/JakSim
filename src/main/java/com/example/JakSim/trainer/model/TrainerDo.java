@@ -8,7 +8,8 @@ public class TrainerDo {
     private String user_id;
     private String uinsta;
     private String uintroduce;
-    private String exp;
+    private String exp1;
+    private String exp2;
     private String cert;
     private String photo_cert;
     private String career;
@@ -22,7 +23,8 @@ public class TrainerDo {
         return "TrainerInfo{" +
                 "uinsta='" + uinsta + '\'' +
                 ", uintroduce='" + uintroduce + '\'' +
-                ", exp='" + exp + '\'' +
+                ", exp1='" + exp1 + '\'' +
+                ", exp2='" + exp2 + '\'' +
                 ", cert='" + cert + '\'' +
                 ", photo_cert='" + photo_cert + '\'' +
                 ", career='" + career +  '\'' +
