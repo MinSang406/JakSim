@@ -11,5 +11,5 @@ public class PayController {
     public String BeforePay(){
         return "content/pay/pay";
     }
-    //안농
+
 }
