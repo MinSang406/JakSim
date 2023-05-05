@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <title>Document</title>
+    <style>
+        #account_head{
+            margin: 1vh;
+        }
+        .input_container{
+            position: relative; 
+            margin: 1vh 1vh 0vh 5vh;
+        }
+        .input_container > .input_span{
+            margin-top: 4px;
+            left:1vh; 
+            position:absolute;
+            font-weight: bold;
+        }
+        .input_container > .input_input{
+            padding-left: 15vh; 
+            padding-top: 5px;
+            padding-bottom: 5px;
+            padding-right: 5px;
+
+            border: 1px solid gray;
+            border-radius: 5px;
+            width: 50%;
+        }
+        #account_container{
+            margin: 5vh;
+        }
+        #duplicate{
+            margin-left: 1em;
+        }
+        #fin_button{
+            margin: 5vh
+        }
+    </style>
+</head>
+<body>
+    <h1 id="account_head">회원가입</h1>
+
+    <form id="account_container">
+        <div class="input_container">
+            <span class="input_span">아이디</span>
+            <input class="input_input" name="user_id">
+            <button class="btn btn-outline-secondary" id="duplicate">중복확인</button>
+        </div>
+        <div class="input_container">
+            <span class="input_span">이름</span>
+            <input class="input_input" name="user_name">
+        </div>
+        <div class="input_container">
+            <span class="input_span">성별</span>
+            <input class="input_input" name="user_gender">
+        </div>
+        <div class="input_container">
+            <span class="input_span">전화번호</span>
+            <input class="input_input" name="user_tel" placeholder="- 없이 작성해주세요. 예)01012345678">
+        </div>
+        <div class="input_container">
+            <span class="input_span">비밀번호</span>
+            <input class="input_input" name="user_pw" type="password">
+        </div>
+        <div class="input_container">
+            <span class="input_span">비밀번호 확인</span>
+            <input class="input_input" name="user_confirm" type="password">
+        </div>
+        <div class="input_container">
+            <span class="input_span">계정 복구 질문</span>
+            <input class="input_input" name="user_question">
+        </div>
+        <div class="input_container">
+            <span class="input_span">계정 복구 정답</span>
+            <input class="input_input" name="user_answer">
+        </div>
+        <div class="input_container">
+            <span class="input_span">생년월일</span>
+            <input class="input_input" name="user_c_dt">
+        </div>
+
+        <input type="button" class="btn btn-success" value="회원가입 완료" id="fin_button">
+    </form>
+
+      
+</body>
+</html>
