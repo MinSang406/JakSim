@@ -1,6 +1,9 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
       layout:decorate="~{layout/base}">
 <div layout:fragment="content" id="trainer_container">
+<<<<<<< HEAD
+    <form th:action="@{/trainer/regist/action}" method="post" id="tRegister_container">
+=======
     <form th:action="@{/login/action}" method="post" id="login_container">
       <fieldset>
           <legend>트레이너 소개</legend>
@@ -46,6 +49,7 @@
         </ul>
       </fieldset>
       <hr/>
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
       <fieldset>
         <legend>수상/경력사항</legend>
         <ul>
@@ -58,6 +62,8 @@
       </fieldset>
       <hr/>
       <fieldset>
+<<<<<<< HEAD
+=======
         <legend>소속 헬스장</legend>
         <ul>
           <li>
@@ -68,6 +74,7 @@
       </fieldset>
       <hr/>
       <fieldset>
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
         <legend>PT 정보</legend>
         <ul>
           <label>전문:&nbsp;</label>
@@ -96,9 +103,13 @@
           <div class="photo-preview"></div>
       </fieldset>
       <hr/>
+<<<<<<< HEAD
+        <input type="submit" class="btn btn-success" value="등록 완료">
+=======
       <div id="buttons">
         <input type="submit" value="프로필 등록">
       </div>
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
     </form>
 </div>
 </html>
