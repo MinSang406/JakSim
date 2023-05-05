@@ -1,6 +1,9 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
 
 <div layout:fragment="content" id="timetable_layout">
+<div>
+    <span th:value="${reservation}"></span>
+</div>
     <table class="Calendar">
         <thead>
         <tr>
@@ -21,7 +24,6 @@
             <td>토</td>
         </tr>
         </thead>
-
         <tbody>
         </tbody>
     </table>
