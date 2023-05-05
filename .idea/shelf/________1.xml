@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <changelist name="리베이스_전에_커밋되지_않은_변경_내용_[변경]1" date="1682872008393" recycled="true" deleted="true">
   <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/리베이스_전에_커밋되지_않은_변경_내용_[변경]1/shelved.patch" />
   <option name="DESCRIPTION" value="리베이스 전에 커밋되지 않은 변경 내용 [변경]" />
@@ -20,5 +21,39 @@
     <option name="BEFORE_PATH" value="bin/main/com/example/JakSim/TstApplication.class" />
     <option name="AFTER_PATH" value="bin/main/com/example/JakSim/TstApplication.class" />
     <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/리베이스_전에_커밋되지_않은_변경_내용_[변경]1/TstApplication.class" />
+=======
+<changelist name="리베이스_전에_커밋되지_않은_변경_내용_[변경]1" date="1682775847662" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/리베이스_전에_커밋되지_않은_변경_내용_[변경]1/shelved.patch" />
+  <option name="DESCRIPTION" value="리베이스 전에 커밋되지 않은 변경 내용 [변경]" />
+  <binary>
+    <option name="BEFORE_PATH" value="src/main/resources/static/images/trainer3.png" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/main/resources/static/abster-webfont.woff" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/main/resources/static/images/trainer1.png" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/main/resources/static/images/trainer2.png" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/main/resources/static/images/Group40267.png" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="src/main/resources/static/abster-webfont.woff2" />
+    <option name="AFTER_PATH" />
+    <option name="SHELVED_PATH" />
+>>>>>>> Stashed changes
   </binary>
 </changelist>

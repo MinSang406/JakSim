@@ -1,3 +1,4 @@
+<<<<<<< Updated upstream
 <changelist name="리베이스_전에_커밋되지_않은_변경_내용_[변경]" date="1682871856909" recycled="true" deleted="true">
   <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/리베이스_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" />
   <option name="DESCRIPTION" value="리베이스 전에 커밋되지 않은 변경 내용 [변경]" />
@@ -21,4 +22,9 @@
     <option name="AFTER_PATH" value="bin/main/com/example/JakSim/TstApplication.class" />
     <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/shelf/리베이스_전에_커밋되지_않은_변경_내용_[변경]/TstApplication.class" />
   </binary>
+=======
+<changelist name="리베이스_전에_커밋되지_않은_변경_내용_[변경]" date="1682657158423" recycled="true" deleted="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/shelf/리베이스_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" />
+  <option name="DESCRIPTION" value="리베이스 전에 커밋되지 않은 변경 내용 [변경]" />
+>>>>>>> Stashed changes
 </changelist>

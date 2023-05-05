@@ -4,24 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ea58683-2f0e-4717-a35e-b13f10a85187" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/md5-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/md5-checksums.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/sha1-checksums.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/sha1-checksums.bin" afterDir="false" />
+<<<<<<< Updated upstream
+    <list default="true" id="1945d43a-4a9b-4462-b1ef-9ecf288dbf6f" name="변경" comment="css, js 추가 수정">
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/Timetable/controller/TimetableController.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/Timetable/dto/TimetableRequest.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/Timetable/model/TimetableDao.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/Timetable/model/TimetableRowMapper.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/Timetable/model/TimetableService.java" beforeDir="false" />
     </list>
+=======
+    <list default="true" id="1945d43a-4a9b-4462-b1ef-9ecf288dbf6f" name="변경" comment="css, js 추가 수정" />
+>>>>>>> Stashed changes
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+<<<<<<< Updated upstream
   <component name="CompilerWorkspaceConfiguration">
     <option name="MAKE_PROJECT_ON_SAVE" value="true" />
+=======
+  <component name="ExportToHTMLSettings">
+    <option name="OUTPUT_DIRECTORY" value="$PROJECT_DIR$/exportToHTML" />
+>>>>>>> Stashed changes
   </component>
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
@@ -39,7 +41,22 @@
             <expand>
               <path>
                 <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+<<<<<<< Updated upstream
                 <item name="Iamport_example" type="f1a62948:ProjectNode" />
+=======
+                <item name="JakSim" type="f1a62948:ProjectNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JakSim" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+              </path>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="JakSim" type="f1a62948:ProjectNode" />
+                <item name="Tasks" type="e4a08cd1:TasksNode" />
+                <item name="build" type="c8890929:TasksNode$1" />
+>>>>>>> Stashed changes
               </path>
             </expand>
             <select />
@@ -52,7 +69,10 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+<<<<<<< Updated upstream
         <option value="AnnotationType" />
+=======
+>>>>>>> Stashed changes
         <option value="Class" />
       </list>
     </option>
@@ -68,7 +88,11 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+<<<<<<< Updated upstream
   <component name="ProjectId" id="2Owwog1KyYyKNfyIDZQL2ifD53y" />
+=======
+  <component name="ProjectId" id="2OwvuMKjEoa7hKc6bZqQipab42f" />
+>>>>>>> Stashed changes
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
@@ -76,27 +100,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "/Users/syum_in/Desktop/study/JakSim/bin/main/static/images",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "project.structure.last.edited": "프로젝트",
-    "project.structure.proportion": "0.17",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+<<<<<<< Updated upstream
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/syum_in/Desktop/study/JakSim/bin/main/static/images&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;프로젝트&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.2&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   },
-  "keyToStringList": {
-    "com.intellij.ide.scratch.ScratchImplUtil$2/새 스크래치 파일": [
-      "CSS"
+  &quot;keyToStringList&quot;: {
+    &quot;com.intellij.ide.scratch.ScratchImplUtil$2/새 스크래치 파일&quot;: [
+      &quot;CSS&quot;
     ]
+=======
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/janghyolim/code/JakSim&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;라이브러리&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.17&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.25&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
+>>>>>>> Stashed changes
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CreateClassDialog.RecentsKey">
+<<<<<<< Updated upstream
       <recent name="com.example.JakSim.pay" />
     </key>
     <key name="CopyFile.RECENT_KEYS">
@@ -112,12 +147,34 @@
       <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.TstApplication">
+  <component name="RunManager" selected="Gradle.JakSim [bootWar]">
     <configuration name="TstApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="ALTERNATIVE_JRE_PATH" value="11" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.example.JakSim.TstApplication" />
       <module name="Iamport_example.main" />
+=======
+      <recent name="com.example.JakSim.login.model" />
+      <recent name="com.example.JakSim.login" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
+      <recent name="$PROJECT_DIR$/lib" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/main/resources/static/css" />
+      <recent name="$PROJECT_DIR$/src/main/resources/static" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/content" />
+      <recent name="$PROJECT_DIR$/src/main/resources/templates/content/fragment" />
+    </key>
+  </component>
+  <component name="RunManager" selected="애플리케이션.TstApplication">
+    <configuration name="TstApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="com.example.JakSim.TstApplication" />
+      <module name="JakSim.main" />
+>>>>>>> Stashed changes
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.JakSim.*" />
@@ -149,7 +206,11 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
+<<<<<<< Updated upstream
     <configuration name="TstApplicationTests" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+=======
+    <configuration name="TstApplicationTests.EnvTest" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+>>>>>>> Stashed changes
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -162,7 +223,34 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
+<<<<<<< Updated upstream
             <option value="&quot;com.example.JakSim.TstApplicationTests&quot;" />
+=======
+            <option value="&quot;com.example.JakSim.TstApplicationTests.EnvTest&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="TstApplicationTests.testConnection" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;com.example.JakSim.TstApplicationTests.testConnection&quot;" />
+>>>>>>> Stashed changes
           </list>
         </option>
         <option name="vmOptions" />
@@ -195,17 +283,16 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="TstApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
-      <module name="JakSim.main" />
-      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.JakSim.TstApplication" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Gradle.TstApplicationTests.testJDBCConnection" />
+<<<<<<< Updated upstream
         <item itemvalue="Gradle.TstApplicationTests" />
+=======
+        <item itemvalue="애플리케이션.TstApplication" />
+        <item itemvalue="Gradle.TstApplicationTests.testConnection" />
+        <item itemvalue="Gradle.TstApplicationTests.EnvTest" />
+>>>>>>> Stashed changes
         <item itemvalue="Gradle.JakSim [bootWar]" />
       </list>
     </recent_temporary>
@@ -213,6 +300,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="디폴트 작업">
+<<<<<<< Updated upstream
       <changelist id="e35100c0-956d-43a3-9e11-48d136abcc7c" name="변경" comment="" />
       <created>1682485128420</created>
       <option name="number" value="Default" />
@@ -243,6 +331,160 @@
     <option name="localTasksCounter" value="4" />
     <servers />
   </component>
+=======
+      <changelist id="1945d43a-4a9b-4462-b1ef-9ecf288dbf6f" name="변경" comment="" />
+      <created>1682484680986</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1682484680986</updated>
+    </task>
+    <task id="LOCAL-00001" summary="Springboot 2.7.11">
+      <created>1682485468643</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1682485468643</updated>
+    </task>
+    <task id="LOCAL-00002" summary="주석 테스트함 ㅇㅇ">
+      <created>1682486997467</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1682486997467</updated>
+    </task>
+    <task id="LOCAL-00003" summary="연결 테스트">
+      <created>1682487599090</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1682487599090</updated>
+    </task>
+    <task id="LOCAL-00004" summary="연결 테스트2">
+      <created>1682487916795</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1682487916795</updated>
+    </task>
+    <task id="LOCAL-00005" summary="연결 테스트3">
+      <created>1682488222602</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1682488222602</updated>
+    </task>
+    <task id="LOCAL-00006" summary="연결 테스트4">
+      <created>1682488430989</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1682488430989</updated>
+    </task>
+    <task id="LOCAL-00007" summary="연결 테스트6">
+      <created>1682489000183</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1682489000183</updated>
+    </task>
+    <task id="LOCAL-00008" summary="main 확인">
+      <created>1682657242032</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1682657242032</updated>
+    </task>
+    <task id="LOCAL-00009" summary="main 확인">
+      <created>1682659363380</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1682659363380</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Commit Test">
+      <created>1682736277123</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1682736277124</updated>
+    </task>
+    <task id="LOCAL-00011" summary="Test JDBC">
+      <created>1682761077635</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1682761077635</updated>
+    </task>
+    <task id="LOCAL-00012" summary="JDBC Test Success">
+      <created>1682776988007</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1682776988007</updated>
+    </task>
+    <task id="LOCAL-00013" summary="gitignore test">
+      <created>1682777517288</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1682777517288</updated>
+    </task>
+    <task id="LOCAL-00014" summary="gitignore test2">
+      <created>1682777658012</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1682777658012</updated>
+    </task>
+    <task id="LOCAL-00015" summary="로그인 일부 해결">
+      <created>1682864247528</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1682864247529</updated>
+    </task>
+    <task id="LOCAL-00016" summary="JDBC MemberPreparedStatementCreator 완료">
+      <created>1682885019885</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1682885019885</updated>
+    </task>
+    <task id="LOCAL-00017" summary="date형 저장 완료">
+      <created>1682922190808</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1682922190808</updated>
+    </task>
+    <task id="LOCAL-00018" summary="로그인 확인 및 아이디중복 확인 완료">
+      <created>1683010383583</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1683010383583</updated>
+    </task>
+    <task id="LOCAL-00019" summary="로그인 확인 및 아이디중복 확인 완료">
+      <created>1683048683741</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1683048683741</updated>
+    </task>
+    <task id="LOCAL-00020" summary="css, js 추가 수정">
+      <created>1683269605633</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1683269605633</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
+    <servers />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="application.properties" />
+  </component>
+>>>>>>> Stashed changes
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
       <map>
@@ -255,11 +497,44 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+<<<<<<< Updated upstream
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="첫 커밋 성공하게 해주세오 ,, !" />
     <MESSAGE value="성공기원" />
     <MESSAGE value="제발 되라" />
     <option name="LAST_COMMIT_MESSAGE" value="제발 되라" />
+=======
+    <MESSAGE value="Springboot 2.7.11" />
+    <MESSAGE value="주석 테스트함 ㅇㅇ" />
+    <MESSAGE value="연결 테스트" />
+    <MESSAGE value="연결 테스트2" />
+    <MESSAGE value="연결 테스트3" />
+    <MESSAGE value="연결 테스트4" />
+    <MESSAGE value="연결 테스트6" />
+    <MESSAGE value="main 확인" />
+    <MESSAGE value="Commit Test" />
+    <MESSAGE value="Test JDBC" />
+    <MESSAGE value="JDBC Test Success" />
+    <MESSAGE value="gitignore test" />
+    <MESSAGE value="gitignore test2" />
+    <MESSAGE value="로그인 일부 해결" />
+    <MESSAGE value="JDBC MemberPreparedStatementCreator 완료" />
+    <MESSAGE value="date형 저장 완료" />
+    <MESSAGE value="로그인 확인 및 아이디중복 확인 완료" />
+    <MESSAGE value="css, js 추가 수정" />
+    <option name="LAST_COMMIT_MESSAGE" value="css, js 추가 수정" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/test/java/com/example/JakSim/TstApplicationTests.java</url>
+          <line>19</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
+>>>>>>> Stashed changes
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
