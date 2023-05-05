@@ -23,8 +23,9 @@ public class SecurityConfiguration{
 
     @Bean
     public BCryptPasswordEncoder passwordEncoder(){
-        return new BCryptPasswordEncoder();
+        return new BCryptPasswordEncoder(); //단방향 해시함수라고 함;;
     }
+
 
     @Bean
     AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception{
@@ -36,7 +37,11 @@ public class SecurityConfiguration{
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
         http.csrf().disable();
         http.authorizeHttpRequests()
+<<<<<<< HEAD
                 .mvcMatchers("/", "/login/**", "/register/**","/error/**", "/javascript/**", "/css/**", "/image/**","trainer/**").permitAll()
+=======
+                .mvcMatchers("/", "/login/**", "/register/**","/error/**", "/javascript/**", "/css/**", "/image/**", "/find/**").permitAll()
+>>>>>>> b3d6b378cdde027582dfc9be4fd13da772ffe7cc
                 .anyRequest().authenticated();
         http.formLogin()
                 .loginPage("/login")
@@ -47,7 +52,7 @@ public class SecurityConfiguration{
                 .logoutRequestMatcher(new AntPathRequestMatcher("/logout"))
                 .logoutSuccessUrl("/")
                 .invalidateHttpSession(true);
-                //.deleteCookies()
+        //.deleteCookies()
         http.sessionManagement()
                 .maximumSessions(1)
                 .maxSessionsPreventsLogin(false)

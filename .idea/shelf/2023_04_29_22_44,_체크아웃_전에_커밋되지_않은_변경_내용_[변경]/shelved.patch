@@ -1,0 +1,131 @@
+Index: src/main/java/com/example/JakSim/config/JdbcConfig.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.JakSim.config;\n\nimport org.apache.tomcat.jdbc.pool.DataSource;\nimport org.springframework.context.annotation.Bean;\nimport org.springframework.context.annotation.Configuration;\nimport org.springframework.context.annotation.EnableMBeanExport;\nimport org.springframework.jdbc.datasource.DataSourceTransactionManager;\nimport org.springframework.transaction.PlatformTransactionManager;\nimport org.springframework.transaction.annotation.EnableTransactionManagement;\n\n@Configuration\n@EnableTransactionManagement\npublic class JdbcConfig {\n    @Bean\n    public PlatformTransactionManager transactionManager(){\n        DataSourceTransactionManager tm = new DataSourceTransactionManager();\n        tm.setDataSource(dataSource());\n\n        return tm;\n    }\n\n    @Bean\n    public DataSource dataSource(){\n        DataSource ds = new DataSource();\n        ds.setDriverClassName(\"oracle.jdbc.driver.OracleDriver\");\n        ds.setUrl(\"jdbc:oracle:thin:@localhost:1521:XE\");\n        ds.setUsername(\"scott\");\n        ds.setPassword(\"tiger\");\n        ds.setInitialSize(2);\n        ds.setMinIdle(3);\n        ds.setMaxIdle(3);\n        ds.setMaxActive(5);\n        ds.setMinEvictableIdleTimeMillis(60000);\n        ds.setTimeBetweenEvictionRunsMillis(5000);\n\n        return ds;\n    }\n}\n
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/config/JdbcConfig.java b/src/main/java/com/example/JakSim/config/JdbcConfig.java
+--- a/src/main/java/com/example/JakSim/config/JdbcConfig.java	
++++ b/src/main/java/com/example/JakSim/config/JdbcConfig.java	
+@@ -1,16 +1,22 @@
+ package com.example.JakSim.config;
+ 
++import com.example.JakSim.login.JDBCTest;
+ import org.apache.tomcat.jdbc.pool.DataSource;
++import org.springframework.beans.factory.annotation.Autowired;
++
++import org.springframework.context.ApplicationContext;
+ import org.springframework.context.annotation.Bean;
+ import org.springframework.context.annotation.Configuration;
+-import org.springframework.context.annotation.EnableMBeanExport;
++
+ import org.springframework.jdbc.datasource.DataSourceTransactionManager;
+ import org.springframework.transaction.PlatformTransactionManager;
+-import org.springframework.transaction.annotation.EnableTransactionManagement;
+ 
+ @Configuration
+-@EnableTransactionManagement
+ public class JdbcConfig {
++    @Autowired
++    private ApplicationContext application;
++
++
+     @Bean
+     public PlatformTransactionManager transactionManager(){
+         DataSourceTransactionManager tm = new DataSourceTransactionManager();
+@@ -20,12 +26,14 @@
+     }
+ 
+     @Bean
+-    public DataSource dataSource(){
++    public DataSource dataSource() {
+         DataSource ds = new DataSource();
+-        ds.setDriverClassName("oracle.jdbc.driver.OracleDriver");
+-        ds.setUrl("jdbc:oracle:thin:@localhost:1521:XE");
+-        ds.setUsername("scott");
+-        ds.setPassword("tiger");
++
++        ds.setDriverClassName(application.getEnvironment().getProperty("spring.datasource.driverClassName"));
++        ds.setUrl(application.getEnvironment().getProperty("spring.datasource.url"));
++        ds.setUsername(application.getEnvironment().getProperty("spring.datasource.username"));
++        ds.setPassword(application.getEnvironment().getProperty("spring.datasource.password"));
++
+         ds.setInitialSize(2);
+         ds.setMinIdle(3);
+         ds.setMaxIdle(3);
+@@ -35,4 +43,9 @@
+ 
+         return ds;
+     }
++
++    @Bean
++    public JDBCTest jdbcTest(){
++        return new JDBCTest(dataSource());
++    }
+ }
+Index: src/main/java/com/example/JakSim/login/JDBCTest.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.JakSim.login;\n\n\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;\n\nimport javax.sql.DataSource;\nimport java.sql.*;\n\npublic class JDBCTest {\n    @Autowired\n    private DataSource ds;\n\n    private Statement stmt;\n    private PreparedStatement pstmt;\n    private ResultSet rs;\n    private String sql;\n\n    public JDBCTest(){\n\n    }\n\n    public void findById() throws SQLException{\n        this.sql = \"select * from user_info where user_id = ?\";\n\n        Connection conn = ds.getConnection();\n        this.pstmt = conn.prepareStatement(sql);\n        pstmt.setString(1, \"hye8997\");\n\n        this.rs = pstmt.executeQuery();\n\n        if(rs.next()){\n            System.out.println(rs.getString(\"USER_NAME\"));\n            System.out.println(rs.getString(\"USER_PW\"));\n            System.out.println(rs.getString(\"USER_C_DT\"));\n            try {\n                if (!conn.isClosed())\n                    conn.close();\n            }catch (Exception e){\n                e.printStackTrace();\n            }\n        }\n    }\n}\n
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/login/JDBCTest.java b/src/main/java/com/example/JakSim/login/JDBCTest.java
+--- a/src/main/java/com/example/JakSim/login/JDBCTest.java	
++++ b/src/main/java/com/example/JakSim/login/JDBCTest.java	
+@@ -2,43 +2,32 @@
+ 
+ 
+ import org.springframework.beans.factory.annotation.Autowired;
+-import org.springframework.boot.autoconfigure.jdbc.JdbcTemplateAutoConfiguration;
++import org.springframework.dao.EmptyResultDataAccessException;
++import org.springframework.jdbc.core.JdbcTemplate;
+ 
+ import javax.sql.DataSource;
+ import java.sql.*;
+ 
+ public class JDBCTest {
+-    @Autowired
+-    private DataSource ds;
+ 
+-    private Statement stmt;
+-    private PreparedStatement pstmt;
+-    private ResultSet rs;
++    private final JdbcTemplate jdbcTemplate;
+     private String sql;
+ 
+-    public JDBCTest(){
+-
++    @Autowired
++    public JDBCTest(DataSource ds){
++        this.jdbcTemplate = new JdbcTemplate(ds);
+     }
+ 
+     public void findById() throws SQLException{
+-        this.sql = "select * from user_info where user_id = ?";
+-
+-        Connection conn = ds.getConnection();
+-        this.pstmt = conn.prepareStatement(sql);
+-        pstmt.setString(1, "hye8997");
++       this.sql = "select * from user_info where user_id = ?";
++       String user_id = "hye8997";
++       UserInfo userInfo = null;
+ 
+-        this.rs = pstmt.executeQuery();
+-
+-        if(rs.next()){
+-            System.out.println(rs.getString("USER_NAME"));
+-            System.out.println(rs.getString("USER_PW"));
+-            System.out.println(rs.getString("USER_C_DT"));
+-            try {
+-                if (!conn.isClosed())
+-                    conn.close();
+-            }catch (Exception e){
+-                e.printStackTrace();
+-            }
+-        }
++       try{
++           userInfo = jdbcTemplate.queryForObject(this.sql, new UserRowMapper(), user_id);
++       }catch (EmptyResultDataAccessException e){
++
++       }
++       System.out.println(userInfo.toString());
+     }
+ }

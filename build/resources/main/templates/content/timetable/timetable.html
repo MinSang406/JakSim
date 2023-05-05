@@ -1,0 +1,29 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
+
+<div layout:fragment="content" id="timetable_layout">
+    <table class="Calendar">
+        <thead>
+        <tr>
+            <td onClick="prevCalendar();" style="cursor:pointer;">&#60;</td>
+            <td colspan="10">
+                <span id="calYear"></span>년
+                <span id="calMonth"></span>월
+            </td>
+            <td onClick="nextCalendar();" style="cursor:pointer;">&#62;</td>
+        </tr>
+        <tr colspan="10">
+            <td>일</td>
+            <td>월</td>
+            <td>화</td>
+            <td>수</td>
+            <td>목</td>
+            <td>금</td>
+            <td>토</td>
+        </tr>
+        </thead>
+
+        <tbody>
+        </tbody>
+    </table>
+</div>
+</html>

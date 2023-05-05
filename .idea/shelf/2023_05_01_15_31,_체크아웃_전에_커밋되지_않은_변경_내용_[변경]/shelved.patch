@@ -1,0 +1,17 @@
+Index: src/main/java/com/example/JakSim/login/model/UserRegisterPreparedStatementCreator.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.JakSim.login.model;\n\nimport org.springframework.jdbc.core.PreparedStatementCreator;\nimport org.springframework.security.crypto.password.PasswordEncoder;\n\nimport java.sql.Connection;\nimport java.sql.PreparedStatement;\nimport java.sql.SQLException;\n\npublic class UserRegisterPreparedStatementCreator implements PreparedStatementCreator {\n    private UserInfo userInfo;\n    private String[] keyColumns;\n    private String sql;\n    private PasswordEncoder passwordEncoder;\n\n\n    public UserRegisterPreparedStatementCreator(UserInfo userInfo, String[] keyColumns, String sql){\n        this.userInfo = userInfo;\n        this.keyColumns = keyColumns;\n        this.sql = sql;\n    }\n    public UserRegisterPreparedStatementCreator(UserInfo userInfo, String sql){\n        this(userInfo, new String[] {}, sql);\n    }\n\n    @Override\n    public PreparedStatement createPreparedStatement(Connection con) throws SQLException {\n        PreparedStatement pstmt = null;\n\n        if(keyColumns.length > 0 ){\n            pstmt = con.prepareStatement(sql, keyColumns);\n        }else{\n            pstmt = con.prepareStatement(sql);\n        }\n        pstmt.setString(1, userInfo.getUser_id());\n        pstmt.setString(2, userInfo.getUser_name());\n        pstmt.setInt(3, userInfo.getUser_gender());\n        pstmt.setString(4, userInfo.getUser_tel());\n        pstmt.setString(5, passwordEncoder.encode(userInfo.getUser_pw()));\n        pstmt.setInt(6, userInfo.getUser_question());\n        pstmt.setString(7, userInfo.getUser_answer());\n        pstmt.setInt(8, 1);\n        pstmt.setString(9, userInfo.getUser_birth());\n\n        return pstmt;\n    }\n}\n
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/login/model/UserRegisterPreparedStatementCreator.java b/src/main/java/com/example/JakSim/login/model/UserRegisterPreparedStatementCreator.java
+--- a/src/main/java/com/example/JakSim/login/model/UserRegisterPreparedStatementCreator.java	
++++ b/src/main/java/com/example/JakSim/login/model/UserRegisterPreparedStatementCreator.java	
+@@ -36,7 +36,7 @@
+         pstmt.setString(2, userInfo.getUser_name());
+         pstmt.setInt(3, userInfo.getUser_gender());
+         pstmt.setString(4, userInfo.getUser_tel());
+-        pstmt.setString(5, passwordEncoder.encode(userInfo.getUser_pw()));
++        pstmt.setString(5, userInfo.getUser_pw());//passwordEncoder.encode(userInfo.getUser_pw()));
+         pstmt.setInt(6, userInfo.getUser_question());
+         pstmt.setString(7, userInfo.getUser_answer());
+         pstmt.setInt(8, 1);

@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+#timetable_layout {
+  background-color : white;
+  height: 900px;
+  width: 60%;
+  padding: 5px;
+  margin: 0 auto;
+  border-radius:5px;
+}
+
+td {
+  width: 50px;
+  height: 50px;
+}
+
+.Calendar {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+}
+
+.Calendar>thead>tr:first-child>td {
+  font-family: 'Questrial', sans-serif;
+  font-size: 3em;
+  font-weight: bold;
+}
+
+.Calendar>thead>tr:last-child>td {
+  font-family: 'Questrial', sans-serif;
+  font-weight: 600;
+}
+
+.Calendar>tbody>tr>td>p {
+  font-family: 'Montserrat', sans-serif;
+  height: 45px;
+  width: 45px;
+  border-radius: 45px;
+  transition-duration: .2s;
+  line-height: 45px;
+  margin: auto;
+  display: block;
+  text-align: center;
+}
+
+.pastDay {
+  color: lightgray;
+}
+
+.today {
+  box-shadow:inset 0px 0px 0px 2px #A584EE;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.futureDay {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.futureDay:hover{
+  background:#eee;
+}
+
+.futureDay.choiceDay,
+.today.choiceDay {
+  background: #A584EE;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@font-face{
+    font-family: abster;
+    src: url(static/abster-webfont.woff) format('woff');
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(images/Group40267.png);
+}
+
+.container .header{
+
+}
+

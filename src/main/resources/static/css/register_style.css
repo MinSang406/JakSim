@@ -1,5 +1,7 @@
 #account_head{
-    margin: 1vh;
+    margin-top: 1vh;
+    margin-left: 1vh;
+    margin-bottom: 5vh;
 }
 .input_container{
     position: relative;
@@ -24,9 +26,9 @@
 .input_container > #user_id_check{
     height:1px;
 }
-#user_id_container{
+#user_id_container, #user_tel_container{
     margin-left: 5em;
-    margin-top: 5vh;
+    /*margin-top: 5vh;*/
 }
 #account_container{
     margin-left: 5em;
@@ -36,4 +38,7 @@
 }
 #fin_button{
     margin: 5vh
+}
+.register_select {
+    margin-left: 8em;
 }
