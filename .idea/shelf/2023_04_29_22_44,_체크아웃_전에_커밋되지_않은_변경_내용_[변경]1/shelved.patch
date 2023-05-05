@@ -1,0 +1,331 @@
+Index: src/test/java/com/example/JakSim/TstApplicationTests.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.JakSim;\n\nimport com.example.JakSim.login.JDBCTest;\nimport groovy.util.logging.Log4j;\nimport org.junit.jupiter.api.DisplayName;\nimport org.junit.jupiter.api.Test;\nimport org.springframework.beans.factory.annotation.Autowired;\nimport org.springframework.boot.test.context.SpringBootTest;\n\n\nimport javax.sql.DataSource;\nimport java.sql.*;\n\n@SpringBootTest\n@Log4j\nclass TstApplicationTests {\n\t@Autowired\n\tprivate DataSource ds;\n\n\t@Test\n\tvoid contextLoads() {\n\t}\n\n\t@Test\n\tpublic void testConnection() throws SQLException {\n\t\tConnection conn = ds.getConnection();\n\t\tPreparedStatement pstmt = conn.prepareStatement(\"select * from user_info where user_id = ?\");\n\t\tpstmt.setString(1, \"hye8997\");\n\t\tResultSet rs = pstmt.executeQuery();\n\t\tif(rs.next()) {\n\t\t\tSystem.out.println(rs.getString(\"USER_ID\"));\n\t\t\tSystem.out.println(rs.getString(\"USER_NAME\"));\n\t\t}\n\n\t\tif(!conn.isClosed())\n\t\t\tconn.close();\n\n\t}\n\n\t@Test\n\t@DisplayName(\"JDBC 성공했나?\")\n\tpublic void testJDBCConnection() throws SQLException{\n\t\tJDBCTest jdbcTest = new JDBCTest();\n\t\tjdbcTest.findById();\n\t}\n\n}\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/test/java/com/example/JakSim/TstApplicationTests.java b/src/test/java/com/example/JakSim/TstApplicationTests.java
+--- a/src/test/java/com/example/JakSim/TstApplicationTests.java	
++++ b/src/test/java/com/example/JakSim/TstApplicationTests.java	
+@@ -2,13 +2,14 @@
+ 
+ import com.example.JakSim.login.JDBCTest;
+ import groovy.util.logging.Log4j;
++import org.apache.tomcat.jdbc.pool.DataSource;
+ import org.junit.jupiter.api.DisplayName;
+ import org.junit.jupiter.api.Test;
+ import org.springframework.beans.factory.annotation.Autowired;
+ import org.springframework.boot.test.context.SpringBootTest;
++import org.springframework.core.env.Environment;
+ 
+ 
+-import javax.sql.DataSource;
+ import java.sql.*;
+ 
+ @SpringBootTest
+@@ -31,6 +32,7 @@
+ 			System.out.println(rs.getString("USER_ID"));
+ 			System.out.println(rs.getString("USER_NAME"));
+ 		}
++		System.out.println(conn);
+ 
+ 		if(!conn.isClosed())
+ 			conn.close();
+@@ -40,8 +42,10 @@
+ 	@Test
+ 	@DisplayName("JDBC 성공했나?")
+ 	public void testJDBCConnection() throws SQLException{
+-		JDBCTest jdbcTest = new JDBCTest();
++		JDBCTest jdbcTest = new JDBCTest(ds);
+ 		jdbcTest.findById();
+ 	}
+ 
++
++
+ }
+Index: src/main/resources/templates/layout/base.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><!DOCTYPE html>\n<html lang=\"ko\"\n      xmlns:layout=\"http://www.w3.org/1999/xhtml\" xmlns:th=\"http://www.w3.org/1999/xhtml\">\n<head>\n  <meta charset=\"UTF-8\">\n  <title>Title</title>\n  <link href=\"https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css\" rel=\"stylesheet\"\n        integrity=\"sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD\" crossorigin=\"anonymous\">\n  <link rel=\"stylesheet\" type=\"text/css\" th:href=\"@{/css/style.css}\">\n</head>\n<body>\n  <!-- navi -->\n  <th:block th:replace=\"~{fragment/navi :: naviFragment}\"></th:block>\n\n  <!-- content -->\n  <section>\n    <th:block layout:fragment=\"content\"></th:block>\n  </section>\n\n  <!-- footer -->\n  <th:block th:replace=\"~{fragment/footer :: footerFragment}\"></th:block>\n</body>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/layout/base.html b/src/main/resources/templates/layout/base.html
+--- a/src/main/resources/templates/layout/base.html	
++++ b/src/main/resources/templates/layout/base.html	
+@@ -7,6 +7,7 @@
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
++  <link rel="stylesheet" type="text/css" th:href="@{/css/login_style.css}">
+ </head>
+ <body>
+   <!-- navi -->
+Index: src/main/resources/static/css/style.css
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>@font-face{\n    font-family: abster;\n    src: url(static/abster-webfont.woff) format('woff');\n}\n* {\n    margin: 0;\n    padding: 0;\n    box-sizing: border-box;\n}\n\n.container{\n    width: 100%;\n    height: 100vh; \n    background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(images/Group40267.png);\n}\n\n.container .header{\n    \n}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/static/css/style.css b/src/main/resources/static/css/style.css
+--- a/src/main/resources/static/css/style.css	
++++ b/src/main/resources/static/css/style.css	
+@@ -18,3 +18,6 @@
+     
+ }
+ 
++#index_container{
++    min-height: 930px;
++}
+Index: src/main/resources/templates/content/account/login.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:layout=\"http://www.w3.org/1999/xhtml\" layout:decorate=\"~{layout/base}\">\n<div layout:fragment=\"content\" id=\"index_container\">\n  <h1>여기가</h1>\n  <hr>\n  <p>로그인이여 ㅇㅋ?</p>\n</div>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/content/account/login.html b/src/main/resources/templates/content/account/login.html
+--- a/src/main/resources/templates/content/account/login.html	
++++ b/src/main/resources/templates/content/account/login.html	
+@@ -1,7 +1,21 @@
+ <html xmlns:layout="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
+ <div layout:fragment="content" id="index_container">
+-  <h1>여기가</h1>
+-  <hr>
+-  <p>로그인이여 ㅇㅋ?</p>
++  <h1>
++    작심득근<br>Sign In
++  </h1>
++  <form th:action="@{/user/login}" method="post" layout:fragment="content" xmlns:layout="http://www.w3.org/1999/xhtml" id="login_container">
++    <div class="mb-3">
++      <span id="inputGroup-sizing-default">ID</span>
++      <input type="text" name="username" id="username" class="form-control">
++    </div>
++    <div class="mb-3">
++      <label for="password">비밀번호</label>
++      <input type="password" name="password" id="password" class="form-control">
++    </div>
++
++    <button type="submit" class="btn btn-primary">로그인</button>
++    <a th:href="@{/user/signup}" class="btn btn-success" type="button">회원가입</a>
++    <a href="#" id="find_id">아이디 / 비밀번호 찾기</a>
++  </form>
+ </div>
+ </html>
+\ No newline at end of file
+Index: src/main/resources/templates/content/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:layout=\"http://www.w3.org/1999/xhtml\" layout:decorate=\"~{layout/base}\">\n<div layout:fragment=\"content\" id=\"index_container\">\n    <h1>여기다가</h1>\n    <hr>\n    <p>그거 잘 하면 됨 ㅇㅋ?</p>\n\n    <button type=\"button\" class=\"btn btn-success\">Success</button>\n</div>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/content/index.html b/src/main/resources/templates/content/index.html
+--- a/src/main/resources/templates/content/index.html	
++++ b/src/main/resources/templates/content/index.html	
+@@ -4,6 +4,5 @@
+     <hr>
+     <p>그거 잘 하면 됨 ㅇㅋ?</p>
+ 
+-    <button type="button" class="btn btn-success">Success</button>
+ </div>
+ </html>
+\ No newline at end of file
+Index: src/main/resources/templates/fragment/navi.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+><html xmlns:sec=\"http://www.w3.org/1999/xhtml\" xmlns:th=\"http://www.w3.org/1999/xhtml\">\n\n<nav class=\"navbar navbar-expand-lg bg-body-tertiary\" th:fragment=\"naviFragment\">\n  <div class=\"container-fluid\">\n    <a class=\"navbar-brand\" href=\"#\">Navbar</a>\n    <button class=\"navbar-toggler\" type=\"button\" data-bs-toggle=\"collapse\" data-bs-target=\"#navbarSupportedContent\" aria-controls=\"navbarSupportedContent\" aria-expanded=\"false\" aria-label=\"Toggle navigation\">\n      <span class=\"navbar-toggler-icon\"></span>\n    </button>\n    <div class=\"collapse navbar-collapse\" id=\"navbarSupportedContent\">\n      <ul class=\"navbar-nav me-auto mb-2 mb-lg-0\">\n        <li class=\"nav-item\">\n          <a class=\"nav-link active\" aria-current=\"page\" href=\"/\">Home</a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link\" href=\"#\">Link</a>\n        </li>\n        <li class=\"nav-item dropdown\">\n          <a class=\"nav-link dropdown-toggle\" href=\"#\" role=\"button\" data-bs-toggle=\"dropdown\" aria-expanded=\"false\">\n            Dropdown\n          </a>\n        </li>\n        <li class=\"nav-item\">\n          <a class=\"nav-link disabled\">Disabled</a>\n        </li>\n      </ul>\n      <form class=\"d-flex\" role=\"search\">\n        <input class=\"form-control me-2\" type=\"search\" placeholder=\"Search\" aria-label=\"Search\">\n        <button class=\"btn btn-outline-success\" type=\"submit\">Search</button>\n      </form>\n    </div>\n  </div>\n</nav>\n</html>
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/templates/fragment/navi.html b/src/main/resources/templates/fragment/navi.html
+--- a/src/main/resources/templates/fragment/navi.html	
++++ b/src/main/resources/templates/fragment/navi.html	
+@@ -9,7 +9,7 @@
+     <div class="collapse navbar-collapse" id="navbarSupportedContent">
+       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+         <li class="nav-item">
+-          <a class="nav-link active" aria-current="page" href="/">Home</a>
++          <a class="nav-link" aria-current="page" href="/">Home</a>
+         </li>
+         <li class="nav-item">
+           <a class="nav-link" href="#">Link</a>
+@@ -23,10 +23,6 @@
+           <a class="nav-link disabled">Disabled</a>
+         </li>
+       </ul>
+-      <form class="d-flex" role="search">
+-        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+-        <button class="btn btn-outline-success" type="submit">Search</button>
+-      </form>
+     </div>
+   </div>
+ </nav>
+Index: src/main/resources/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.output.ansi.enabled=always\nserver.port=8080\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/resources/application.properties b/src/main/resources/application.properties
+--- a/src/main/resources/application.properties	
++++ b/src/main/resources/application.properties	
+@@ -1,2 +1,7 @@
+ spring.output.ansi.enabled=always
+-server.port=8080
++server.port=8081
++
++spring.datasource.driverClassName=oracle.jdbc.driver.OracleDriver
++spring.datasource.url=jdbc:oracle:thin:@localhost:1521:XE
++spring.datasource.username=scott
++spring.datasource.password=tiger
+Index: build.gradle
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>plugins {\n\tid 'java'\n\tid 'org.springframework.boot' version '2.7.11'\n\tid 'io.spring.dependency-management' version '1.0.15.RELEASE'\n\tid 'war'\n}\n\ngroup = 'com.example'\nversion = '0.0.1-SNAPSHOT'\nsourceCompatibility = '11'\napply plugin: 'war'\n\nconfigurations {\n\tcompileOnly {\n\t\textendsFrom annotationProcessor\n\t}\n}\n\nrepositories {\n\tmavenCentral()\n}\n\ndependencies {\n\timplementation 'org.springframework.boot:spring-boot-starter-web'\n\tcompileOnly 'org.projectlombok:lombok'\n\truntimeOnly 'com.oracle.database.jdbc:ojdbc8'\n\tannotationProcessor 'org.projectlombok:lombok'\n\n\timplementation 'org.springframework.boot:spring-boot-starter-thymeleaf'\n\timplementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'\n\n\timplementation 'org.springframework.boot:spring-boot-starter-jdbc'\n\timplementation 'org.apache.tomcat:tomcat-jdbc:8.5.27'// Using JDBCTemplate\n\timplementation 'com.oracle.ojdbc:orai18n:19.3.0.0'   // KO16KSC5601 Encoding\n\n\tprovidedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'\n\n\ttestImplementation 'org.springframework.boot:spring-boot-starter-test'\n\n\timplementation 'org.springframework.boot:spring-boot-starter-thymeleaf'\n\timplementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'\n\n}\n\ntasks.named('test') {\n\tuseJUnitPlatform()\n}\n\nbootWar{\n\tarchiveName(\"Tester.war\")\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/build.gradle b/build.gradle
+--- a/build.gradle	
++++ b/build.gradle	
+@@ -36,10 +36,6 @@
+ 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+ 
+ 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+-
+-	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+-	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect'
+-
+ }
+ 
+ tasks.named('test') {
+Index: src/main/resources/static/css/login_style.css
+===================================================================
+diff --git a/src/main/resources/static/css/login_style.css b/src/main/resources/static/css/login_style.css
+new file mode 100644
+--- /dev/null	
++++ b/src/main/resources/static/css/login_style.css	
+@@ -0,0 +1,13 @@
++#login_layout{
++    width: 80%;
++    min-height: 90vh;
++    margin: 15vh auto;
++}
++#login_container{
++    margin: 0px 50vh;
++}
++#login_layout > h1{
++    margin: 5vh auto;
++    text-align: center;
++    color: blueviolet;
++}
+Index: src/main/java/com/example/JakSim/login/UserRowMapper.java
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/login/UserRowMapper.java b/src/main/java/com/example/JakSim/login/UserRowMapper.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/com/example/JakSim/login/UserRowMapper.java	
+@@ -0,0 +1,19 @@
++package com.example.JakSim.login;
++
++import lombok.NoArgsConstructor;
++import org.springframework.jdbc.core.RowMapper;
++
++import java.sql.ResultSet;
++import java.sql.SQLException;
++
++public class UserRowMapper implements RowMapper<UserInfo> {
++    @Override
++    public UserInfo mapRow(ResultSet rs, int rowNum) throws SQLException {
++        UserInfo userInfo = new UserInfo();
++        userInfo.setUser_id(rs.getString("user_id"));
++        userInfo.setUser_name(rs.getString("user_name"));
++        userInfo.setUser_birth(rs.getString("user_birth"));
++
++        return userInfo;
++    }
++}
+Index: src/main/java/com/example/JakSim/TstApplication.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.example.JakSim;\n\nimport org.springframework.boot.SpringApplication;\nimport org.springframework.boot.autoconfigure.SpringBootApplication;\nimport org.springframework.boot.builder.SpringApplicationBuilder;\nimport org.springframework.boot.web.servlet.support.SpringBootServletInitializer;\n\n@SpringBootApplication\npublic class TstApplication extends SpringBootServletInitializer {\n\t@Override\n\tprotected SpringApplicationBuilder configure(SpringApplicationBuilder application) {\n\t\treturn application.sources(TstApplication.class);\n\t}\n\n\tpublic static void main(String[] args) {\n\t\tSpringApplication.run(TstApplication.class, args);\n\t}\n}\n\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/TstApplication.java b/src/main/java/com/example/JakSim/TstApplication.java
+--- a/src/main/java/com/example/JakSim/TstApplication.java	
++++ b/src/main/java/com/example/JakSim/TstApplication.java	
+@@ -5,6 +5,7 @@
+ import org.springframework.boot.builder.SpringApplicationBuilder;
+ import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
+ 
++
+ @SpringBootApplication
+ public class TstApplication extends SpringBootServletInitializer {
+ 	@Override
+Index: src/main/java/com/example/JakSim/login/UserInfo.java
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/login/UserInfo.java b/src/main/java/com/example/JakSim/login/UserInfo.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/com/example/JakSim/login/UserInfo.java	
+@@ -0,0 +1,33 @@
++package com.example.JakSim.login;
++
++import lombok.Getter;
++import lombok.Setter;
++
++@Getter
++@Setter
++public class UserInfo {
++    private String user_id;
++    private String user_name;
++    private int user_gender;
++    private String user_pw;
++    private int user_question;
++    private String user_answer;
++    private int user_type;
++    private String user_birth;
++    private String user_c_dt;
++
++    @Override
++    public String toString() {
++        return "UserInfo{" +
++                "user_id='" + user_id + '\'' +
++                ", user_name='" + user_name + '\'' +
++                ", user_gender=" + user_gender +
++                ", user_pw='" + user_pw + '\'' +
++                ", user_question=" + user_question +
++                ", user_answer='" + user_answer + '\'' +
++                ", user_type=" + user_type +
++                ", user_birth='" + user_birth + '\'' +
++                ", user_c_dt='" + user_c_dt + '\'' +
++                '}';
++    }
++}
+Index: src/main/java/com/example/JakSim/config/AppConfig.java
+===================================================================
+diff --git a/src/main/java/com/example/JakSim/config/AppConfig.java b/src/main/java/com/example/JakSim/config/AppConfig.java
+new file mode 100644
+--- /dev/null	
++++ b/src/main/java/com/example/JakSim/config/AppConfig.java	
+@@ -0,0 +1,15 @@
++package com.example.JakSim.config;
++
++import org.springframework.context.annotation.Bean;
++import org.springframework.context.annotation.Configuration;
++import org.springframework.context.annotation.EnableMBeanExport;
++import org.springframework.core.env.Environment;
++import org.springframework.core.env.StandardEnvironment;
++
++@Configuration
++public class AppConfig {
++    @Bean
++    public Environment env(){
++        return new StandardEnvironment();
++    }
++}
