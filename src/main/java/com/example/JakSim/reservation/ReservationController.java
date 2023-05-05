@@ -1,6 +1,7 @@
 package com.example.JakSim.reservation;
 
 import groovy.util.logging.Slf4j;
+import lombok.RequiredArgsConstructor;
 import org.apache.juli.logging.Log;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,12 +14,10 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Slf4j
 @Controller
 @RequestMapping("/Reservation")
+@RequiredArgsConstructor
 public class ReservationController {
-    @Autowired
-    private DataSource ds;
 
-    ReservationService reservationService;
-
+    private final ReservationService reservationService;
 
     private Log log;
 
@@ -26,11 +25,7 @@ public class ReservationController {
     @GetMapping("/{userId}")
     public String ReservationList(@PathVariable("userId") String id, Model model) {
 
-        reservationService = new ReservationService();
-
-//        log.error("Helllllllolhlehfoaisjofajsofjaosijfoaseijfoi");
-
-        model.addAttribute("timetable", reservationService.searchAllReservation(id));
+        model.addAttribute("reservation", id);//reservationService.searchAllReservation(id));
 
         return "content/timetable/timetable";
     }

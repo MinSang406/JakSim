@@ -4,8 +4,62 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< HEAD
+    <list default="true" id="5f33acec-38d9-4fdf-93a9-d1751fc276e7" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationDao.class" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ReservationController.class.uniqueId0" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/TstApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/TstApplication.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/AuthFailureHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/AuthFailureHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/AuthSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/AuthSuccessHandler.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/SecurityConfiguration.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/config/JdbcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/config/JdbcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/LoginDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/LoginService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/RegisterService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRegisterPreparedStatementCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRegisterPreparedStatementCreator.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRole.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRowMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserSecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserSecurityService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/pay/PayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/pay/PayController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/Reservation$rType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/Reservation$rType.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/Reservation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationRowMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/controller/TrainerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/controller/TrainerController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/content/account/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/content/account/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/content/timetable/timetable.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/content/timetable/timetable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfiguration.class.uniqueId0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/auth/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/auth/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/account/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content/account/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/timetable/timetable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content/timetable/timetable.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/base.html" afterDir="false" />
+=======
     <list default="true" id="9495474b-28c1-4396-b5f7-304dcd124ee3" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+>>>>>>> fd139f6cc270cbe890af08d15c2161c001393b05
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -36,6 +90,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="HTML File" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -53,11 +108,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
+<<<<<<< HEAD
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "DefaultHtmlFileTemplate": "HTML File",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "node.js.selected.package.tslint": "(autodetect)"
+=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
+>>>>>>> fd139f6cc270cbe890af08d15c2161c001393b05
   }
 }</component>
   <component name="RunManager">
@@ -74,11 +138,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="애플리케이션.TstApplication" />
-      </list>
-    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -90,5 +149,8 @@
       <updated>1683274936091</updated>
     </task>
     <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
   </component>
 </project>
