@@ -1,0 +1,445 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+#timetable_layout {
+  background-color : white;
+  height: 900px;
+  width: 80%;
+  padding: 15px;
+  margin: 0 auto;
+  border-radius:5px;
+}
+
+#screen1 {
+  width: 65%;
+  height: 600px;
+  float: left;
+
+  background-color: white;
+  padding-right: 5px;
+  border: 2px solid rgba(196, 196, 196, 1);
+  border-radius: 5%;
+  padding: 5%;
+  margin-top: 5%
+
+}
+
+#screen2 {
+  width: 30%;
+  height: 600px;
+  float: right;
+
+  background: white;
+  padding-left: 5px;
+
+  margin-top: 7%
+}
+
+
+td {
+  width: 50px;
+  height: 50px;
+}
+
+.Calendar {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+}
+
+.Calendar>thead>tr:first-child>td {
+  font-family: 'Questrial', sans-serif;
+  font-size: 2em;
+  font-weight: bold;
+
+  color: #A584EE;
+}
+
+.Calendar>thead>tr:last-child>td {
+  font-family: 'Questrial', sans-serif;
+  font-weight: 1000;
+
+}
+
+.Calendar>tbody>tr>td>p {
+  font-family: 'Montserrat', sans-serif;
+  height: 45px;
+  width: 70px;
+  border-radius: 45px;
+  transition-duration: .2s;
+  line-height: 45px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  display: block;
+  text-align: center;
+
+}
+
+.pastDay {
+  color: lightgray;
+}
+
+.today {
+  box-shadow:inset 0px 0px 0px 2px #A584EE;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.futureDay {
+  background-color: #FFFFFF;
+  cursor: pointer;
+}
+.futureDay:hover{
+  background:#eee;
+}
+
+.futureDay.choiceDay,
+.today.choiceDay {
+  background: #A584EE;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+@font-face{
+  font-family: abster;
+  src: url(static/abster-webfont.woff) format('woff');
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container{
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.8),rgba(0,0,0,0.8)),url(images/Group40267.png);
+}
+
+#screen2-1 {
+
+  height: 80px;
+
+  background: white;
+
+  margin-bottom: 15px;
+  border-radius: 20px;
+  border: 2px solid rgba(196, 196, 196, 1);
+}
+
+#screen2-2 {
+
+  /* width: 50%; */
+  height: 195px;
+
+  background: white;
+  margin-top: 15px;
+  margin-bottom: 10px;
+  border-radius: 20px;
+  border: 2px solid rgba(196, 196, 196, 1);
+}
+
+#screen2-3 {
+
+  /* width: 50%; */
+  height: 40px;
+  background: white;
+
+  margin-bottom: 20px;
+
+}
+
+#screen2-4 {
+
+  /* width: 50%; */
+  height: 190px;
+  background: white;
+  margin-top: 25px;
+
+}
+
+#reservationBtn1 {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: 'Questrial', sans-serif;
+  color: #A584EE;
+  font-size: 14px;
+  font-weight: bold;
+  background: #ffffff;
+  padding: 3px 30px 3px 30px;
+  border: solid #A584EE 2px;
+  text-decoration: none;
+
+  position: relative;
+  left: 190px;
+  top: 30px;
+}
+
+#reservationBtn1:hover {
+  background: #A584EE;
+  text-decoration: none;
+  color: white;
+}
+
+.MD {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+
+  color: #A584EE;
+
+  position: relative;
+  bottom: 8px;
+
+}
+
+#reservation_MD {
+  width: 100%;
+  height: 40px;
+  border: solid #A584EE 2px;
+  border-radius: 100px;
+
+  position: relative;
+  top: 20px;
+}
+
+#status_co {
+  width:100%;
+  height: 30px;
+}
+
+#status {
+  width: 100%;
+  height: 150px;
+  margin-top: 10px;
+  border: 2px solid rgba(196, 196, 196, 1);
+  border-radius: 20px;
+}
+
+.circle1 {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 0, 0, 1);
+  border: 2px solid rgba(255, 0, 0, 1);
+  border-radius: 12px;
+
+  position: relative;
+  top: 19px;
+  left: 185px;
+}
+
+.circle2 {
+  width: 12px;
+  height: 12px;
+  background: rgba(0, 255, 41, 1);
+  border: 2px solid rgba(0, 255, 41, 1);
+  border-radius: 12px;
+
+  position: relative;
+  bottom: 17px;
+  left: 260px;
+}
+
+.c1 {
+  font-family: 'Questrial', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+
+  position: relative;
+  bottom: 1px;
+  left: 200px;
+}
+
+.c2 {
+  font-family: 'Questrial', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+
+  position: relative;
+  bottom: 37px;
+  left: 275px;
+}
+
+circle3 {
+  width: 12px;
+  height: 12px;
+  background: rgba(255, 0, 0, 1);
+  border: 2px solid rgba(255, 0, 0, 1);
+  border-radius: 12px;
+
+  position: relative;
+  top: 19px;
+  left: 20px;
+}
+
+#cancelBtn1 {
+  -webkit-border-radius: 28;
+  -moz-border-radius: 28;
+  border-radius: 28px;
+  font-family: 'Questrial', sans-serif;
+  color: #A584EE;
+  font-size: 14px;
+  font-weight: bold;
+  background: #ffffff;
+  padding: 3px 30px 3px 30px;
+  border: solid #A584EE 2px;
+  text-decoration: none;
+
+  position: relative;
+  left: 190px;
+  bottom: 10px;
+}
+
+#cancelBtn1:hover {
+  background: #A584EE;
+  text-decoration: none;
+  color: white;
+}
+
+.all_status {
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(116, 116, 116, 1);
+
+  position:relative;
+  top: 10px;
+  left: 15px;
+}
+
+.my {
+  weight: 55px;
+  height: 55px;
+  border: 0.1px solid white;
+  border-radius: 55px;
+
+  position: relative;
+  top: 12px;
+  left: 15px;
+}
+
+.my_info {
+  font-family: 'Questrial', sans-serif;
+  font-size: 16px;
+  font-weight: semi bold;
+}
+
+#my_name {
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(116, 116, 116, 1);
+
+  position:relative;
+  bottom: 40px;
+  left: 80px;
+}
+
+#my_ch {
+  font-family: 'Questrial', sans-serif;
+  font-size: 11px;
+  font-weight: bold;
+  color: rgba(161, 160, 160, 1);
+
+  position:relative;
+  bottom: 60px;
+  left: 80px;
+}
+
+
+
+#status1 {
+  font-family: 'Questrial', sans-serif;
+  font-size: 16px;
+  font-weight: semi bold;
+}
+
+.res_time {
+  font-family: 'Questrial', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  color: rgba(116, 116, 116, 1);
+
+  position:relative;
+  top: 10px;
+  left: 15px;
+
+}
+
+#res_time1 {
+  font-family: 'Questrial', sans-serif;
+  font-size: 16px;
+  font-weight: semi bold;
+}
+
+// 라디오버튼 css
+   label {
+     font-size: 15px;
+     line-height: 2rem;
+     padding: 0.2em 0.4em;
+   }
+
+span {
+  vertical-align: middle;
+}
+
+[type="radio"] {
+  vertical-align: middle;
+  appearance: none;
+  border: max(2px, 0.1em) solid gray;
+  border-radius: 50%;
+  width: 1.25em;
+  height: 1.25em;
+  transition: border 0.5s ease-in-out;
+}
+
+[type="radio"]:checked {
+  border: 0.4em solid rgba(165, 132, 238, 1);
+}
+
+[type="radio"]:focus-visible {
+  outline-offset: max(2px, 0.1em);
+  outline: max(2px, 0.1em) dotted rgba(165, 132, 238, 1);
+}
+
+[type="radio"]:hover {
+  box-shadow: 0 0 0 max(4px, 0.2em) lightgray;
+  cursor: pointer;
+}
+
+[type="radio"]:disabled {
+  background-color: lightgray;
+  box-shadow: none;
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+[type="radio"]:disabled + span {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* Global CSS */
+fieldset {
+  display: flex;
+  justify-content: center;
+  border: none;
+  margin: 0;
+  padding: 40px 20px;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+// ————————여기까지
+

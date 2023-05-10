@@ -14,7 +14,7 @@ public class ReservationRowMapper implements RowMapper<Reservation> {
         reservation.setTp_idx(rs.getInt("TP_IDX"));
         reservation.setUser_id(rs.getString("USER_ID"));
         reservation.setR_c_dt(rs.getString("R_C_DT"));
-//        reservation.setR_result(rs.getType("R_RESULT"));
+        reservation.setR_result(rs.getInt("R_RESULT"));
 
         return reservation;
     }

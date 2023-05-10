@@ -4,62 +4,172 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-<<<<<<< HEAD
-    <list default="true" id="5f33acec-38d9-4fdf-93a9-d1751fc276e7" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationDao.class" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/ReservationController.class.uniqueId0" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationDao.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/checksums/checksums.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/dependencies-accessors/dependencies-accessors.lock" afterDir="false" />
+    <list default="true" id="9495474b-28c1-4396-b5f7-304dcd124ee3" name="변경" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/Timetable.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/fileHashes.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.6.1/fileHashes/resourceHashesCache.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/outputFiles.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_22_44,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_22_44,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_22_44__________.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_22_44__________1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/Group40267.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/Group402671.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/RegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/abster-webfont.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/abster-webfont.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/abster-webfont1.woff" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/abster-webfont1.woff2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/trainer1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/trainer11.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/trainer2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/trainer21.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/trainer3.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/trainer31.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_50_PM__________.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_57_PM,_업데이트_전에_커밋되지_않은_변경_내용_[변경]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_04_29_5_57_PM__________1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_15_AM,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_15_AM,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/MainImg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_15_AM,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_15_AM,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_15_AM,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_15_AM__________.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_16_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_16_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/MainImg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_16_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_16_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_16_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_16_AM__________.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_18_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_18_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/MainImg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_18_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_18_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_18_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_18_AM__________.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_24_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_24_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/MainImg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_24_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_24_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_24_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_24_AM__________.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_27_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_27_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/MainImg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_27_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_27_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_27_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_27_AM__________1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_36_AM,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_36_AM,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/MainImg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_36_AM,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_36_AM,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_36_AM,_업데이트_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_01_1_36_AM__________.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_11_22_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_11_22_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/MainImg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_11_22_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_11_22_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_11_22_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_11_22_AM__________1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_1_53_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_1_53_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/MainImg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_1_53_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_1_53_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_1_53_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_1_53_AM__________1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_2_02_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_2_02_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_2_02_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_2_02_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_2_02_AM__________.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_3_00_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_3_00_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_3_00_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_3_00_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_3_00_AM__________1.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_3_09_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_3_09_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_3_09_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/TstApplicationTests.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_3_09_AM,_체크아웃_전에_커밋되지_않은_변경_내용_[변경]1/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/2023_05_02_3_09_AM__________1.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/MainController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/TstApplication.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/TstApplication.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/AuthFailureHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/AuthFailureHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/AuthSuccessHandler.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/AuthSuccessHandler.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/SecurityConfiguration.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/SecurityConfiguration.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/config/JdbcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/config/JdbcConfig.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/controller/LoginController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/controller/RegisterController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/LoginDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/LoginService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/LoginService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/RegisterService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/RegisterService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserInfo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRegisterPreparedStatementCreator.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRegisterPreparedStatementCreator.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRole.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRole.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRowMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserSecurityService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserSecurityService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/pay/PayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/pay/PayController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/Reservation$rType.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/Reservation$rType.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/Reservation.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/Reservation.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationRowMapper.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationService.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/controller/TrainerController.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/controller/TrainerController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDao.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDo.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDo.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/application.properties" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/content/account/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/content/account/register.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/content/timetable/timetable.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/content/timetable/timetable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/resources/main/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/build/resources/main/templates/layout/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/compileTransaction/stash-dir/SecurityConfiguration.class.uniqueId0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" afterPath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/MainController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/TstApplication.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/AuthFailureHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/AuthSuccessHandler.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/auth/SecurityConfiguration.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/config/JdbcConfig.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/controller/LoginController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/controller/RegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/LoginDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/LoginService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/RegisterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserInfo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRegisterPreparedStatementCreator.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRole.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserRowMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/login/model/UserSecurityService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/pay/PayController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/Reservation$rType.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/Reservation.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationRowMapper.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/reservation/ReservationService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/controller/TrainerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/controller/TrainerControllerTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerCertRegisterPrepared.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDaoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDo.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerDoTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerExpRegisterPrepared.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerRegisterPrepared.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerRegisterPreparedTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/com/example/JakSim/trainer/model/TrainerRegisterService.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/tmp/compileJava/previous-compilation-data.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/Account/RegisterController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/model/LoginDao.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/model/LoginDao.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/model/UserRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/model/UserRowMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/pay/PayController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/pay/PayController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/trainer/TrainerController.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/images/Group40267.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/content/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/content/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/content/account/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/content/account/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/content/account/trainerRegister.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/content/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/content/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/content/pay/Pay.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/content/pay/Pay.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/content/test/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/fragment/navi.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/fragment/navi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/com/example/JakSim/TstApplicationTests.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/com/example/JakSim/TstApplicationTests.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/auth/SecurityConfiguration.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/auth/SecurityConfiguration.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/Reservation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/Reservation.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationRowMapper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/account/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content/account/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/trainer/controller/TrainerController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/trainer/controller/TrainerController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/trainer/model/TrainerRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/trainer/model/TrainerRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/timetable.css" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/timetable/timetable.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content/timetable/timetable.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/base.html" afterDir="false" />
-=======
-    <list default="true" id="9495474b-28c1-4396-b5f7-304dcd124ee3" name="변경" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
->>>>>>> fd139f6cc270cbe890af08d15c2161c001393b05
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +189,12 @@
         </task>
         <projects_view>
           <tree_state>
-            <expand />
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Iamport_example" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
             <select />
           </tree_state>
         </projects_view>
@@ -108,26 +223,34 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-<<<<<<< HEAD
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "node.js.selected.package.tslint": "(autodetect)"
-=======
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
     &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;
->>>>>>> fd139f6cc270cbe890af08d15c2161c001393b05
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5130fdee4d2ba91a4adc909cbdc7c302&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ujeon\IdeaProjects\JakSim\src\main\resources\static\images" />
+    </key>
+  </component>
+  <component name="RunManager" selected="Spring Boot.TstApplication">
     <configuration name="TstApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="ALTERNATIVE_JRE_PATH" value="11" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
       <option name="MAIN_CLASS_NAME" value="com.example.JakSim.TstApplication" />
-      <module name="JakSim.main" />
       <extension name="coverage">
         <pattern>
           <option name="PATTERN" value="com.example.JakSim.*" />
@@ -138,6 +261,18 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="TstApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="com.example.Iamport_example.main" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.JakSim.TstApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.TstApplication" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="애플리케이션 수준" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -147,6 +282,11 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683274936091</updated>
+      <workItem from="1683555399515" duration="13628000" />
+      <workItem from="1683705250365" duration="2705000" />
+      <workItem from="1683714821458" duration="7066000" />
+      <workItem from="1683737065931" duration="4011000" />
+      <workItem from="1683742639618" duration="1144000" />
     </task>
     <servers />
   </component>

@@ -6,18 +6,18 @@ import lombok.NoArgsConstructor;
 @Data
 @NoArgsConstructor
 public class Reservation {
-    public enum rType {
-        WAITING,
-        CANCLE,
-        COMPLETE
-    }
+//    public enum rType {
+//        WAITING,
+//        CANCLE,
+//        COMPLETE
+//    }
 
     private int r_idx;
     private int t_idx;
     private int tp_idx;
     private String user_id;
     private String r_c_dt;
-    private rType r_result;
+    private int r_result;
 
 //    @Override
 //    public String toString() {
