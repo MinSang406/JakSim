@@ -12,17 +12,17 @@ import java.sql.SQLException;
 @Controller
 @RequiredArgsConstructor
 public class TrainerControllerTest {
-    private final TrainerRegisterService trainerRegisterService;
-    @GetMapping("trainer/register/test")
-    public String create() {
-        return "content/trainer/trainerRegisterTest";
-    }
-
-    @PostMapping("trainer/regist/action")
-    public String createTest(TrainerDo trainerDo) throws SQLException {
-
-        trainerRegisterService.RegistTest(trainerDo);
-        return "redirect:/";
-    }
+//    private final TrainerRegisterService trainerRegisterService;
+//    @GetMapping("trainer/register/test")
+//    public String create() {
+//        return "content/trainer/trainerRegisterTest";
+//    }
+//
+//    @PostMapping("trainer/regist/action")
+//    public String createTest(TrainerDo trainerDo) throws SQLException {
+//
+//        trainerRegisterService.RegistTest(trainerDo);
+//        return "redirect:/";
+//    }
 
 }

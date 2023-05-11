@@ -12,16 +12,16 @@ public class TrainerDaoTest {
     private JdbcTemplate jdbcTemplate;
     private String sql;
 
-    public TrainerDaoTest(DataSource ds) {jdbcTemplate = new JdbcTemplate(ds);}
-    public void TrainerInsert(TrainerDo trainerDo) {
-        this.sql = "INSERT INTO USER_TRAINER values(USER_TRAINER_SEQ.NEXTVAL,?,?,?,?)";
-
-        try{
-            KeyHolder keyHolder = new GeneratedKeyHolder();
-            jdbcTemplate.update(new TrainerRegisterPreparedTest(trainerDo, sql), keyHolder);
-        }catch (EmptyResultDataAccessException e) {
-            e.printStackTrace();
-        }
-        System.out.println("성공?");
-        }
+//    public TrainerDaoTest(DataSource ds) {jdbcTemplate = new JdbcTemplate(ds);}
+//    public void TrainerInsert(TrainerDo trainerDo) {
+//        this.sql = "INSERT INTO USER_TRAINER values(USER_TRAINER_SEQ.NEXTVAL,?,?,?,?)";
+//
+//        try{
+//            KeyHolder keyHolder = new GeneratedKeyHolder();
+//            jdbcTemplate.update(new TrainerRegisterPreparedTest(trainerDo, sql), keyHolder);
+//        }catch (EmptyResultDataAccessException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println("성공?");
+//        }
 }

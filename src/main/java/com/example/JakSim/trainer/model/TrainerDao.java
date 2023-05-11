@@ -13,6 +13,8 @@ import java.sql.SQLException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.util.ArrayList;
+import java.util.List;
 import javax.naming.Context;
 import javax.naming.InitialContext;
 
@@ -22,16 +24,27 @@ public class TrainerDao {
 
     public TrainerDao(DataSource ds) {jdbcTemplate = new JdbcTemplate(ds);}
 
-    public void TrainerInsert(TrainerDo trainerDo) {
-        this.sql = "INSERT INTO USER_TRAINER values(USER_TRAINER_SEQ.NEXTVAL,?,?,?,?)";
+//    public void TrainerInsert(TrainerDo trainerDo) {
+//        this.sql = "INSERT INTO USER_TRAINER values(USER_TRAINER_SEQ.NEXTVAL,?,?,?,?)";
+//
+//        try{
+//            KeyHolder keyHolder = new GeneratedKeyHolder();
+//            jdbcTemplate.update(new TrainerRegisterPreparedTest(trainerDo, sql), keyHolder);
+//        }catch (EmptyResultDataAccessException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println("성공?");
+//    }
+    public List<TrainerDo> getAllTrainer(){
+        List<TrainerDo> trainerList = new ArrayList<TrainerDo>();
+        this.sql = "select * from user_trainer";
 
         try{
-            KeyHolder keyHolder = new GeneratedKeyHolder();
-            jdbcTemplate.update(new TrainerRegisterPreparedTest(trainerDo, sql), keyHolder);
-        }catch (EmptyResultDataAccessException e) {
-            e.printStackTrace();
+            trainerList = jdbcTemplate.query(this.sql, new TrainerRowMapper());
+        }catch(Exception e){
+            System.out.println("Nop");
         }
-        System.out.println("성공?");
+        return trainerList;
     }
 
     public void TrainerExpInsert(TrainerDo trainerDo) {
@@ -46,17 +59,17 @@ public class TrainerDao {
         System.out.println("성공?");
     }
 
-    public void TrainerCertInsert(TrainerDo trainerDo) {
-        this.sql = "INSERT INTO TRAINER_CERT values(TRAINER_CERT_SEQ.NEXTVAL,?,?,?)";
-
-        try{
-            KeyHolder keyHolder = new GeneratedKeyHolder();
-            jdbcTemplate.update(new TrainerCertRegisterPrepared(trainerDo, sql), keyHolder);
-        }catch (EmptyResultDataAccessException e) {
-            e.printStackTrace();
-        }
-        System.out.println("성공?");
-    }
+//    public void TrainerCertInsert(TrainerDo trainerDo) {
+//        this.sql = "INSERT INTO TRAINER_CERT values(TRAINER_CERT_SEQ.NEXTVAL,?,?,?)";
+//
+//        try{
+//            KeyHolder keyHolder = new GeneratedKeyHolder();
+//            jdbcTemplate.update(new TrainerCertRegisterPrepared(trainerDo, sql), keyHolder);
+//        }catch (EmptyResultDataAccessException e) {
+//            e.printStackTrace();
+//        }
+//        System.out.println("성공?");
+//    }
 }
 
 

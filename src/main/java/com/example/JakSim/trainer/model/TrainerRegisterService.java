@@ -11,14 +11,14 @@ public class TrainerRegisterService {
     @Autowired
     private DataSource ds;
 
-    public void RegistTest(TrainerDo trainerDo) throws SQLException {
-        TrainerDao trainerDao = new TrainerDao(ds);
-        TrainerDao trainerDaoExp = new TrainerDao(ds);
-        TrainerDao trainerDaoCert = new TrainerDao(ds);
-        trainerDao.TrainerInsert(trainerDo);
-        trainerDaoCert.TrainerCertInsert(trainerDo);
-        trainerDaoExp.TrainerExpInsert(trainerDo);
-    }
+//    public void RegistTest(TrainerDo trainerDo) throws SQLException {
+//        TrainerDao trainerDao = new TrainerDao(ds);
+//        TrainerDao trainerDaoExp = new TrainerDao(ds);
+//        TrainerDao trainerDaoCert = new TrainerDao(ds);
+//        trainerDao.TrainerInsert(trainerDo);
+//        trainerDaoCert.TrainerCertInsert(trainerDo);
+//        trainerDaoExp.TrainerExpInsert(trainerDo);
+//    }
 }
 
 

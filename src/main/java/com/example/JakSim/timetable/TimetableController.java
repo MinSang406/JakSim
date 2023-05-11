@@ -13,11 +13,11 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("/timetable")
 @RequiredArgsConstructor
 public class TimetableController {
-//    private final TimetableService timetableService;
+    private final TimetableService timetableService;
 
-//    @GetMapping("{userId}")
-//    public String TimetblaeList(@PathVariable("userId") String id, Model model){
-//
-//        return "content/timetable/timetable";
-//    }
+    @GetMapping("{userId}")
+    public String TimetblaeList(@PathVariable("userId") String id, Model model) {
+
+        return "content/timetable/timetable";
+    }
 }
