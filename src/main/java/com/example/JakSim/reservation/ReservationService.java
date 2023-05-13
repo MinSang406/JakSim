@@ -1,8 +1,6 @@
 package com.example.JakSim.reservation;
 
-import com.example.JakSim.timetable.Timetable;
-import com.example.JakSim.trainer.model.TrainerDao;
-import com.example.JakSim.trainer.model.TrainerDo;
+import com.example.JakSim.timetable.TimetableDao;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,6 +17,7 @@ public class ReservationService {
 
     //    private UserDao userDao;
     private ReservationDao reservationDao;
+    private TimetableDao timetableDao;
 
     public List<ReservationUser> searchAllReservation(String userId) {
         int i = 0;
@@ -78,6 +77,17 @@ public class ReservationService {
         }
 
         return false;
+    }
+
+    public Boolean deleteReservation(String userId, int rIdx, int tIdx) {
+        if(timetableDao.deleteUserTimetable(tIdx) || reservationDao.delete(rIdx)) {
+            return false;
+        }
+//        if(userDao.increasePtCnt(userId)) {
+//            return false;
+//        } // 이거 짜서 주석에 짱박아 놔야함....
+
+        return true;
     }
 
 }

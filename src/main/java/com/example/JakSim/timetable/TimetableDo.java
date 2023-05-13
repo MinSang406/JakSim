@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class Timetable {
+public class TimetableDo {
     private int t_idx;
     private int ut_idx;
     private String t_start_t;

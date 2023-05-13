@@ -4,10 +4,10 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class TimetableRowMapper implements RowMapper<Timetable> {
+public class TimetableRowMapper implements RowMapper<TimetableDo> {
 
-    public Timetable mapRow(ResultSet rs, int fowNum) throws SQLException {
-        Timetable timetable = new Timetable();
+    public TimetableDo mapRow(ResultSet rs, int fowNum) throws SQLException {
+        TimetableDo timetable = new TimetableDo();
 
         timetable.setT_idx(rs.getInt("T_IDX"));
         timetable.setUt_idx(rs.getInt("UT_IDX"));

@@ -1,6 +1,5 @@
 package com.example.JakSim.timetable;
 
-import com.example.JakSim.reservation.ReservationDao;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -15,7 +14,7 @@ public class TimetableService {
 
 
 
-    public List<Timetable> searchAllTimetable(String userId) {
+    public List<TimetableDo> searchAllTimetable(String userId) {
         // 1. user가 존재하는 유저인지 확인
          try {
             // null인지 먼저 판별해줘야 함.

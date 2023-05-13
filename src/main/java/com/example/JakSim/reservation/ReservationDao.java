@@ -54,4 +54,19 @@ public class ReservationDao {
         System.out.println("예약 완료!!");
         return true;
     }
+
+    public Boolean delete(int rIdx) {
+        this.sql = "delete from reservation" +
+                "where r_idx = ?";
+
+        try {
+            jdbcTemplate.update(this.sql, rIdx);
+        } catch (EmptyResultDataAccessException e) {
+            System.out.println("예약 취소가 올바르게 되지 않았습니다.");
+            return false;
+        }
+
+        System.out.println("예약 취소 완료!!");
+        return true;
+    }
 }

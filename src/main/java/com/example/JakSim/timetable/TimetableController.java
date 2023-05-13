@@ -1,6 +1,5 @@
 package com.example.JakSim.timetable;
 
-import com.example.JakSim.reservation.ReservationUser;
 import groovy.util.logging.Slf4j;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Controller;
@@ -21,8 +20,8 @@ public class TimetableController {
 
     @GetMapping("/list/{userId}")
     @ResponseBody
-    public List<Timetable> TimetableList(@PathVariable("userId") String id, Model model) {
-        List<Timetable> timetableList = timetableService.searchAllTimetable(id);
+    public List<TimetableDo> TimetableList(@PathVariable("userId") String id, Model model) {
+        List<TimetableDo> timetableList = timetableService.searchAllTimetable(id);
 
         if(timetableList.isEmpty()) {
             System.out.println("Timetable_is_null");

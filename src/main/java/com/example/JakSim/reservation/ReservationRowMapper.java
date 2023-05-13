@@ -5,10 +5,10 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ReservationRowMapper implements RowMapper<Reservation> {
+public class ReservationRowMapper implements RowMapper<ReservationDo> {
 
-    public Reservation mapRow(ResultSet rs, int rowNum) throws SQLException {
-        Reservation reservation = new Reservation();
+    public ReservationDo mapRow(ResultSet rs, int rowNum) throws SQLException {
+        ReservationDo reservation = new ReservationDo();
 
         reservation.setR_idx(rs.getInt("RES_IDX"));
         reservation.setT_idx(rs.getInt("T_IDX"));

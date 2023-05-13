@@ -5,7 +5,7 @@ import lombok.NoArgsConstructor;
 
 @Data
 @NoArgsConstructor
-public class Reservation {
+public class ReservationDo {
 //    public enum rType {
 //        WAITING,
 //        CANCLE,
