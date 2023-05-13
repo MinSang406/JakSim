@@ -1,5 +1,6 @@
 package com.example.JakSim.reservation;
 
+import com.example.JakSim.timetable.Timetable;
 import groovy.util.logging.Slf4j;
 import lombok.RequiredArgsConstructor;
 import org.apache.juli.logging.Log;
@@ -26,24 +27,25 @@ public class ReservationController {
         if(reservationList.isEmpty()) {
             System.out.println("ReservationList_is_null");
         } else {
-            model.addAttribute("reservation", reservationList);
+            model.addAttribute("reservationList", reservationList);
         }
         return "content/timetable/timetable";
     }
 
     // 일반 PT사용자가 예약하기
     @PostMapping("/reservate/{userId}")
-//    @ResponseBody
-    public String Reservation(@PathVariable("userId") String id) {
-        // front에서 userId와 현재 선택된 날짜와 예약하려는 시작 시간, 마감 시간을 받아온다.
+    @ResponseBody
+    public Boolean Reservation(@PathVariable("userId") String userId, int tIdx, String date) {
 
+        if(reservationService.register(userId, tIdx, date)) {
+            return true;
+        }
 
-
-        return "content/timetable/timetable";
+        return false;
     }
 
     @PostMapping("/cancle/{userId}")
-//    @ResponseBody
+    @ResponseBody
     public String ReservationCancle(@PathVariable("userId") String id, Model model) {
 //        model.addAttribute("", reservationService.);
 

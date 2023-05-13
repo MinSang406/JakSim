@@ -1,5 +1,6 @@
 package com.example.JakSim.reservation;
 
+import com.example.JakSim.timetable.Timetable;
 import com.example.JakSim.trainer.model.TrainerDao;
 import com.example.JakSim.trainer.model.TrainerDo;
 import org.apache.tomcat.jdbc.pool.DataSource;
@@ -46,6 +47,37 @@ public class ReservationService {
         }
 
         return reservationUser;
+    }
+
+
+
+
+    public Boolean register(String userId, int tIdx, String date) {
+        // 유효한 결제를 찾아 그거의 tpIdx를 찾는다.
+        // int tpIdx = paymentDao.findtpIdxByuserId(userId);
+        // 예시 데이터
+        int tpIdx = 2;
+        /*
+        나중에 payDao에 넣기!
+        * public int findtpIdxByuserId(String userId) {
+        * int tpIdx;
+        * this.sql = "select tp_idx from payment where user_id = ?";
+        *
+        *  try {
+            tpIdx = jdbcTemplate.query(this.sql, , userId);
+        } catch (EmptyResultDataAccessException e) {
+            System.out.println("예약이 올바르게 되지 않았습니다.");
+            return -1;
+        }
+
+        return tpIdx;
+        * */
+
+        if(reservationDao.insert(userId, tIdx, date, tpIdx)) {
+            return true;
+        }
+
+        return false;
     }
 
 }

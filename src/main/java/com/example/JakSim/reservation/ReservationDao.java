@@ -36,7 +36,22 @@ public class ReservationDao {
         // 2. Reservation의 IDX(R_IDX)로 Timetable의 정보를 join시켜서 테이블 가져오기
         this.sql = "select * from reservation natural join timetable where user_id = ?";
         reservationUser = jdbcTemplate.query(this.sql, new ReservationUserRowMapper(), userId);
-System.out.println(reservationUser);
+
         return reservationUser;
+    }
+
+    public Boolean insert(String userId, int tIdx, String date, int tpIdx) {
+        this.sql = "insert into reservation" +
+                    "values(RESERVATION_SEQ.NEXTVAL, ?, ?, ?, TO_DATE(?, 'YYYY-MM-DD'), ?)";
+
+        try {
+            jdbcTemplate.update(this.sql, tIdx, userId, tpIdx, date);
+        } catch (EmptyResultDataAccessException e) {
+            System.out.println("예약이 올바르게 되지 않았습니다.");
+            return false;
+        }
+
+        System.out.println("예약 완료!!");
+        return true;
     }
 }

@@ -31,7 +31,7 @@ public class JdbcConfig {
         ds.setUsername(application.getEnvironment().getRequiredProperty("spring.datasource.username"));
         ds.setPassword(application.getEnvironment().getRequiredProperty("spring.datasource.password"));
 
-        ds.setDefaultAutoCommit(false);
+        ds.setDefaultAutoCommit(true);
 
         ds.setInitialSize(2);
         ds.setMinIdle(3);
