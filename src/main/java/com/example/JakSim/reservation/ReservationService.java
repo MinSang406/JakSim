@@ -3,6 +3,7 @@ package com.example.JakSim.reservation;
 import com.example.JakSim.timetable.TimetableDao;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -86,6 +87,25 @@ public class ReservationService {
 //        if(userDao.increasePtCnt(userId)) {
 //            return false;
 //        } // 이거 짜서 주석에 짱박아 놔야함....
+
+        //////////////////////////////
+//        public Boolean increasePtCnt(String userId) {
+//            this.sql = "update timetable" +
+//                    "set user_pt = user_pt + 1" +
+//                    "where user_id = ?";
+//
+//            try {
+//                jdbcTemplate.update(this.sql, userId);
+//            } catch (EmptyResultDataAccessException e) {
+//                System.out.println("사용자 pt횟수 변경이 올바르게 되지 않았습니다.");
+//                return false;
+//            }
+//
+//            System.out.println("사용자 pt횟수 변경 완료!!");
+//            return true;
+//        }
+
+        //////////////////////////////
 
         return true;
     }
