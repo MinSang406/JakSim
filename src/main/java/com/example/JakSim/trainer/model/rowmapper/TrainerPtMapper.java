@@ -1,6 +1,8 @@
 package com.example.JakSim.trainer.model.rowmapper;
 
 import com.example.JakSim.trainer.model.TrainerPtDo;
+import org.springframework.jdbc.core.PreparedStatementSetter;
+import org.springframework.jdbc.core.RowCallbackHandler;
 import org.springframework.jdbc.core.RowMapper;
 
 import java.sql.ResultSet;

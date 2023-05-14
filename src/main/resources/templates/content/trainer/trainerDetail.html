@@ -1,0 +1,157 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout/base}">
+<script src="https://kit.fontawesome.com/05995ac069.js" crossorigin="anonymous"></script>
+<div layout:fragment="content" id="trainer_Detail_Container">
+<h4>트레이너 상세페이지</h4>
+  <br>
+
+  <div id="trainer-info">
+    <img th:src="${imageList[0].path}" alt="Trainer Image" width="270" height="270">
+
+  <table id="trainer-table">
+    <tr th:each="expert : ${expertList}">
+      <td th:if="${expert.expert == 0}" th:text="바디프로필"></td>
+      <td th:if="${expert.expert == 1}" th:text="파워리프팅"></td>
+      <td th:if="${expert.expert == 2}" th:text="다이어트"></td>
+      <td th:if="${expert.expert == 3}" th:text="재활운동"></td>
+      <td th:if="${expert.expert == 4}" th:text="자세교정"></td>
+      <td th:if="${expert.expert == 5}" th:text="컨디셔닝"></td>
+    </tr>
+    <tr>
+      <td th:text="${trainerInfo.user_name}">  </td>
+      <td>트레이너</td>
+    </tr>
+    <tr>
+      <td th:text="${trainer.gym}"> </td>
+    </tr>
+    <tr>
+    <td><i class="fa-brands fa-instagram fa-xl"></i></td>
+    </tr>
+    <tr>
+      <td th:text="${trainer.insta}"> </td>
+    </tr>
+  </table>
+  </div>
+  <i class="fa-solid fa-heart fa-2xl" style="color: #ff0505;"></i>
+<!--  <i class="fa-regular fa-heart fa-2xl" style="color: #000000;"></i>-->
+  <hr/>
+
+  <h5>자격증</h5>
+  <div id="trainer-cert" th:each="cert : ${certList}">
+    <span th:text="${cert.name}"></span><br/>
+    <span th:src="${cert.image}" alt="Trainer Image" /></span>
+  </div>
+<br>
+
+  <h5>트레이너 자기소개</h5>
+  <div id="trainer-intro">
+    <span th:text="${trainer.introduce}"></span>
+  </div>
+  <br>
+
+  <h5>경력 / 수상사항</h5>
+  <div id="trainer-career" th:each="career : ${careerList}">
+    <span th:text="${career.content}"></span> <br/>
+  </div>
+  <br>
+  <h5>추가 사진</h5>
+  <div th:each="image : ${imageList}" style="display:inline-block; margin:3px;">
+    <img th:src="${image.path}" alt="Trainer Image" width="270" height="270"/>
+  </div>
+  <hr/>
+
+  <h5>PT 상품</h5>
+  <div id="pt-info" th:each="pt : ${ptList}">
+    <span th:text="${pt.times}"></span> <span> 회 </span>
+    <span th:text="${pt.month}"></span> <span> 개월 </span>
+    <span th:text="${pt.price}"></span> <span> 원 </span>
+    <button type="submit" class="pay-button">결제하기</button>
+<!--    <form th:action="/paytest" method="GET">-->
+<!--      <span>-->
+<!--        <button type="submit" class="pay-button">결제하기</button>-->
+<!--      </span>-->
+<!--    </form>-->
+  </div>
+  <hr>
+
+  <div id="review-container">
+    <h5>PT리뷰</h5> <br/>
+<!--    <div class="star-container">-->
+<!--      <i class="fa-solid fa-star" style="color: #f3eb12;"></i>-->
+<!--     </div>-->
+    <form id="filter-form" th:action="@{/review/filter}" method="post">
+      <div class="review-filters">
+        <select id="review-filter" th:name="review-filter">
+          <option value="highest">별점 높은순</option>
+          <option value="lowest">별점 낮은순</option>
+          <option value="recent">최신순</option>
+        </select>
+      </div>
+    </form>
+
+    <script th:inline="javascript">
+  const selectElement = document.getElementById('review-filter');
+  const reviewContainer = document.getElementById('review-container');
+
+  selectElement.addEventListener('change', function() {
+    // Get the selected filter value
+    const selectedFilter = this.value;
+
+    // Check if the review container element exists
+    if (reviewContainer) {
+      // Sort the review elements based on the selected filter
+      const reviews = Array.from(reviewContainer.getElementsByClassName('review'));
+      reviews.sort(function(a, b) {
+        if (selectedFilter === 'highest') {
+          return b.querySelectorAll('.fa-star').length - a.querySelectorAll('.fa-star').length;
+        } else if (selectedFilter === 'lowest') {
+          return a.querySelectorAll('.fa-star').length - b.querySelectorAll('.fa-star').length;
+        } else if (selectedFilter === 'recent') {
+          const dateA = new Date(a.querySelector('.review-date').textContent);
+          const dateB = new Date(b.querySelector('.review-date').textContent);
+          return dateB - dateA;
+        }
+      });
+
+      // Reorder the review elements in the container
+      reviews.forEach(function(review) {
+        reviewContainer.appendChild(review);
+      });
+    }
+  });
+</script>
+
+
+    <div th:each="review : ${reviewList}" class="review">
+      작심<span class="review-idx" th:text="${review.idx}"></span>
+      <span th:each="i : ${#numbers.sequence(1, review.star)}">
+        <i class="fa-solid fa-star" style="color: #f3eb12;"></i>
+      </span>
+      <span class="review-date" th:text="${review.createDate}"></span>
+      <div class="review-content" th:text="${review.content}"></div>
+      <div id="review-button" th:if="${review.user_id == user}">
+        <a th:href="@{/review/edit/{reviewId}(reviewId=${review.user_id})}" style="color: black;">수정</a>
+        <button onclick="deleteReview()">삭제</button>
+      </div>
+      <script>
+          function deleteReview() {
+              fetch('/delete-review', { method: 'POST' })
+                  .then(response => {
+                      if (response.ok) {
+                          // Redirect to the desired page after successful deletion
+                          alert('리뷰가 삭제 되었습니다.');
+                          window.location.href = '/';
+                      } else {
+                          // Handle any error conditions
+                          console.error('Failed to delete review');
+                      }
+                  })
+                  .catch(error => {
+                      console.error('Failed to delete review', error);
+                  });
+          }
+      </script>
+    </div>
+  </div>
+</div>
+</html>

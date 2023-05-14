@@ -1,0 +1,63 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
+<head>
+    <script src="https://kit.fontawesome.com/be4d93a5b2.js" crossorigin="anonymous"></script>
+</head>
+<div layout:fragment="content">
+<div id="payscreen">
+    <div id="p_screen1">
+        <p id="결제하기">결제하기</p>
+        <div id="p_screen1-1">
+            <p id="주문내역">주문 내역</p>
+            <input class="trainer" type="image" th:src="@{/images/trainer1.png}" >
+            <p id="p_t_info1">구세은&nbsp;트레이너</p>
+            <div id="위치">
+                <i class="fa-solid fa-location-dot fa-flip fa-sm" style="color: #a584ee;"></i>
+            </div>
+            <p id="p_t_info2">올림피아드&nbsp;헬스장</p>
+            <p id="p_t_info3">서울특별시&nbsp;강남구&nbsp;멀티캠퍼스&nbsp;2층</p>
+            <p id="p_t_info4">PT&nbsp;횟수&nbsp;:&nbsp;10회</p>
+        </div>
+        <div id="p_screen1-2">
+            <p id="구매자정보">구매자 정보</p>
+            <div class="name_co">
+                <span class="name1">이름</span>
+                <span class="name2">이성구</span>
+            </div>
+            <div class="tel_co">
+                <span class="tel1">전화번호</span>
+                <span class="tel2">010123456578</span>
+            </div>
+            <div class="addr_co">
+                <span class="addr1">주소</span>
+                <span class="addr2">서울특별시 노원구 쌍문동</span>
+            </div>
+            <div class="start_co">
+                <span class="start1">운동시작일</span>
+                <span class="start2">2023.05.14</span>
+            </div>
+        </div>
+        <div id="p_screen1-3">
+            <input type="checkbox" id="all_agree" name="all_agree" checked>
+            <label for="all_agree">전체 동의</label> </br>
+            <input type="checkbox" id="agree1" name="agree1" checked>
+            <label for="agree1">[필수] 취소 및 환불규정을 확인했습니다.</label> </br>
+            <input type="checkbox" id="agree2" name="agree2" checked>
+            <label for="agree2">[필수] 개인정보 제 3자 위탁에 동의합니다.</label> </br>
+        </div>
+    </div>
+    <div id="p_screen2">
+        <form class="payment" method="get">
+            <p id="주문금액">주문금액</p>
+            <p id="돈1">1,200,000&nbsp;원</p>
+            <p id="할인">할인</p>
+            <p id="돈2">0&nbsp;원</p>
+            </br>
+            <hr style="border: solid 0.5px rgba(100, 100, 100, 1); position: relative; bottom:10vh;\">
+            <p id="총금액">총 결제금액</p>
+            <p id="돈3">1,200,000&nbsp;원</p>
+            <button id="payBtn" onclick="requestPay()">결제하기</button> <!-- 결제하기 버튼 생성 -->
+        </form>
+    </div>
+</div>
+</div>
+</html>

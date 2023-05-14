@@ -5,7 +5,6 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-
 public class UserRowMapper implements RowMapper<UserInfo> {
 
     @Override
@@ -28,4 +27,3 @@ public class UserRowMapper implements RowMapper<UserInfo> {
         return userInfo;
     }
 }
-

@@ -44,7 +44,7 @@ public class TimetableDao {
     public void insertTimetable(TimetableDo timetableDo) {
 
         this.sql = "insert into timetable(t_idx, ut_idx, t_start_t, t_end_t, t_max, t_cur, t_type)" +
-                "values(TIMETABLE_SEQ.NEXTVAL, ?, TO_TIMESTAMP(?, 'YYYY/MM/DD HH24:MI:SS'), TO_TIMESTAMP(?, 'YYYY/MM/DD HH24:MI:SS'), ?, ?, ?)";
+                "values(TIMETABLE_SEQ.NEXTVAL, ?, TO_TIMESTAMP(?, 'YYYY-MM-DD\"T\"HH24:MI'), TO_TIMESTAMP(?, 'YYYY-MM-DD\"T\"HH24:MI'), ?, ?, ?)";
         try {
             KeyHolder keyHolder = new GeneratedKeyHolder();
             jdbcTemplate.update(new TrainerTimetalbeRegisterPreparedStatementCreator(timetableDo, sql), keyHolder);
@@ -87,21 +87,20 @@ public class TimetableDao {
     }
 
     public TimetableDo findByDate(String date) {
-        System.out.println("helllllo");
+
+        System.out.println("DAO왔냥?ㅇ???.");
         TimetableDo timetableDo;
-        this.sql = "select * from timetable where T_START_T = TO_TIMESTAMP('?', 'YYYY-MM-DD HH24:MI:SS')";
+        this.sql = "select * from timetable where T_START_T = TO_TIMESTAMP('?', 'YYYY-MM-DD\"T\"HH24:MI:SS')";
 
         try {
             timetableDo = jdbcTemplate.queryForObject(this.sql, new TimetableRowMapper(), date);
-        } catch (EmptyResultDataAccessException e) {
+        } catch (Exception e) {
             System.out.println("해당 날짜 또는 시간의 시간표가 없습니다.");
             return null;
         }
-
-        System.out.println("helllllo" + timetableDo);
-
         return timetableDo;
     }
+
 
     public void increaseCurr(int tIdx) {
         this.sql = "update timetable set t_cur = t_vur + 1 where t_idx = tIdx";

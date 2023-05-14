@@ -1,0 +1,54 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout/base}">
+<div layout:fragment="content" id="index_container">
+  <div id="findTrainer_container">
+    <div id="location">
+      <img src="/images/location.png" alt="위치" id="location_img">
+      <span id="location_span">서울시 구로구 가산디지털단지역</span>
+    </div>
+
+    <div id="button_container">
+      <input type="radio" name="toggle" value="0" id="toggle-body-profile" class="toggle-btn">
+      <label for="toggle-body-profile" class="toggle-label">바디프로필</label>
+
+      <input type="radio" name="toggle" value="1" id="toggle-power-lifting" class="toggle-btn">
+      <label for="toggle-power-lifting" class="toggle-label">파워리프팅</label>
+
+      <input type="radio" name="toggle" value="2" id="toggle-diet" class="toggle-btn">
+      <label for="toggle-diet" class="toggle-label">다이어트</label>
+
+      <input type="radio" name="toggle" value="3" id="toggle-rehab" class="toggle-btn">
+      <label for="toggle-rehab" class="toggle-label">재활운동</label>
+
+      <input type="radio" name="toggle" value="4" id="toggle-posture" class="toggle-btn">
+      <label for="toggle-posture" class="toggle-label">자세교정</label>
+
+      <input type="radio" name="toggle" value="5" id="toggle-condition" class="toggle-btn">
+      <label for="toggle-condition" class="toggle-label">컨디셔닝</label>
+    </div>
+
+    <span id="amount_trainer">200명의 트레이너</span>
+
+    <table>
+      <tr th:each="item : ${result}">
+        <td>
+          <div class="find_trainer_crop">
+            <img th:src="${item.img}" alt="트레이너" class="find_trainer_profile">
+          </div>
+          <div><span th:text="${item.gym}"></span></div>
+          <div><span th:text="|${item.userName} 트레이너|"></span></div>
+          <div th:each="expert : ${item.expList}" style="display:inline-block; margin-right:3px;">
+            <span th:text="${expert}"></span>
+          </div>
+          <div></div>
+          <div th:each="cert : ${item.certs}" style="display:inline-block; margin-right:3px;">
+            <span th:text="${cert}"></span>
+          </div>
+        </td>
+      </tr>
+    </table>
+
+
+  </div>
+</div>
+</html>

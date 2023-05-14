@@ -1,38 +1,33 @@
 <html xmlns:sec="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
-</html>
-<body>
-
 <nav class="navbar navbar-expand-lg bg-body-tertiary" th:fragment="naviFragment">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">작심득근</a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
+    <img th:src="@{/images/logo.png}" alt="logo" width="43px" height="43px" style="margin-right:10px;">
+    <a class="navbar-brand" href="/" id="nav-head">작심득근</a>
+
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">트레이너 등록</a>
+          <a class="nav-link" th:href="@{/trainer/create/}">트레이너 등록</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#">트레이너 찾기</a>
+          <a class="nav-link" th:href="@{/trainer/search/}">트레이너 찾기</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" sec:authorize="isAnonymous()"  th:href="@{/login}">로그인</a>
-          <a class="nav-link" sec:authorize="isAuthenticated()"  th:href="@{/logout}">로그아웃</a>
+          <a class="nav-link" th:href="@{/myPage}">마이페이지</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" th:href="@{/reservation}">스케줄러</a>
         </li>
       </ul>
-
-      <ul class="nav justify-content-end">
-        <li class="nav-item">
-          <a class="nav-link" href="#">로그인</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">회원가입</a>
-        </li>
-      </ul>
-
+      <li class="nav-item d-flex">
+        <a class="nav-link" sec:authorize="isAnonymous()"  th:href="@{/login}">로그인</a>
+        <a class="nav-link" sec:authorize="isAuthenticated()"  th:href="@{/logout}">로그아웃</a>
+      </li>
+      <li class="nav-item d-flex" style="margin-left:7px;">
+        <a class="nav-link" sec:authorize="isAnonymous()" th:href="@{/register}">회원가입</a>
+      </li>
     </div>
+
   </div>
 </nav>
-
-</body>
+</html>

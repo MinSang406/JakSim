@@ -17,13 +17,13 @@ public class LoginService {
     private final PasswordEncoder passwordEncoder;
 
     public void registerUser(UserInfo user){
-        LoginDao loginDao = new LoginDao(ds);
+        UserDao userDao = new UserDao(ds);
         user.setUser_pw(passwordEncoder.encode(user.getUser_pw()));
-        loginDao.insertTest(user);
+        userDao.insertTest(user);
     }
 
     public UserInfo findUserTel(String tel) throws SQLException {
-        LoginDao loginDao = new LoginDao(ds);
-        return loginDao.findByTel(tel);
+        UserDao userDao = new UserDao(ds);
+        return userDao.findByTel(tel);
     }
 }

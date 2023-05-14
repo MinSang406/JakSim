@@ -23,11 +23,10 @@ public class UserSecurityService implements UserDetailsService {
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-        System.out.println(username);
-        LoginDao loginDao = new LoginDao(ds);
+        UserDao userDao = new UserDao(ds);
         UserInfo siteUser = null;
         try {
-            siteUser = loginDao.findById(username);
+            siteUser = userDao.findById(username);
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
@@ -37,6 +36,7 @@ public class UserSecurityService implements UserDetailsService {
         }else{
             authorities.add(new SimpleGrantedAuthority(UserRole.USER.getValue()));
         }
+
 
         return new User(siteUser.getUser_id(), siteUser.getUser_pw(), authorities);
     }

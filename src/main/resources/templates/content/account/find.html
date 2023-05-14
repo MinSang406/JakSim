@@ -10,7 +10,7 @@
       <div >
         <span class="find_banner">전화번호</span>
       </div>
-      <input type="text" class="find_input" id="find_tel"/>
+      <input type="text" class="find_input" id="find_tel" placeholder="- 없이 작성해주세요. 예)01012345678"/>
       <button class="btn btn-outline-secondary" id="find_tel_button">확인</button>
     </div>
     <div class="find_input_con">
@@ -46,11 +46,16 @@
             <span class="find_banner">비번확인</span>
           </div>
           <input type="password" name="find_pw_confirm" id="find_pw_confirm" class="find_input" disabled/>
+          <button type="button" id="find_pw_check" class="btn btn-outline-secondary" disabled>비밀번호 확인</button>
+        </div>
+        <span id="find_password_check">비밀번호 확인버튼을 눌러주세요</span>
+        <div>
           <input type="submit" class="btn btn-primary" id="find_change_pw" value="변경" disabled/>
+          <a type="button" class="btn btn-outline-secondary" th:href="@{/login}">로그인으로 이동</a>
         </div>
       </form>
       <div style="margin-top: 3vh">
-        <a type="button" class="btn btn-outline-secondary" th:href="@{/login}">로그인으로 이동</a>
+
       </div>
     </div>
   </div>

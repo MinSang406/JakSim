@@ -1,5 +1,7 @@
 package com.example.JakSim.reservation;
 
+import com.example.JakSim.login.model.UserDao;
+import com.example.JakSim.login.model.UserInfo;
 import com.example.JakSim.pay.PayMentDao;
 import com.example.JakSim.timetable.TimetableDao;
 import com.example.JakSim.timetable.TimetableDo;
@@ -30,7 +32,7 @@ public class ReservationService {
         } catch (Exception e) {
             return null;
         }
-        
+        System.out.println("DAODAO::::" + reservationUser);
         return reservationUser;
     }
 
@@ -42,38 +44,26 @@ public class ReservationService {
 
 
     public Boolean register(String userId, String date) {
-        TimetableDo timetableDo = reservationDao.findAllByDate(date);
+
+        timetableDao = new TimetableDao(ds);
+        TimetableDo timetableDo = timetableDao.findByDate(date);
+
+        if(timetableDo == null) {
+            System.out.println("null이당!!!!");
+            return false;
+        }
         int tIdx = timetableDo.getT_idx();
 
-        //////////////////////////////
-//        public void decreaseCnt(String userId) {
-//            this.sql = "update timetable " +
-//                    "set user_pt = user_pt - 1" +
-//                    "where user_id = ?";
-//
-//            try {
-//                jdbcTemplate.update(this.sql, userId);
-//            } catch (EmptyResultDataAccessException e) {
-//                System.out.println("사용자 pt횟수 변경이 올바르게 되지 않았습니다.");
-//                return;
-//            }
-//
-//            System.out.println("사용자 pt횟수 변경 완료!!");
-//            return;
-//        }
+        UserInfo userInfo = null;
+        try {
+            userInfo = userDao.findById(userId);
+        } catch(Exception e) {
+            System.out.println("조회되지 않은 닉네임");
+            return false;
+        }
 
-        //////////////////////////////
-
-        //////////////////////////////
-//        public int findByUser(String userId) {
-//            this.sql = "select * from user_info  where user_id = ?";
-//
-//            return jdbcTemplate.update(this.sql, new UserRowMapper(), userId);
-//        }
-
-        //////////////////////////////
-
-        if((userDao.findByUser.getUserPt(userId) > 0) && (timetableDo.getT_cur() < timetableDo.getT_max())) {
+        if((userInfo.getUser_pt() > 0) && (timetableDo.getT_cur() < timetableDo.getT_max())) {
+            System.out.println("if문 들어옴" + "예약 가능status");
             try{
                 reservationDao.insert(tIdx, userId, date);
             } catch(Exception e) {
@@ -89,27 +79,17 @@ public class ReservationService {
     }
 
     public Boolean delete(String userId, String date) {
-        TimetableDo timetableDo = reservationDao.findAllByDate(date);
+        timetableDao = new TimetableDao(ds);
+        reservationDao = new ReservationDao(ds);
+
+        TimetableDo timetableDo = timetableDao.findByDate(date);
+        if(timetableDo == null) {
+            System.out.println("null이당!!!!");
+            return false;
+        }
+        System.out.println(timetableDo.toString());
+
         int tIdx = timetableDo.getT_idx();
-
-        //////////////////////////////
-//        public void increaseCnt(String userId) {
-//            this.sql = "update timetable " +
-//                    "set user_pt = user_pt + 1" +
-//                    "where user_id = ?";
-//
-//            try {
-//                jdbcTemplate.update(this.sql, userId);
-//            } catch (EmptyResultDataAccessException e) {
-//                System.out.println("사용자 pt횟수 변경이 올바르게 되지 않았습니다.");
-//                return;
-//            }
-//
-//            System.out.println("사용자 pt횟수 변경 완료!!");
-//            return;
-//        }
-
-        //////////////////////////////
 
         if(reservationDao.delete(userId, tIdx)) {
             userDao.increaseCnt(userId);
@@ -119,5 +99,4 @@ public class ReservationService {
 
         return false;
     }
-
 }

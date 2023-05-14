@@ -6,9 +6,67 @@
   <component name="ChangeListManager">
     <list default="true" id="9495474b-28c1-4396-b5f7-304dcd124ee3" name="변경" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/MainController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/MainController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/config/JdbcConfig.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/config/JdbcConfig.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/controller/LoginController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/controller/LoginController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/controller/RegisterController.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/controller/RegisterController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/model/LoginDao.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/model/UserInfo.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/model/UserInfo.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/model/UserRowMapper.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/com/example/JakSim/login/model/UserRowMapper.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/static/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/static/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/content/account/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/content/account/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/content/account/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/content/account/register.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/content/pay/Pay.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/fragment/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/fragment/footer.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/fragment/navi.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/fragment/navi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/resources/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/resources/templates/layout/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/MainController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/auth/AuthFailureHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/auth/AuthSuccessHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/auth/SecurityConfiguration.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/config/JdbcConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/login/controller/LoginController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/login/controller/RegisterController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/login/model/LoginDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/login/model/LoginService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/login/model/RegisterService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/login/model/UserDao.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/login/model/UserInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/login/model/UserRegisterPreparedStatementCreator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/login/model/UserRole.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/login/model/UserRowMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/login/model/UserSecurityService.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationDao.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationUserRowMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/reservation/ReservationUserRowMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/timetable/TimetableController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/timetable/TimetableController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/timetable/TimetableDao.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/timetable/TimetableDao.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/timetable/TimetableService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/JakSim/timetable/TimetableService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/trainer/model/TrainerPtDo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/JakSim/trainer/model/rowmapper/TrainerPtMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/account_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/login_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/register_style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/style.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/MainImg.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/trainer1.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/images/trainer2.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/javascript/TrainerRegister.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/javascript/pay.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/javascript/register.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/account/find.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content/account/find.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/account/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/account/register.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/account/test.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/pay/pay.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/trainer/gpt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/content/trainer/trainerRegister.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/content/trainer/trainerRegister.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/footer.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/fragment/navi.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/fragment/navi.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/layout/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/layout/base.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,31 +120,35 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RequestMappingsPanelOrder0": "0",
-    "RequestMappingsPanelOrder1": "1",
-    "RequestMappingsPanelWidth0": "75",
-    "RequestMappingsPanelWidth1": "75",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/ujeon/IdeaProjects/JakSim/src/main/resources/static/css",
-    "node.js.detected.package.eslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "spring.configuration.checksum": "5130fdee4d2ba91a4adc909cbdc7c302",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RequestMappingsPanelOrder0&quot;: &quot;0&quot;,
+    &quot;RequestMappingsPanelOrder1&quot;: &quot;1&quot;,
+    &quot;RequestMappingsPanelWidth0&quot;: &quot;75&quot;,
+    &quot;RequestMappingsPanelWidth1&quot;: &quot;75&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ujeon/IdeaProjects/JakSim/src/main/resources/static/css&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;spring.configuration.checksum&quot;: &quot;5130fdee4d2ba91a4adc909cbdc7c302&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ujeon\IdeaProjects\JakSim\src\main\resources\static\css" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ujeon\IdeaProjects\JakSim\src\main\resources\static\images" />
+      <recent name="C:\Users\ujeon\IdeaProjects\JakSim\src\main\resources\templates\fragment" />
+      <recent name="C:\Users\ujeon\IdeaProjects\JakSim\src\main\resources\templates\content\trainer" />
+      <recent name="C:\Users\ujeon\IdeaProjects\JakSim\src\main\resources\templates\content\pay" />
+      <recent name="C:\Users\ujeon\IdeaProjects\JakSim\src\main\resources\templates\content\account" />
+      <recent name="C:\Users\ujeon\IdeaProjects\JakSim\src\main\resources\static\javascript" />
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.TstApplication">
@@ -136,7 +198,8 @@
       <workItem from="1683951096097" duration="649000" />
       <workItem from="1683951771701" duration="8835000" />
       <workItem from="1683975614314" duration="27728000" />
-      <workItem from="1684035869077" duration="12251000" />
+      <workItem from="1684035869077" duration="19229000" />
+      <workItem from="1684065192222" duration="9261000" />
     </task>
     <servers />
   </component>

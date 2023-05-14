@@ -5,7 +5,7 @@
     <div id="carouselExampleControls" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
             <div class="carousel-item active">
-                <a th:href="@{/pay}"><img th:src="@{/images/mainImg.png}" class="d-block w-100" alt="..."></a>
+                <a th:href="@{/trainer/search/}"><img th:src="@{/images/mainImg.png}" class="d-block w-100" alt="..."></a>
             </div>
             <div class="carousel-item">
                 <img src="..." class="d-block w-100" alt="...">
@@ -24,15 +24,22 @@
         </button>
     </div>
 
-
-</div>
-</html>
-
-<body>
-<div class="card">
-    <div class="card-body">
-        This is some text within a card body.
+    <div id="index_subTitle">
+        <h3>새로운 트레이너님들을 소개합니다!</h3>
     </div>
+
+    <div id="index_trainer_container">
+        <table id="index_trainer_table">
+            <tr>
+                <td th:each="item: ${trainerList}">
+                    <div class="find_trainer_crop"><a th:href="@{|/trainer/${item.utIdx}|}"><img th:src="${item.img}" alt="트레이너"  class="find_trainer_profile"></a></div>
+                    <div><span th:text="${item.gym}" style="color:#747474"></span></div>
+                    <div><span th:text="|${item.userName} 트레이너|"></span></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+
 </div>
-</body>
 </html>

@@ -1,0 +1,36 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout/base}">
+
+<div layout:fragment="content" id="review-main-content">
+
+    <br/>
+  <h5>리뷰 등록</h5>
+  <form id="review-form" th:object="${review}" th:action="@{/review/update/{reviewId}}" method="post">
+    <div class="review-star">
+            <label for="review-star">별점</label>
+            <select class="star_select" id="review-star" name="star" th:field="*{star}">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+    </div>
+    <div class="review-content">
+        <label for="review-content">내용</label>
+        <input type="text" id="review-content" name="content" th:field="*{content}" />
+        <br/>
+    </div>
+    <input type="submit" id="review-edit-button" value="저장">
+    <button type="button" id="review-cancel-button" onclick="goBack()">취소</button>
+      <script>
+        function goBack() {
+            // Go back to the previous page in the browser's history
+            window.history.back();
+        }
+      </script>
+  </form>
+
+</div>
+
+</html>

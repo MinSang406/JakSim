@@ -52,11 +52,11 @@ public class ReservationController {
     @ResponseBody
     public Boolean Reservation(@AuthenticationPrincipal User user, @PathVariable("date") String date) {
 
-        return reservationService.register(user.getUsername(), date);
+        return reservationService.register(user.getUsername(), date); // yyyy-m-dd HH24:mm:ss
     }
 
     // PT 사용자 예약 취소_Main 화면에서
-    @PostMapping("/cancle/{date}")
+    @GetMapping("/cancel/{date}")
     @ResponseBody
     public Boolean ReservationCancle(@AuthenticationPrincipal User user, @PathVariable("date") String date) {
 

@@ -22,7 +22,7 @@ public class ReservationDao {
     }
 
     public List<ReservationUser> findAllByUserId(String userId) {
-        List<ReservationUser> reservationUser = new ArrayList<>();
+        List<ReservationUser> reservationUser;
 
         this.sql = "select * from reservation";
 
@@ -33,34 +33,36 @@ public class ReservationDao {
             System.out.println("예약이 존재하지 않습니다.");
             return null;
         }
-
+System.out.println("dao왔음");
         // 1. Reservation테이블에서 userId로 해당 유저에 해당하는 예약을 모두 찾아준다
         // 2. Reservation의 IDX(R_IDX)로 Timetable의 정보를 join시켜서 테이블 가져오기
         this.sql = "select * from reservation natural join timetable where user_id = ?";
         reservationUser = jdbcTemplate.query(this.sql, new ReservationUserRowMapper(), userId);
 
+        System.out.println("dao왔음22" + reservationUser);
         return reservationUser;
     }
 
-    public TimetableDo findAllByDate(String date) {
-        TimetableDo timetableDo;
+    public List<ReservationDo> findAllByDate(String date) {
+        List<ReservationDo> reservationDoList;
 
-        this.sql = "select * from timetable where res_c_dt = TO_DATE(?, 'YYYY-MM-DD')";
+        this.sql = "select * from reservation where res_c_dt = TO_DATE(?, 'YYYY-MM-DD')";
 
         try {
-            timetableDo = jdbcTemplate.queryForObject(this.sql, new TimetableRowMapper(), date);
+            reservationDoList = jdbcTemplate.query(this.sql, new ReservationRowMapper(), date);
         } catch (EmptyResultDataAccessException e) {
             System.out.println("예약이 존재하지 않습니다.");
             return null;
         }
 
-        return timetableDo;
+        return reservationDoList;
     }
 
     public Boolean available(String userId, String date) {
         this.sql = "select * from reservation where user_id = ? and res_c_dt = to_date(?, 'yyyy-mm-dd')";
 
         if(jdbcTemplate.query(this.sql, new ReservationRowMapper(), userId, date).isEmpty()) {
+            System.out.println("이게 나와야 해!!!!!");
             return true;
         }
 
