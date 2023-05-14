@@ -2,6 +2,8 @@ package com.example.JakSim.timetable;
 
 import groovy.util.logging.Slf4j;
 import lombok.RequiredArgsConstructor;
+import org.springframework.security.core.annotation.AuthenticationPrincipal;
+import org.springframework.security.core.userdetails.User;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -18,16 +20,10 @@ import java.util.List;
 public class TimetableController {
     private final TimetableService timetableService;
 
-    @GetMapping("/list/{userId}")
+    // 트레이너 시간표 조회_reservation-MAIN
+    @GetMapping("/timetable/{date}")
     @ResponseBody
-    public List<TimetableDo> TimetableList(@PathVariable("userId") String id, Model model) {
-        List<TimetableDo> timetableList = timetableService.searchAllTimetable(id);
-
-        if(timetableList.isEmpty()) {
-            System.out.println("Timetable_is_null");
-        } else {
-            model.addAttribute("timetableList", timetableList);
-        }
-        return timetableList;
+    public List<TimetableDo> timeTableList(@AuthenticationPrincipal User user, @PathVariable("date") String date) {
+        return timetableService.searchTimetable(user.getUsername(), date);
     }
 }

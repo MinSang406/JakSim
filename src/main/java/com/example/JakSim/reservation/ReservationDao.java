@@ -1,6 +1,8 @@
 package com.example.JakSim.reservation;
 
 import com.example.JakSim.login.model.UserInfo;
+import com.example.JakSim.timetable.TimetableDo;
+import com.example.JakSim.timetable.TimetableRowMapper;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.jdbc.core.JdbcTemplate;
@@ -40,12 +42,37 @@ public class ReservationDao {
         return reservationUser;
     }
 
-    public Boolean insert(String userId, int tIdx, String date, int tpIdx) {
-        this.sql = "insert into reservation" +
-                    "values(RESERVATION_SEQ.NEXTVAL, ?, ?, ?, TO_DATE(?, 'YYYY-MM-DD'), ?)";
+    public TimetableDo findAllByDate(String date) {
+        TimetableDo timetableDo;
+
+        this.sql = "select * from timetable where res_c_dt = TO_DATE(?, 'YYYY-MM-DD')";
 
         try {
-            jdbcTemplate.update(this.sql, tIdx, userId, tpIdx, date);
+            timetableDo = jdbcTemplate.queryForObject(this.sql, new TimetableRowMapper(), date);
+        } catch (EmptyResultDataAccessException e) {
+            System.out.println("예약이 존재하지 않습니다.");
+            return null;
+        }
+
+        return timetableDo;
+    }
+
+    public Boolean available(String userId, String date) {
+        this.sql = "select * from reservation where user_id = ? and res_c_dt = to_date(?, 'yyyy-mm-dd')";
+
+        if(jdbcTemplate.query(this.sql, new ReservationRowMapper(), userId, date).isEmpty()) {
+            return true;
+        }
+
+        return false;
+    }
+
+    public Boolean insert(int tIdx, String userId, String date) {
+        this.sql = "insert into reservation " +
+                    "values(RESERVATION_SEQ.NEXTVAL, ?, ?, TO_DATE(?, 'YYYY-MM-DD'))";
+
+        try {
+            jdbcTemplate.update(this.sql, tIdx, userId, date);
         } catch (EmptyResultDataAccessException e) {
             System.out.println("예약이 올바르게 되지 않았습니다.");
             return false;
@@ -56,7 +83,7 @@ public class ReservationDao {
     }
 
     public Boolean delete(int rIdx) {
-        this.sql = "delete from reservation" +
+        this.sql = "delete from reservation " +
                 "where r_idx = ?";
 
         try {

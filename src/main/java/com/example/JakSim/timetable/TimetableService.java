@@ -1,9 +1,13 @@
 package com.example.JakSim.timetable;
 
+import com.example.JakSim.reservation.ReservationDao;
+import com.example.JakSim.reservation.ReservationDo;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @Service
@@ -11,27 +15,71 @@ public class TimetableService {
     @Autowired
     private DataSource ds;
     private  TimetableDao timetableDao;
+    private ReservationDao reservationDao;
 
 
+    public List<TimetableDo> registerTimetables(List<TimetableDo> timetableDoList){
+        TimetableDao TimetableDao = new TimetableDao(ds);
 
-    public List<TimetableDo> searchAllTimetable(String userId) {
-        // 1. user가 존재하는 유저인지 확인
-         try {
-            // null인지 먼저 판별해줘야 함.
-            // userDao.findById(userId); _조장님이 하고 있음.
-        } catch (NullPointerException e) {
-            System.out.println("현재 유저는 등록되어 있지 않은 회원입니다.");
+        for(TimetableDo timetableDO : timetableDoList) {
+            timetableDao.insertTimetable(timetableDO);
+            System.out.println("insert");
+        }
+
+        return timetableDoList;
+    }
+    public List<TimetableDo> updateTimetables(List<TimetableDo> timetableDoList){
+        TimetableDao timetableDao = new TimetableDao(ds);
+
+        for(TimetableDo timetableDO : timetableDoList) {
+            timetableDao.updateTimetable(timetableDO);
+            System.out.println("update");
+        }
+
+        return timetableDoList;
+    }
+    public List<TimetableDo> searchTimetable(int utIdx) {
+        TimetableDao timetableDao = new TimetableDao(ds);
+        List<TimetableDo> timeTableList = timetableDao.findAllByUt(utIdx);
+        return timeTableList;
+    }
+
+    public List<TimetableDo> searchTimetable(String userId, String date) {
+        List<TimetableDo> timetableDoList = new ArrayList<>();
+        List<TimetableDo> todayTimetableDoList = new ArrayList<>();
+        List<ReservationDo> reservationDoList = new ArrayList<>();
+        int tpIdx, utIdx;
+
+        reservationDoList = reservationDao.findAllByDate(date);
+        if(reservationDoList.isEmpty()) {
             return null;
         }
-        // 2. 유저가 결제를 찾아 환불이 안됐고 아직 횟수가 남은 피티가 있는지 확인
-        // tpIdx = payDao.findTpById(userId);
+        // 이게 2번
 
-        // 3. 해당 결제에서 pt정보 테이블을 불러오고 그 pt정보 테이블에서 트레이너 id를 빼와
+        tpIdx = timetableDao.findTpByUser(userId);
+        if(tpIdx == -1) {
+            return null;
+        }
 
-        // 4. 해당 트레이너의 모든 시간표 조회
-        timetableDao.searchAllTimetable(userId);
+        utIdx = timetableDao.findUtByTp(tpIdx);
+        if(utIdx == -1) {
+            return null;
+        }
 
-        return null; // 변경 필요
+        timetableDoList = timetableDao.findAllByUt(utIdx);
+        // 이까지 1번
+
+        for(TimetableDo timetable : timetableDoList) {
+            for(ReservationDo reservation : reservationDoList) {
+                if(timetable.getT_idx() == reservation.getT_idx()) {
+                    todayTimetableDoList.add(timetable);
+                    break;
+                }
+            }
+
+        }
+
+        return timetableDoList;
     }
 
 }

@@ -16,6 +16,7 @@ public class UserInfo {
     private int user_type;
     private String user_birth;
     private String user_c_dt;
+    private int user_pt;
 
     @Override
     public String toString() {
@@ -30,6 +31,7 @@ public class UserInfo {
                 ", user_type=" + user_type +
                 ", user_birth='" + user_birth + '\'' +
                 ", user_c_dt='" + user_c_dt + '\'' +
+                ", user_pt='" + user_pt + '\'' +
                 '}';
     }
 }

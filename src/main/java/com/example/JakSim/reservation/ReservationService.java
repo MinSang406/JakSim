@@ -1,9 +1,10 @@
 package com.example.JakSim.reservation;
 
+import com.example.JakSim.pay.PayMentDao;
 import com.example.JakSim.timetable.TimetableDao;
+import com.example.JakSim.timetable.TimetableDo;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -14,11 +15,10 @@ public class ReservationService {
 
     @Autowired
     private DataSource ds;
-
-
-    //    private UserDao userDao;
     private ReservationDao reservationDao;
     private TimetableDao timetableDao;
+    private PayMentDao payDao;
+    private UserDao userDao;
 
     public List<ReservationUser> searchAllReservation(String userId) {
         int i = 0;
@@ -26,54 +26,62 @@ public class ReservationService {
         List<ReservationUser> reservationUser = new ArrayList<>();
 
         try {
-            // null인지 먼저 판별해줘야 함.
-            // userDao.findById(userId); _조장님이 하고 있음.
-        } catch (NullPointerException e) {
-            System.out.println("현재 유저는 등록되어 있지 않은 회원입니다.");
+            reservationUser = reservationDao.findAllByUserId(userId);
+        } catch (Exception e) {
             return null;
         }
-
-        reservationUser = reservationDao.findAllByUserId(userId);
-
-        for (ReservationUser r: reservationUser) {
-            // 3. Reservation의 예약 현황이 취소가 아닌 것 빼고 다 불러오기
-            if(r.getR_result() == 1) {
-                // 예약 취소인 것
-                reservationUser.remove(i);
-            }
-            // 예약 완료 & 예약 대기는 패쓰~~
-
-            i++;
-        }
-
+        
         return reservationUser;
     }
 
 
+    public Boolean reservationAvailable(String userId, String date) {
+
+        return reservationDao.available(userId, date);
+    }
 
 
-    public Boolean register(String userId, int tIdx, String date) {
-        // 유효한 결제를 찾아 그거의 tpIdx를 찾는다.
-        // int tpIdx = paymentDao.findtpIdxByuserId(userId);
-        // 예시 데이터
-        int tpIdx = 2;
-        /*
-        나중에 payDao에 넣기!
-        * public int findtpIdxByuserId(String userId) {
-        * int tpIdx;
-        * this.sql = "select tp_idx from payment where user_id = ?";
-        *
-        *  try {
-            tpIdx = jdbcTemplate.query(this.sql, , userId);
-        } catch (EmptyResultDataAccessException e) {
-            System.out.println("예약이 올바르게 되지 않았습니다.");
-            return -1;
-        }
+    public Boolean register(String userId, String date) {
+        TimetableDo timetableDo = reservationDao.findAllByDate(date);
+        int tIdx = timetableDo.getT_idx();
 
-        return tpIdx;
-        * */
+        //////////////////////////////
+//        public Boolean decreaseCnt(String userId) {
+//            this.sql = "update timetable " +
+//                    "set user_pt = user_pt - 1" +
+//                    "where user_id = ?";
+//
+//            try {
+//                jdbcTemplate.update(this.sql, userId);
+//            } catch (EmptyResultDataAccessException e) {
+//                System.out.println("사용자 pt횟수 변경이 올바르게 되지 않았습니다.");
+//                return false;
+//            }
+//
+//            System.out.println("사용자 pt횟수 변경 완료!!");
+//            return true;
+//        }
 
-        if(reservationDao.insert(userId, tIdx, date, tpIdx)) {
+        //////////////////////////////
+
+        //////////////////////////////
+//        public int findCntByUser(String userId) {
+//            this.sql = "select * from user_info  where user_id = ?";
+//
+//            return jdbcTemplate.update(this.sql, new UserRowMapper(), userId);
+//        }
+
+        //////////////////////////////
+
+        if((userDao.findCntByUser(userId) > 0) && (timetableDo.getT_cur() < timetableDo.getT_max())) {
+            try{
+                reservationDao.insert(tIdx, userId, date);
+            } catch(Exception e) {
+                return false;
+            }
+
+            userDao.decreaseCnt(userId);
+            timetableDao.increaseCurr(tIdx);
             return true;
         }
 
@@ -86,11 +94,11 @@ public class ReservationService {
         }
 //        if(userDao.increasePtCnt(userId)) {
 //            return false;
-//        } // 이거 짜서 주석에 짱박아 놔야함....
+//        }
 
         //////////////////////////////
 //        public Boolean increasePtCnt(String userId) {
-//            this.sql = "update timetable" +
+//            this.sql = "update timetable " +
 //                    "set user_pt = user_pt + 1" +
 //                    "where user_id = ?";
 //

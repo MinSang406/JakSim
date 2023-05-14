@@ -63,7 +63,7 @@ public class LoginDao {
                 "set user_pw = ? " +
                 "where user_id = ?";
         try{
-            jdbcTemplate.update(sql, findId, findPw);
+            jdbcTemplate.update(sql, findPw, findId);
         }catch (Exception e){
 
         }

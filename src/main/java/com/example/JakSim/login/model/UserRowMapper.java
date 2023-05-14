@@ -5,6 +5,7 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
+
 public class UserRowMapper implements RowMapper<UserInfo> {
 
     @Override
@@ -21,7 +22,10 @@ public class UserRowMapper implements RowMapper<UserInfo> {
         userInfo.setUser_type(rs.getInt("USER_TYPE"));
         userInfo.setUser_birth(rs.getString("USER_BIRTH"));
         userInfo.setUser_c_dt(rs.getString("USER_C_DT"));
+        userInfo.setUser_pt(rs.getInt("USER_PT"));
+
 
         return userInfo;
     }
 }
+

@@ -10,7 +10,8 @@ public class TimetableDo {
     private int ut_idx;
     private String t_start_t;
     private String t_end_t;
-    private int t_people;
+    private int t_max;
+    private int t_cur;
     private int t_type;
 
 }

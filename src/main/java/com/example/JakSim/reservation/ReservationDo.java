@@ -14,10 +14,8 @@ public class ReservationDo {
 
     private int r_idx;
     private int t_idx;
-    private int tp_idx;
     private String user_id;
     private String r_c_dt;
-    private int r_result;
 
 //    @Override
 //    public String toString() {
