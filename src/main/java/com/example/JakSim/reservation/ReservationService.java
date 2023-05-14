@@ -46,7 +46,7 @@ public class ReservationService {
         int tIdx = timetableDo.getT_idx();
 
         //////////////////////////////
-//        public Boolean decreaseCnt(String userId) {
+//        public void decreaseCnt(String userId) {
 //            this.sql = "update timetable " +
 //                    "set user_pt = user_pt - 1" +
 //                    "where user_id = ?";
@@ -55,17 +55,17 @@ public class ReservationService {
 //                jdbcTemplate.update(this.sql, userId);
 //            } catch (EmptyResultDataAccessException e) {
 //                System.out.println("사용자 pt횟수 변경이 올바르게 되지 않았습니다.");
-//                return false;
+//                return;
 //            }
 //
 //            System.out.println("사용자 pt횟수 변경 완료!!");
-//            return true;
+//            return;
 //        }
 
         //////////////////////////////
 
         //////////////////////////////
-//        public int findCntByUser(String userId) {
+//        public int findByUser(String userId) {
 //            this.sql = "select * from user_info  where user_id = ?";
 //
 //            return jdbcTemplate.update(this.sql, new UserRowMapper(), userId);
@@ -73,7 +73,7 @@ public class ReservationService {
 
         //////////////////////////////
 
-        if((userDao.findCntByUser(userId) > 0) && (timetableDo.getT_cur() < timetableDo.getT_max())) {
+        if((userDao.findByUser.getUserPt(userId) > 0) && (timetableDo.getT_cur() < timetableDo.getT_max())) {
             try{
                 reservationDao.insert(tIdx, userId, date);
             } catch(Exception e) {
@@ -88,16 +88,12 @@ public class ReservationService {
         return false;
     }
 
-    public Boolean deleteReservation(String userId, int rIdx, int tIdx) {
-        if(timetableDao.deleteUserTimetable(tIdx) || reservationDao.delete(rIdx)) {
-            return false;
-        }
-//        if(userDao.increasePtCnt(userId)) {
-//            return false;
-//        }
+    public Boolean delete(String userId, String date) {
+        TimetableDo timetableDo = reservationDao.findAllByDate(date);
+        int tIdx = timetableDo.getT_idx();
 
         //////////////////////////////
-//        public Boolean increasePtCnt(String userId) {
+//        public void increaseCnt(String userId) {
 //            this.sql = "update timetable " +
 //                    "set user_pt = user_pt + 1" +
 //                    "where user_id = ?";
@@ -106,16 +102,22 @@ public class ReservationService {
 //                jdbcTemplate.update(this.sql, userId);
 //            } catch (EmptyResultDataAccessException e) {
 //                System.out.println("사용자 pt횟수 변경이 올바르게 되지 않았습니다.");
-//                return false;
+//                return;
 //            }
 //
 //            System.out.println("사용자 pt횟수 변경 완료!!");
-//            return true;
+//            return;
 //        }
 
         //////////////////////////////
 
-        return true;
+        if(reservationDao.delete(userId, tIdx)) {
+            userDao.increaseCnt(userId);
+            timetableDao.decreaseCurr(tIdx);
+            return true;
+        }
+
+        return false;
     }
 
 }

@@ -82,12 +82,12 @@ public class ReservationDao {
         return true;
     }
 
-    public Boolean delete(int rIdx) {
+    public Boolean delete(String userId, int tIdx) {
         this.sql = "delete from reservation " +
-                "where r_idx = ?";
+                "where user_id = ? and t_idx = ?";
 
         try {
-            jdbcTemplate.update(this.sql, rIdx);
+            jdbcTemplate.update(this.sql, userId, tIdx);
         } catch (EmptyResultDataAccessException e) {
             System.out.println("예약 취소가 올바르게 되지 않았습니다.");
             return false;

@@ -55,11 +55,11 @@ public class ReservationController {
         return reservationService.register(user.getUsername(), date);
     }
 
-    // PT 사용자 예약 취소
-    @PostMapping("/cancle/{userId}")
+    // PT 사용자 예약 취소_Main 화면에서
+    @PostMapping("/cancle/{date}")
     @ResponseBody
-    public Boolean ReservationCancle(@PathVariable("userId") String userId, int rIdx, int tIdx) {
+    public Boolean ReservationCancle(@AuthenticationPrincipal User user, @PathVariable("date") String date) {
 
-        return reservationService.deleteReservation(userId, rIdx, tIdx);
+        return reservationService.delete(user.getUsername(), date);
     }
 }

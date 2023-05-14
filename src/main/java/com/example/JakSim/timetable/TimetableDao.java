@@ -103,17 +103,30 @@ public class TimetableDao {
         return timetableDo;
     }
 
-    public Boolean increaseCurr(int tIdx) {
+    public void increaseCurr(int tIdx) {
         this.sql = "update timetable set t_cur = t_vur + 1 where t_idx = tIdx";
 
         try {
             jdbcTemplate.update(this.sql, tIdx);
         } catch (EmptyResultDataAccessException e) {
             System.out.println("시간표에 대한 현재 인원수 증가.");
-            return false;
+            return;
         }
 
-        return true;
+        return;
+    }
+
+    public void decreaseCurr(int tIdx) {
+        this.sql = "update timetable set t_cur = t_vur - 1 where t_idx = tIdx";
+
+        try {
+            jdbcTemplate.update(this.sql, tIdx);
+        } catch (EmptyResultDataAccessException e) {
+            System.out.println("시간표에 대한 현재 인원 수 감소");
+            return;
+        }
+
+        return;
     }
 
     public int findUtByTp(int tpIdx) {
