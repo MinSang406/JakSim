@@ -53,6 +53,7 @@ function buildCalendar() {
 
 // 날짜 선택
 function choiceDate(newDIV) {
+    console.log(newDIV.innerHTML);
     if (document.getElementsByClassName("choiceDay")[0]) {                              // 기존에 선택한 날짜가 있으면
         document.getElementsByClassName("choiceDay")[0].classList.remove("choiceDay");  // 해당 날짜의 "choiceDay" class 제거
     }

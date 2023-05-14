@@ -26,7 +26,7 @@
 .input_container > #user_id_check{
     height:1px;
 }
-#user_id_container, #user_tel_container{
+#user_id_container, #user_tel_container, #user_password_container{
     margin-left: 5em;
     /*margin-top: 5vh;*/
 }
@@ -41,4 +41,21 @@
 }
 .register_select {
     margin-left: 8em;
+}
+
+#account_success_container{
+    width:400px;
+    min-height:400px;
+    margin: 200px auto;
+}
+#account_success_container > h1{
+    text-align: center;
+}
+#account_success_container > div{
+    margin: 50px auto;
+}
+.input_select{
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
 }

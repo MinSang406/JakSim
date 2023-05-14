@@ -5,16 +5,15 @@ import org.springframework.jdbc.core.RowMapper;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-public class ReservationRowMapper implements RowMapper<Reservation> {
-    public Reservation mapRow(ResultSet rs, int rowNum) throws SQLException {
-        Reservation reservation = new Reservation();
+public class ReservationRowMapper implements RowMapper<ReservationDo> {
 
-        reservation.setR_idx(rs.getInt("R_IDX"));
+    public ReservationDo mapRow(ResultSet rs, int rowNum) throws SQLException {
+        ReservationDo reservation = new ReservationDo();
+
+        reservation.setR_idx(rs.getInt("RES_IDX"));
         reservation.setT_idx(rs.getInt("T_IDX"));
-        reservation.setTp_idx(rs.getInt("TP_IDX"));
         reservation.setUser_id(rs.getString("USER_ID"));
-        reservation.setR_c_dt(rs.getString("R_C_DT"));
-//        reservation.setR_result(rs.getType("R_RESULT"));
+        reservation.setR_c_dt(rs.getString("RES_C_DT"));
 
         return reservation;
     }

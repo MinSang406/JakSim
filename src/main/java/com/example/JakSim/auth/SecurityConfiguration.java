@@ -35,9 +35,10 @@ public class SecurityConfiguration{
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception{
-        http.csrf().disable();
+
         http.authorizeHttpRequests()
-                .mvcMatchers("/", "/login/**", "/register/**","/error/**", "/javascript/**", "/css/**", "/images/**", "/find/**", "/Reservation/**").permitAll()
+                .mvcMatchers("/", "/login/**", "/register/**","/error/**",
+                        "/javascript/**", "/css/**", "/images/**", "/find/**", "/trainer/search/**", "/files/**").permitAll()
                 .anyRequest().authenticated();
         http.formLogin()
                 .loginPage("/login")
@@ -49,6 +50,7 @@ public class SecurityConfiguration{
                 .logoutSuccessUrl("/")
                 .invalidateHttpSession(true);
         //.deleteCookies()
+        http.csrf().disable();
         http.sessionManagement()
                 .maximumSessions(1)
                 .maxSessionsPreventsLogin(false)

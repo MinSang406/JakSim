@@ -1,0 +1,91 @@
+
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout/base}">
+<div layout:fragment="content" id="index_container">
+
+  <div id="manage_main_container">
+    <h3>PT시간등록</h3>
+    <form method="POST" th:action="@{/timetable/res/action}">
+      <div id="trainer_manage_container">
+        <div class="manage_container">
+          <div class="time_container">
+            <span class="manage_class">수업시간</span>
+            <input type="datetime-local" id="t_start_t">
+            <span class="manage_range">~</span>
+            <input type="datetime-local" id="t_end_t">
+          </div>
+          <div class="manage_radio_container">
+            <input type="radio" id="gather" value="gather">단체
+            <input type="radio" id="one" value="one" checked="checked">1:1
+            <input type="radio" id="consult" value="consult">상담
+          </div>
+          <div class="count_people">
+            <label for="people_1" class="manage_people_label">인원수</label>
+            <select id="people_1">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+            </select>
+          </div>
+          <input type="text" name="trainer_reservation_display" id="trainer_reservation_display" readonly>
+        </div>
+        <div id="manage_button_div">
+          <button type="button" id="manage_button">변경사항 저장</button>
+        </div>
+        <input type="submit" class="btn btn-success" value="최종결정">
+      </div>
+    </form>
+
+    <h3 style="margin-top: 50px;">회원예약승인</h3>
+    <div id="reservation_validation">
+      <table>
+        <thead>
+        <td>회원이름</td>
+        <td>1:1/단체</td>
+        <td>아이디</td>
+        <td>예약시간</td>
+        <td>참여인원현황</td>
+        <td>
+          <select name="res_valid" id="res_valid">
+            <option value="all">예약대기/취소</option>
+            <option value="wait">예약대기</option>
+            <option value="cancel">예약취소</option>
+            <option value="done">완료</option>
+          </select>
+        </td>
+        </thead>
+        <tbody>
+        <tr>
+          <td>구세은</td>
+          <td>1:1</td>
+          <td>gse96</td>
+          <td>23/03/23/ 10:00 AM</td>
+          <td>1/1</td>
+          <td><button class="btn btn-success">예약 취소</button></td>
+        </tr>
+        <tr>
+          <td>장효림</td>
+          <td>단체</td>
+          <td>JorimJoram</td>
+          <td>23/04/26 05:00 PM</td>
+          <td>1/3</td>
+          <td><button class="btn btn-danger">예약 대기</button></td>
+        </tr>
+        <tr>
+          <td>김민상</td>
+          <td>1:1</td>
+          <td>i91420</td>
+          <td>23/05/22/ 10:00 AM</td>
+          <td>1/1</td>
+          <td><button class="btn btn-danger">예약 대기</button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+</html>

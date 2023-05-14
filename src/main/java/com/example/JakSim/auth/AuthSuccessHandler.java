@@ -1,6 +1,6 @@
 package com.example.JakSim.auth;
 
-import com.example.JakSim.login.model.LoginDao;
+import com.example.JakSim.login.model.UserDao;
 import org.apache.tomcat.jdbc.pool.DataSource;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.Authentication;
@@ -17,7 +17,7 @@ import java.io.IOException;
 public class AuthSuccessHandler extends SimpleUrlAuthenticationSuccessHandler {
     @Autowired
     private DataSource ds;
-    private LoginDao loginDao;
+    private UserDao userDao;
 
     @Override
     public void onAuthenticationSuccess(HttpServletRequest request, HttpServletResponse response, FilterChain chain, Authentication authentication) throws IOException, ServletException {

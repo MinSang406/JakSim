@@ -9,22 +9,30 @@
   <link rel="stylesheet" type="text/css" th:href="@{/css/style.css}">
   <link rel="stylesheet" type="text/css" th:href="@{/css/login_style.css}">
   <link rel="stylesheet" type="text/css" th:href="@{/css/register_style.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/editReview.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/trainerSearch.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/TrainerPage.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/myPage.css}">
+  <link rel="stylesheet" type="text/css" th:href="@{/css/paytest.css}">
   <link rel="stylesheet" type="text/css" th:href="@{/css/timetable.css}">
 
-  <script src="/javascript/TrainerRegister.js"></script>
+  <script src="https://kit.fontawesome.com/05995ac069.js" crossorigin="anonymous"></script>
+  <script th:src="@{/javascript/TrainerRegister.js}"></script>
+  <script th:src="@{/javascript/register.js}"></script>
+  <script th:src="@{/javascript/trainer.js}"></script>
+  <script th:src="@{/javascript/accountTelCheck.js}"></script>
   <script src="/javascript/Timetable.js"></script>
-  <script src="/javascript/register.js"></script>
 </head>
 <body>
-  <!-- navi -->
-  <th:block th:replace="~{fragment/navi :: naviFragment}"></th:block>
+<!-- navi -->
+<th:block th:replace="~{fragment/navi :: naviFragment}"></th:block>
 
-  <!-- content -->
-  <section>
-    <th:block layout:fragment="content"></th:block>
-  </section>
+<!-- content -->
+<section>
+  <th:block layout:fragment="content"></th:block>
+</section>
 
-  <!-- footer -->
-  <th:block th:replace="~{fragment/footer :: footerFragment}"></th:block>
+<!-- footer -->
+<th:block th:replace="~{fragment/footer :: footerFragment}"></th:block>
 </body>
 </html>

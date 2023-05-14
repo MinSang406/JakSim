@@ -1,0 +1,85 @@
+<html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml"
+      layout:decorate="~{layout/base}">
+<div layout:fragment="content" id="myPage-content">
+    <h3>마이작심</h3>
+    <div id="profile">
+        <div>
+            <h5 th:text="${userinfo.user_name}"></h5>
+            <p th:text="${userinfo.user_id}"></p>
+        </div>
+    </div>
+    <div id="account">
+        <form th:object="${userinfo}" th:action="@{/update-userInfo}" class="form-account" id="account-form"  method="post" >
+            <label for="phoneNumber">전화번호</label>
+
+            <input type="text" th:field="*{user_tel}" th:value="${user_tel}" id="phoneNumber" name="phone-number">
+            <button class="btn btn-outline-secondary" type="button" id="mypage_tel_dup">중복확인</button>
+            <br/><span id="mypage_user_tel_check">전화번호 중복을 확인해주세요</span>
+
+            <label for="date-of-birth">생년월일</label>
+            <input type="text" th:field="*{user_birth}" id="date-of-birth" name="date-of-birth">
+
+            <label for="account-recovery-question">계정 복구 질문</label>
+            <select class="question-select" th:field="*{user_question}" id="account-recovery-question" name="account-recovery-question">
+                <option value="0">당신이 태어난 고향은?</option>
+                <option value="1">졸업한 초등학교 이름은?</option>
+                <option value="2">가장 소중한 보물 1호는?</option>
+                <option value="3">당신의 첫 해외여행지는?</option>
+                <option value="4">가장 존경하는 인물은?</option>
+            </select>
+
+            <label for="account-recovery-answer">계정 복구 정답</label>
+            <input type="text" th:field="*{user_answer}" id="account-recovery-answer" name="account-recovery-answer">
+
+            <div id="myPageButtons">
+                <button id="save-button" type="submit" class="save-button">프로필 저장</button>
+            </div>
+        </form>
+        <div id="withdraw-container">
+            <form th:action="@{/delete-userInfo}" method="post">
+                <button id="withdraw-button" onclick="deleteUserInfo()" class="withdrawal-button">회원 탈퇴</button>
+            </form>
+        </div>
+    </div>
+</div>
+</html>
+
+<!--            <script>-->
+<!--              function deleteUserInfo() {-->
+<!--                  fetch('/delete-userInfo', { method: 'POST' })-->
+<!--                      .then(response => {-->
+<!--                          if (response.ok) {\-->
+<!--                              alert('탈퇴가 완료 되었습니다.');-->
+<!--                              window.location.href = '/';-->
+<!--                          } else {-->
+<!--                              console.error('Failed to delete user');-->
+<!--                          }-->
+<!--                      })-->
+<!--                      .catch(error => {-->
+<!--                          console.error('Failed to delete user', error);-->
+<!--                      });-->
+<!--              }-->
+<!--            </script>-->
+
+
+<!--            <label for="password">비밀번호</label>-->
+<!--            <input type="password" th:value="${userinfo.user_pw}" id="password" name="password">-->
+
+<!--            <label for="confirmPassword">비밀번호 확인</label>-->
+<!--            <input type="password" th:value="${userinfo.user_pw}" id="confirmPassword" name="confirm-password">-->
+
+<!--            <div id="password-match">-->
+<!--                <script th:inline="javascript">-->
+<!--                    function checkPasswordMatch() {-->
+<!--                    var password = document.getElementById("password").value;-->
+<!--                    var confirmPassword = document.getElementById("confirmPassword").value;-->
+
+<!--                    if (password == confirmPassword) {-->
+<!--                    document.getElementById("password-match").innerHTML = "비밀번호가 일치합니다.";-->
+<!--                    } else {-->
+<!--                    document.getElementById("password-match").innerHTML = "비밀번호가 일치하지 않습니다.";-->
+<!--                    }-->
+<!--                    }-->
+<!--                </script>-->
+<!--            </div>-->
+

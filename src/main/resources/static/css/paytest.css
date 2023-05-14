@@ -1,0 +1,419 @@
+@import url('https://fonts.googleapis.com/css?family=Questrial&display=swap');
+
+#payscreen {
+    background-color : white;
+    height: 1000px;
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3vh;
+
+    border-radius: 2.5vh;
+}
+
+
+#결제하기 {
+    position: relative;
+
+    font-family: 'Questrial', sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    color: rgba(100, 100, 100, 1);
+}
+
+#p_screen1 {
+    position: relative;
+    width: 60%;
+    height: 1000px;
+
+    background-color: white;
+}
+
+#p_screen2 {
+    position: relative;
+    bottom: 1015px;
+    left: 1015px;
+
+    width: 38%;
+    height: 240px;
+    background: white;
+
+    border-radius: 10px;
+    border: 1px solid rgba(196, 196, 196, 1);
+
+    margin-top: 10vh;
+}
+
+#p_screen1-1 {
+    position: relative;
+    top:3vh;
+
+    width: 100%;
+    height: 260px;
+
+    background: white;
+    margin-bottom: 3vh;
+
+    border-radius: 10px;
+    border: 1px solid rgba(196, 196, 196, 1);
+
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(100, 100, 100, 1);
+}
+
+#p_screen1-2 {
+    position: relative;
+    top:3vh;
+
+    width: 100%;
+    height: 310px;
+
+    background: white;
+    margin-top: 15px;
+    margin-bottom: 10px;
+
+    border-radius: 10px;
+    border: 1px solid rgba(196, 196, 196, 1);
+
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(100, 100, 100, 1);
+  }
+
+#p_screen1-3 {
+    position: relative;
+    top:3vh;
+    width: 100%;
+    height: 150px;
+    background: white;
+    margin-top: 25px;
+
+    border-radius: 10px;
+    border: 1px solid rgba(196, 196, 196, 1);
+
+    font-family: 'Questrial', sans-serif;
+    font-size: 18px;
+    font-weight: bold;
+    color: rgba(100, 100, 100, 1);
+
+    padding-top: 4.5vh;
+    padding-left: 5vh;
+}
+
+#주문내역 {
+    position: relative;
+    top: 4.5vh;
+    left: 5vh;
+}
+
+#p_t_info1 {
+    position: relative;
+    bottom: 10.5vh;
+    left: 30vh;
+
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    color: rgba(100, 100, 100, 1);
+
+}
+
+#p_t_info2 {
+    position: relative;
+    bottom: 15vh;
+    left: 30vh;
+
+    font-family: 'Questrial', sans-serif;
+    font-size: 14px;
+    font-weight: semi bold;
+    color: rgba(172, 173, 182, 1);
+
+}
+
+#p_t_info3 {
+    position: relative;
+    bottom: 15vh;
+    left: 32vh;
+
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(100, 100, 100, 1);
+
+}
+
+#위치 {
+    position: relative;
+    bottom: 8.3vh;
+    left: 30vh;
+}
+
+#p_t_info4 {
+    position: relative;
+    bottom: 16vh;
+    left: 30vh;
+
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(100, 100, 100, 1);
+
+}
+
+.trainer {
+    weight: 130px;
+    height: 130px;
+    border: 0.1px solid white;
+    border-radius: 10px;
+
+    position: relative;
+    top: 4.5vh;
+    left: 5vh;
+}
+
+#구매자정보 {
+    position: relative;
+    top: 4.5vh;
+    left: 5vh;
+}
+
+#payinfo1 {
+    position: relative;
+}
+
+#payBtn {
+    -webkit-border-radius: 28;
+    -moz-border-radius: 28;
+    border-radius: 1.5vh;
+    font-family: 'Questrial', sans-serif;
+    color: #A584EE;
+    font-size: 14px;
+    font-weight: bold;
+    background: #ffffff;
+    padding: 8px 60px 8px 60px;
+    border: solid #A584EE 2px;
+    text-decoration: none;
+
+    position: relative;
+    bottom: 15vh;
+    left: 15vh;
+}
+
+#payBtn:hover {
+    background: #A584EE;
+    text-decoration: none;
+    color: white;
+}
+
+#주문금액 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(100, 100, 100, 1);
+
+    position: relative;
+    top: 3vh;
+    left: 3vh;
+}
+
+#총금액 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(100, 100, 100, 1);
+
+    position: relative;
+    bottom: 9vh;
+    left: 3vh;
+}
+
+#할인 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(100, 100, 100, 1);
+
+    position: relative;
+    bottom: 2vh;
+    left: 3vh;
+}
+
+#돈1 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(100, 100, 100, 1);
+
+    position: relative;
+    bottom: 1.8vh;
+    left: 36vh;
+}
+
+#돈2 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(172, 173, 182, 1);
+
+    position: relative;
+    bottom: 6.7vh;
+    left: 43vh;
+}
+
+#돈3 {
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(100, 100, 100, 1);
+
+    position: relative;
+    bottom: 13.9vh;
+    left: 36vh;
+}
+
+#line {
+    position: relative;
+    bottom: 15vh;
+}
+
+.name_co {
+    width: 90%;
+    height: 4vh;
+    background: white;
+
+    border-radius: 0.7vh;
+    border: 1px solid rgba(196, 196, 196, 1);
+
+    position: relative;
+    top: 5vh;
+    left: 5vh;
+}
+
+.tel_co {
+    width: 90%;
+    height: 4vh;
+    background: white;
+
+    border-radius: 0.7vh;
+    border: 1px solid rgba(196, 196, 196, 1);
+
+    position: relative;
+    top: 6vh;
+    left: 5vh;
+}
+
+.addr_co {
+    width: 90%;
+    height: 4vh;
+    background: white;
+
+    border-radius: 0.7vh;
+    border: 1px solid rgba(196, 196, 196, 1);
+
+    position: relative;
+    top: 7vh;
+    left: 5vh;
+}
+
+.start_co {
+    width: 90%;
+    height: 4vh;
+    background: white;
+
+    border-radius: 0.7vh;
+    border: 1px solid rgba(196, 196, 196, 1);
+
+    position: relative;
+    top: 8vh;
+    left: 5vh;
+}
+
+.name1{
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(100, 100, 100, 1);
+
+    position:relative;
+    top:0.6vh;
+    left: 3vh;
+}
+
+.name2{
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(172, 173, 182, 1);
+
+    position:relative;
+    top:0.6vh;
+    left: 15vh;
+}
+
+.tel1{
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(100, 100, 100, 1);
+
+    position:relative;
+    top:0.6vh;
+    left: 3vh;
+}
+
+.tel2{
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(172, 173, 182, 1);
+
+    position:relative;
+    top:0.6vh;
+    left: 12vh;
+}
+
+.addr1{
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(100, 100, 100, 1);
+
+    position:relative;
+    top:0.6vh;
+    left: 3vh;
+}
+
+.addr2{
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(172, 173, 182, 1);
+
+    position:relative;
+    top:0.6vh;
+    left: 15vh;
+}
+
+.start1{
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(100, 100, 100, 1);
+
+    position:relative;
+    top:0.6vh;
+    left: 3vh;
+}
+
+.start2{
+    font-family: 'Questrial', sans-serif;
+    font-size: 16px;
+    font-weight: semi bold;
+    color: rgba(172, 173, 182, 1);
+
+    position:relative;
+    top:0.6vh;
+    left: 10vh;
+}

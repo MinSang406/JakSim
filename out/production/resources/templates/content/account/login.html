@@ -1,22 +1,22 @@
 <html xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml" layout:decorate="~{layout/base}">
-  <div layout:fragment="content" id="login_layout">
-      <h1>
+<div layout:fragment="content" id="login_layout">
+    <h1>
         작심득근<br>Sign In
-      </h1>
-      <form th:action="@{/login/action}" method="post" id="login_container">
+    </h1>
+    <form th:action="@{/login/action}" method="post" id="login_container">
         <div class="mb-3">
-          <span id="inputGroup-sizing-default">ID</span>
-          <input type="text" name="user_id" id="useR_id" class="form-control">
+            <span id="inputGroup-sizing-default">ID</span>
+            <input type="text" name="username" id="useR_id" class="form-control">
         </div>
         <div class="mb-3">
-          <label for="user_pw">비밀번호</label>
-          <input type="password" name="user_pw" id="user_pw" class="form-control">
+            <label for="user_pw">비밀번호</label>
+            <input type="password" name="password" id="user_pw" class="form-control">
         </div>
 
         <button type="submit" class="btn btn-primary">로그인</button>
-        <a th:href="@{/user/signup}" class="btn btn-success" type="button">회원가입</a>
-        <a href="#" id="find_id">아이디 / 비밀번호 찾기</a>
+        <a th:href="@{/register}" class="btn btn-success" type="button">회원가입</a>
+        <a th:href="@{/find}" id="find_id">아이디 / 비밀번호 찾기</a>
 
-      </form>
-  </div>
+    </form>
+</div>
 </html>

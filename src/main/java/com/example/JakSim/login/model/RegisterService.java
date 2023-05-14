@@ -12,12 +12,12 @@ public class RegisterService {
     private DataSource ds;
 
     public UserInfo findByUserId(String user_id) throws SQLException {
-        LoginDao loginDao = new LoginDao(ds);
-        return loginDao.findById(user_id);
+        UserDao userDao = new UserDao(ds);
+        return userDao.findById(user_id);
     }
 
     public void updatePassword(String findId, String findPw) {
-        LoginDao loginDao = new LoginDao(ds);
-        loginDao.updatePassword(findId, findPw);
+        UserDao userDao = new UserDao(ds);
+        userDao.updatePassword(findId, findPw);
     }
 }

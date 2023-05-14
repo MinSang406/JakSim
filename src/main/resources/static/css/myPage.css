@@ -1,0 +1,201 @@
+/*
+    #top-menu {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #FFFFFF;
+      height: 50px;
+
+      padding: 0 20px;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: 1;
+      border-bottom: 1px solid #BDBCBC;
+      margin-bottom: 20px;
+      }
+
+     #top-menu .logo {
+        margin-left: 2vh;
+        font-weight: bold;
+        font-size: 25px;
+        color: #5213DD;
+      }
+      #top-menu ul {
+        list-style: none;
+        display: flex;
+        margin: 0;
+        padding: 0;
+      }
+      #top-menu ul li {
+        margin-left: 20px;
+      }
+      #top-menu ul li:first-child {
+        margin-left: 0;
+      }
+      #top-menu ul li a {
+        color: #333333;
+        text-decoration: none;
+        font-size: 16px;
+        display: inline-block;
+        padding: 10px;
+      }
+      #top-menu ul li a:hover {
+        background-color: #B094F0;
+        color: #FFFFFF;
+      }
+      #top-menu #logout-button {
+        background-color: #B094F0;
+        color: #FFFFFF;
+        border-radius: 4px;
+        border: none;
+        font-size: 16px;
+        font-weight: bold;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-right: 5vh;
+      }
+      #top-menu #logout-button:hover {
+        opacity: 0.8;
+      } */
+
+        /* Style for the left menu bar
+     #left-menu {
+      position: fixed;
+      top: 0px;
+      left: 0;
+      bottom: 0;
+      width: 200px;
+      background-color: #f0f0f0;
+      padding: 20px;
+      margin-top: 50px;
+    }
+
+    /* Style for the menu items
+    #left-menu ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    #left-menu li {
+      margin-bottom: 10px;
+    }
+
+    #left-menu a {
+      display: block;
+      padding: 10px;
+      background-color: #e0e0e0;
+      color: #333;
+      text-decoration: none;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+
+    #left-menu a:hover {
+      background-color: #ccc;
+    }
+*/
+    /*body {
+        font-family: "Roboto", sans-serif;
+        font-size: 13px;
+        line-height: 1.5;
+      }*/
+
+      #myPage-content {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        margin-left: 300px;
+        margin-right: 300px;
+      }
+
+      #profile {
+        box-sizing: border-box;
+        top: 100px;
+        width: 1014px;
+        height: 150px;
+        border: 1px solid #BDBCBC;
+        border-radius: 5px;
+        padding : 30px;
+      }
+
+    #account {
+        margin-top: 20px;
+        margin-bottom: 20px;
+    }
+
+    #account-form {
+        box-sizing: border-box;
+        width: 1014px;
+        height: 520px;
+        top: 280px;
+        padding : 30px;
+
+        background: #FFFFFF;
+        border: 1px solid #BDBCBC;
+        border-radius: 5px;
+      }
+
+
+
+      .form-account label {
+        display: block;
+        margin-bottom: 5px;
+      }
+
+      .form-account input,
+      .form-account select {
+        display: block;
+        width: 250px;
+        box-sizing: border-box;
+        margin-bottom: 10px;
+                border: 1px solid #BDBCBC;
+                border-radius: 5px;
+                padding: 5px;
+      }
+    .question_select {
+      width: 200px;
+    }
+
+    #myPageButtons {
+        margin-top: 10px;
+    }
+
+    .save-button {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+        background-color: #E9E1FB;
+        color: black;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        text-align: center;
+
+    }
+
+    #withdrawal-container {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 5px;
+    }
+
+    .withdrawal-button {
+        font-family: "Roboto", sans-serif;
+        font-size: 15px;
+        line-height: 1.5;
+        background-color: #FF0000;
+        color: black;
+        padding: 10px;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        text-align: center;
+        margin-top: 5px;
+    }
+     button:hover {
+        opacity: 0.8;
+        /*의도치 않게 투명해지면 이거탓임 ㅇㅇ*/
+     }
